@@ -1,0 +1,12 @@
+{
+  "name": "com.xidostudio.ui",
+  "version": "1.0.0-preview.1",
+  "displayName": "XS_UI",
+  "type": "tool",
+  "dependencies": {
+    "com.xidostudio.utils": "1.0.0",
+    "com.xidostudio.guardat": "1.0.0",
+    "com.xidostudio.inputs": "1.0.0",
+    "com.xidostudio.animaciopercodi": "1.0.0"
+  }
+}
