@@ -46,6 +46,7 @@ public class UI_Tecla : MonoBehaviour, IBindable
     {
         if(image == null)
         {
+            image = new Image[0];
             if (image.Length == 0) image = GetComponentsInChildren<Image>(true);
         }
         if (!text) text = GetComponentInChildren<TMP_Text>();
@@ -53,7 +54,7 @@ public class UI_Tecla : MonoBehaviour, IBindable
         if(text)
             text.text = TeclaNom();
 
-        if(image.Length == 0)
+        if(image.Length > 0)
         {
             for (int i = 0; i < image.Length; i++)
             {

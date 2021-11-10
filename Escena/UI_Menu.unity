@@ -796,8 +796,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e6ed8c71732c64191a5515c5677976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixers: {fileID: 11400000, guid: a5776265ebec15d48a16432c7e91b544, type: 2}
-  prefab: {fileID: 8189387271757548685, guid: c3d834c8c2ee8bc4199d689790f3c584, type: 3}
 --- !u!4 &591012754
 Transform:
   m_ObjectHideFlags: 0
@@ -1161,17 +1159,26 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 0.025
-          inSlope: -0.05
-          outSlope: -0.05
+          inSlope: -0.10015272
+          outSlope: -0.10015272
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
+          time: 0.24961877
+          value: 0
+          inSlope: -0.093992464
+          outSlope: -0
+          tangentMode: 1
+          weightedMode: 0
+          inWeight: 0.1105749
+          outWeight: 0.13293344
+        - serializedVersion: 3
           time: 0.5
           value: 0
-          inSlope: -0.05
-          outSlope: -0.05
+          inSlope: 0
+          outSlope: 0
           tangentMode: 34
           weightedMode: 0
           inWeight: 0.33333334
@@ -1695,7 +1702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1039276022
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2747,8 +2754,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1e6ed8c71732c64191a5515c5677976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixers: {fileID: 11400000, guid: a5776265ebec15d48a16432c7e91b544, type: 2}
-  prefab: {fileID: 8189387271757548685, guid: c3d834c8c2ee8bc4199d689790f3c584, type: 3}
 --- !u!4 &1621349581
 Transform:
   m_ObjectHideFlags: 0
@@ -3310,7 +3315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2059770661406224938, guid: d323596f530549c4595b386c5d8a76ea, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2059770661406224939, guid: d323596f530549c4595b386c5d8a76ea, type: 3}
       propertyPath: m_Pivot.x
