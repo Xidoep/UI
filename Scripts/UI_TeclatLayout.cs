@@ -76,13 +76,21 @@ public class UI_TeclatLayout : MonoBehaviour
        
     }
 
+
+
+    public void SetLayout(int tipus)
+    {
+        layout = (Layout)tipus;
+        Actualitzar();
+    }
+
     [ContextMenu("Prova")]
     void Provar()
     {
         Actualitzar();
     }
 
-    public void Actualitzar()
+    void Actualitzar()
     {
         switch (layout)
         {
