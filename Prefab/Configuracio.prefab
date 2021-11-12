@@ -671,9 +671,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: GUID:9436256bc28d1fe408dad9be48c59526
+      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
     m_TableEntryReference:
-      m_KeyId: 13279875072
+      m_KeyId: 18577281024
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -947,9 +947,9 @@ MonoBehaviour:
     m_WaitForCompletion: 1
   fonts:
     m_TableReference:
-      m_TableCollectionName: GUID:9436256bc28d1fe408dad9be48c59526
+      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
     m_TableEntryReference:
-      m_KeyId: 13279875072
+      m_KeyId: 18577281024
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -1141,9 +1141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: GUID:9436256bc28d1fe408dad9be48c59526
+      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
     m_TableEntryReference:
-      m_KeyId: 13279875072
+      m_KeyId: 18577281024
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -2440,9 +2440,9 @@ MonoBehaviour:
     m_WaitForCompletion: 1
   fonts:
     m_TableReference:
-      m_TableCollectionName: GUID:9436256bc28d1fe408dad9be48c59526
+      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
     m_TableEntryReference:
-      m_KeyId: 13279875072
+      m_KeyId: 18577281024
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -3030,9 +3030,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: GUID:9436256bc28d1fe408dad9be48c59526
+      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
     m_TableEntryReference:
-      m_KeyId: 13279875072
+      m_KeyId: 18577281024
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -4026,9 +4026,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: GUID:9436256bc28d1fe408dad9be48c59526
+      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
     m_TableEntryReference:
-      m_KeyId: 13279875072
+      m_KeyId: 18577281024
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -5281,9 +5281,9 @@ MonoBehaviour:
     m_WaitForCompletion: 1
   fonts:
     m_TableReference:
-      m_TableCollectionName: GUID:9436256bc28d1fe408dad9be48c59526
+      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
     m_TableEntryReference:
-      m_KeyId: 13279875072
+      m_KeyId: 18577281024
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -6212,9 +6212,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: GUID:9436256bc28d1fe408dad9be48c59526
+      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
     m_TableEntryReference:
-      m_KeyId: 13279875072
+      m_KeyId: 18577281024
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -6444,18 +6444,6 @@ MonoBehaviour:
     blendShape: []
     esdeveniment: []
     so: []
---- !u!114 &2059770661107494375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8284599429007081065}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a83f2a346d3d54940b12abdd2c11b9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1948440230497499954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6473,6 +6461,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 30d380f56601e1d48a7c9bcfd3b84931, type: 2}
   - {fileID: 11400000, guid: 22f6595b31d9b4640bac0ebdf77c8544, type: 2}
   - {fileID: 11400000, guid: 66199f0bfeec1654392cb6e927f589f1, type: 2}
+--- !u!114 &2059770661107494375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8284599429007081065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83f2a346d3d54940b12abdd2c11b9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2059770660153708848
 PrefabInstance:
   m_ObjectHideFlags: 0

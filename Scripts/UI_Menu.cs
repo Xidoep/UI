@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using XS_Utils;
 
@@ -26,22 +27,7 @@ public class UI_Menu : MonoBehaviour
 
         if (guardat) guardat.Carregar();
         if (playerInput) playerInput.SwitchCurrentActionMap(UI);
-        /*if (animacioBlur) 
-        {
-            animacioBlur.gameObject.SetActive(true);
-            animacioBlur.Play(0);
-        }
-        if (blur)
-        {
-            if(amagarBlur != null)
-            {
-                StopCoroutine(amagarBlur);
-                amagarBlur = null;
-            }
-            blur.gameObject.SetActive(true);
-            //blur.SetTemps(1);
-            blur.Play(0);
-        }*/
+
         if (blurShader)
         {
             if (amagarBlur != null)
@@ -50,12 +36,11 @@ public class UI_Menu : MonoBehaviour
                 amagarBlur = null;
             }
             blurShader.gameObject.SetActive(true);
-            //blur.SetTemps(1);
             blurShader.Play(0);
         }
 
-        if (submenuInicial) submenuInicial.SetActive(true);
-
+        //if (submenuInicial) submenuInicial.SetActive(true);
+        MenuPausaShow();
         Time.timeScale = 0;
     }
     private void OnDisable()
@@ -64,21 +49,9 @@ public class UI_Menu : MonoBehaviour
 
         if (playerInput) playerInput.SwitchCurrentActionMap(GAME_PLAY);
         if (guardat) guardat.Guardar();
-        /*if (animacioBlur) 
-        {
-            waitForSeconds = new WaitForSeconds(1);
-            animacioBlur.Play(1);
-            animacioBlur.gameObject.SetActive(false, 1);
-        }
-        if (blur)
-        {
-            //blur.SetTemps(0.25f);
-            blur.Play(1);
-            amagarBlur = blur.gameObject.SetActive(false, 0.26f);
-        }*/
+
         if (blurShader)
         {
-            //blur.SetTemps(0.25f);
             blurShader.Play(1);
             amagarBlur = blurShader.gameObject.SetActive(false, 0.26f);
         }
@@ -94,4 +67,52 @@ public class UI_Menu : MonoBehaviour
     {
         Application.Quit();
     }
+
+
+
+    public void MenuPausaShow()
+    {
+        SceneManager.LoadSceneAsync("MenuPausa", LoadSceneMode.Additive);
+    }
+    public void MenuPausaHide()
+    {
+        SceneManager.UnloadSceneAsync("MenuPausa");
+        this.gameObject.SetActive(false);
+    }
+
+    public void CreditsShow()
+    {
+        SceneManager.LoadSceneAsync("Credits", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("MenuPausa");
+    }
+    public void CreditsHide()
+    {
+        SceneManager.UnloadSceneAsync("Credits");
+        MenuPausaShow();
+    }
+
+    public void ControlsShow()
+    {
+        SceneManager.LoadSceneAsync("Controls", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("MenuPausa");
+    }
+    public void ControlsHide()
+    {
+        SceneManager.UnloadSceneAsync("Controls");
+        MenuPausaShow();
+    }
+
+    public void ConfiguracioShow()
+    {
+        SceneManager.LoadSceneAsync("Configuracio", LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync("MenuPausa");
+    }
+    public void ConfiguracioHide()
+    {
+        SceneManager.UnloadSceneAsync("Configuracio");
+        MenuPausaShow();
+    }
+
+
+
 }

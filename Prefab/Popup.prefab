@@ -198,9 +198,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LocalizedAssetReference:
     m_TableReference:
-      m_TableCollectionName: GUID:9436256bc28d1fe408dad9be48c59526
+      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
     m_TableEntryReference:
-      m_KeyId: 13279875072
+      m_KeyId: 18577281024
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
@@ -352,79 +352,6 @@ MonoBehaviour:
   transicio: 0
   temps: 0.51
   enEnable: 0
-  temps: 0.5
-  animacio:
-    transicio: 0
-    temps: 0.5
-    transformacions:
-    - tipus: 2
-      corba:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: -1.0900428
-          outSlope: -1.0900428
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0.117536314
-        - serializedVersion: 3
-          time: 0.46541747
-          value: -0.20948973
-          inSlope: 3.2881641
-          outSlope: 3.2881641
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.07734547
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 0
-      iniciDinamic: 0
-      inici: {x: 1, y: 1, z: 1}
-      final: {x: 0, y: 0, z: 0}
-    colors:
-    - tipus: 1
-      corba:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 2
-          outSlope: 2
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 0
-      iniciDinamic: 1
-      inici: {r: 0, g: 0, b: 0, a: 0}
-      final: {r: 0, g: 0, b: 0, a: 0}
-      propietat: 
-    esdeveniments: []
   transformacions:
   - transformacio:
     - tipus: 2
