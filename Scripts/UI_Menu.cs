@@ -11,8 +11,8 @@ public class UI_Menu : MonoBehaviour
 
     [SerializeField] PlayerInput playerInput;
     [SerializeField] Guardat guardat;
-    [SerializeField] AnimacioPerCodi animacioBlur;
-    [SerializeField] AnimacioPerCodi_All blur;
+    //[SerializeField] AnimacioPerCodi animacioBlur;
+    //[SerializeField] AnimacioPerCodi_All blur;
     [SerializeField] AnimacioPerCodi_Shader blurShader;
     [SerializeField] GameObject submenuInicial;
 
@@ -26,7 +26,7 @@ public class UI_Menu : MonoBehaviour
 
         if (guardat) guardat.Carregar();
         if (playerInput) playerInput.SwitchCurrentActionMap(UI);
-        if (animacioBlur) 
+        /*if (animacioBlur) 
         {
             animacioBlur.gameObject.SetActive(true);
             animacioBlur.Play(0);
@@ -41,7 +41,7 @@ public class UI_Menu : MonoBehaviour
             blur.gameObject.SetActive(true);
             //blur.SetTemps(1);
             blur.Play(0);
-        }
+        }*/
         if (blurShader)
         {
             if (amagarBlur != null)
@@ -64,7 +64,7 @@ public class UI_Menu : MonoBehaviour
 
         if (playerInput) playerInput.SwitchCurrentActionMap(GAME_PLAY);
         if (guardat) guardat.Guardar();
-        if (animacioBlur) 
+        /*if (animacioBlur) 
         {
             waitForSeconds = new WaitForSeconds(1);
             animacioBlur.Play(1);
@@ -75,7 +75,7 @@ public class UI_Menu : MonoBehaviour
             //blur.SetTemps(0.25f);
             blur.Play(1);
             amagarBlur = blur.gameObject.SetActive(false, 0.26f);
-        }
+        }*/
         if (blurShader)
         {
             //blur.SetTemps(0.25f);

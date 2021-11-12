@@ -9,8 +9,8 @@ public class UI_Layout : MonoBehaviour
     [SerializeField] Selectable mainButton;
     [SerializeField] Selectable selecteOnShown;
 
-    AnimacioPerCodi_Transformacio[] animationsShow;
-    Utils_DisableTempsAnimacio[] animaionsHide;
+    [SerializeField] AnimacioPerCodi_Transformacio[] animationsShow;
+    [SerializeField] Utils_DisableTempsAnimacio[] animaionsHide;
     bool shown;
 
     private void OnEnable()
@@ -26,20 +26,20 @@ public class UI_Layout : MonoBehaviour
     {
         if (!shown)
         {
-            selecteOnShown.Select();
             shown = true;
             for (int i = 0; i < animationsShow.Length; i++)
             {
                 animationsShow[i].gameObject.SetActive(true);
                 animationsShow[i].Play();
             }
+            selecteOnShown.Select();
         }
         else
         {
             shown = false;
             for (int i = 0; i < animaionsHide.Length; i++)
             {
-                animaionsHide[i].Play();
+                animaionsHide[i].Disable();
             }
         }
     }
@@ -51,7 +51,7 @@ public class UI_Layout : MonoBehaviour
         shown = false;
         for (int i = 0; i < animaionsHide.Length; i++)
         {
-            animaionsHide[i].Play();
+            animaionsHide[i].Disable();
         }
     }
     public void SeleccionarTipus(int tipus)
@@ -60,7 +60,7 @@ public class UI_Layout : MonoBehaviour
         shown = false;
         for (int i = 0; i < animaionsHide.Length; i++)
         {
-            animaionsHide[i].Play();
+            animaionsHide[i].Disable();
         }
         mainButton.Select();
     }
