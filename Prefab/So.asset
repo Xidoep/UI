@@ -18,5 +18,7 @@ MonoBehaviour:
   loop: 0
   volum: {x: 1, y: 1}
   pitch: {x: 1, y: 1}
+  spatialBlend: 0
   distanciaMaxima: 100
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: ed0e8d28e930bf447bf15fcbb49c0d21, type: 3}

@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
 
 public class UI_TeclatLayout : MonoBehaviour
 {
+    const string GUARDAT_KEY = "Layout";
     enum Layout
     {
         QWERTY,
@@ -15,6 +17,7 @@ public class UI_TeclatLayout : MonoBehaviour
         JCUKEN //Rus
     }
     [SerializeField] Layout layout;
+    [SerializeField] Guardat guardat;
 
     /*[SerializeField] Transform A;
     [SerializeField] Transform M;
@@ -73,10 +76,23 @@ public class UI_TeclatLayout : MonoBehaviour
         Z.Inicial();
         Ñ.Inicial();
 
-       
+        StartCoroutine(SetLayout());
+        //GetTeclasAndSetLayout();
     }
 
+    async Task GetTeclasAndSetLayout()
+    {
+        tecles = GetComponentsInChildren<UI_Tecla>();
+        await Task.Yield();
+        SetLayout((int)guardat.Get(GUARDAT_KEY, 0));
+    }
 
+    IEnumerator SetLayout()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        layout = (Layout)(int)guardat.Get(GUARDAT_KEY, 0);
+        Actualitzar();
+    }
 
     public void SetLayout(int tipus)
     {
@@ -301,7 +317,8 @@ public class UI_TeclatLayout : MonoBehaviour
                 }
                 break;
 
-
         }
+
+        guardat.SetLocal(GUARDAT_KEY, (int)layout);
     }
 }
