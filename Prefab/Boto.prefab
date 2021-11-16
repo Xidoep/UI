@@ -264,7 +264,9 @@ MonoBehaviour:
     shader: []
     blendShape: []
     esdeveniment: []
-    so: []
+    so:
+    - play: 0.1
+      so: {fileID: 11400000, guid: 0f5c5cba8ac437443a232771586d3390, type: 2}
 --- !u!1 &7957026878644789863
 GameObject:
   m_ObjectHideFlags: 0
