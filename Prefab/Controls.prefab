@@ -4747,6 +4747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411433648421}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846411177876322}
   texte:
@@ -5328,6 +5329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846409571640938}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410400020898}
   texte:
@@ -5582,7 +5584,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -20, y: -20}
+  m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6529846409696776531
 CanvasRenderer:
@@ -5639,7 +5641,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.8
+  m_fontSize: 27.45
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6575,6 +6577,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410755149899}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410584323816}
   texte:
@@ -8186,6 +8189,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846409573489028}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846411294153977}
   texte:
@@ -8433,6 +8437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410249590141}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846411335897840}
   texte:
@@ -11043,6 +11048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411366900400}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410423402863}
   texte:
@@ -13969,6 +13975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411585381853}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410534044793}
   texte:
@@ -14329,6 +14336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411307463477}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410907690187}
   texte:
@@ -17362,6 +17370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410091176977}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846411546140214}
   texte:
@@ -17551,6 +17560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410655381915}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410277941218}
   texte:
@@ -19462,6 +19472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410294235994}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846411298596664}
   texte:
@@ -23593,6 +23604,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411503237542}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410930597507}
   texte:
@@ -24364,6 +24376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411057103868}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846409727922208}
   texte:
@@ -30399,6 +30412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410528073740}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846409764464461}
   texte:
@@ -30512,6 +30526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410651844087}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410706629667}
   texte:
@@ -38553,6 +38568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411217438014}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410038521798}
   texte:
@@ -39119,6 +39135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410928562195}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846411526946549}
   texte:
@@ -39366,6 +39383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411695125707}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846411349723741}
   texte:
@@ -40180,6 +40198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411077891666}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846411045775407}
   texte:
@@ -40665,6 +40684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410627241682}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846411552580328}
   texte:
@@ -41839,6 +41859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410676646021}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846409775669665}
   texte:
@@ -42282,6 +42303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411199210354}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846411368877067}
   texte:
@@ -45130,6 +45152,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410865836413}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846409789475824}
   texte:
@@ -46655,6 +46678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410046781326}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410597317159}
   texte:
@@ -47053,6 +47077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846411533513847}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846410560429058}
   texte:
@@ -47616,6 +47641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846409929799180}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846409608335213}
   texte:
@@ -47730,6 +47756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   binding: {fileID: 6529846410602483503}
+  bindingsComposats: []
   fondo: {fileID: 0}
   etiqueta: {fileID: 6529846409626653936}
   texte:
@@ -49112,6 +49139,18 @@ MonoBehaviour:
     iniciDinamic: 0
     inici: {x: 0, y: 0, z: 0}
     final: {x: 450, y: 0, z: 0}
+--- !u!114 &1316336343260735628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7972710365201093029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83f2a346d3d54940b12abdd2c11b9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &7972850116417763914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49129,18 +49168,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 30d380f56601e1d48a7c9bcfd3b84931, type: 2}
   - {fileID: 11400000, guid: 22f6595b31d9b4640bac0ebdf77c8544, type: 2}
   - {fileID: 11400000, guid: 66199f0bfeec1654392cb6e927f589f1, type: 2}
---- !u!114 &1316336343260735628
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7972710365201093029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a83f2a346d3d54940b12abdd2c11b9b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &8022005433635907350
 GameObject:
   m_ObjectHideFlags: 0
