@@ -9,10 +9,10 @@ using UnityEngine.Audio;
 
 public class UI_ValorInicial_Mixers : UI_ValorInicial
 {
-    public AudioMixerGroup audioMixerGroup;
-    public UnityEvent<float> passar;
+    [SerializeField] AudioMixerGroup audioMixerGroup;
+    [SerializeField] UnityEvent<float> passar;
 
-    public bool boolitzar;
+    [SerializeField] bool boolitzar;
 
     [ContextMenu("Provar")]
     public override void Agafar()
