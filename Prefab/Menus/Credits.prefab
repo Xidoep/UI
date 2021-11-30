@@ -227,43 +227,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5038b50a8174e554691de6b6bd01569c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enEnable: 0
   transicio: 0
   temps: 0.25
   transformacions:
-  - transformacio:
-    - tipus: 3
-      corba:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 2
-          outSlope: 2
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 0
-      iniciDinamic: 0
-      inici: {x: 0, y: 80, z: 0}
-      final: {x: 0, y: 0, z: 0}
-    color: []
-    shader: []
-    blendShape: []
-    esdeveniment: []
-    so: []
+  - {fileID: 0}
 --- !u!1 &9197360651999148080
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,26 +291,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc060dd0798ce848b98677644d4d0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reconeixement: {fileID: 11400000, guid: d435628161b5073428f2622f9c70b669, type: 2}
   binding: {fileID: 9197360653621370056}
   fondo: {fileID: 0}
-  etiqueta: {fileID: 9197360652148054157}
-  texte:
-    m_TableReference:
-      m_TableCollectionName: GUID:c57b1a19b115908409fbf8060f51e954
-    m_TableEntryReference:
-      m_KeyId: 1799837155250176
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
-  fonts:
-    m_TableReference:
-      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
-    m_TableEntryReference:
-      m_KeyId: 18577281024
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
-  reconeixement: {fileID: 11400000, guid: d435628161b5073428f2622f9c70b669, type: 2}
   inputBinding: {fileID: 7308534164389280476, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
 --- !u!1 &9197360652054183327
 GameObject:
@@ -1060,43 +1011,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5038b50a8174e554691de6b6bd01569c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enEnable: 0
   transicio: 0
   temps: 0.25
   transformacions:
-  - transformacio:
-    - tipus: 3
-      corba:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 2
-          outSlope: 2
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 0
-      iniciDinamic: 0
-      inici: {x: 0, y: -80, z: 0}
-      final: {x: 0, y: 0, z: 0}
-    color: []
-    shader: []
-    blendShape: []
-    esdeveniment: []
-    so: []
+  - {fileID: 0}
 --- !u!1 &9197360652923087384
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,26 +1075,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc060dd0798ce848b98677644d4d0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reconeixement: {fileID: 11400000, guid: d435628161b5073428f2622f9c70b669, type: 2}
   binding: {fileID: 9197360652682529093}
   fondo: {fileID: 0}
-  etiqueta: {fileID: 9197360653293908989}
-  texte:
-    m_TableReference:
-      m_TableCollectionName: GUID:c57b1a19b115908409fbf8060f51e954
-    m_TableEntryReference:
-      m_KeyId: 243915337420800
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
-  fonts:
-    m_TableReference:
-      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
-    m_TableEntryReference:
-      m_KeyId: 18577281024
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
-  reconeixement: {fileID: 11400000, guid: d435628161b5073428f2622f9c70b669, type: 2}
   inputBinding: {fileID: -3348152582035144007, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
 --- !u!1 &9197360653289083039
 GameObject:
@@ -1189,6 +1091,7 @@ GameObject:
   - component: {fileID: 9197360653289083037}
   - component: {fileID: 9197360653289083036}
   - component: {fileID: 8403392511695762894}
+  - component: {fileID: 8237172159138864426}
   m_Layer: 5
   m_Name: Credits
   m_TagString: Untagged
@@ -1329,6 +1232,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8237172159138864426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9197360653289083039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efbfcd642e2b09946abd8e75bc23cf0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9197360653293908989
 GameObject:
   m_ObjectHideFlags: 0
@@ -1522,26 +1437,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fc060dd0798ce848b98677644d4d0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reconeixement: {fileID: 11400000, guid: d435628161b5073428f2622f9c70b669, type: 2}
   binding: {fileID: 9197360652054183327}
   fondo: {fileID: 0}
-  etiqueta: {fileID: 9197360652381836633}
-  texte:
-    m_TableReference:
-      m_TableCollectionName: GUID:c57b1a19b115908409fbf8060f51e954
-    m_TableEntryReference:
-      m_KeyId: 243915337420800
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
-  fonts:
-    m_TableReference:
-      m_TableCollectionName: GUID:cd0862dd07c039c4cb8b6060b78e11b0
-    m_TableEntryReference:
-      m_KeyId: 18577281024
-      m_Key: 
-    m_FallbackState: 0
-    m_WaitForCompletion: 1
-  reconeixement: {fileID: 11400000, guid: d435628161b5073428f2622f9c70b669, type: 2}
   inputBinding: {fileID: -3348152582035144007, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
 --- !u!1 &9197360653621370056
 GameObject:
@@ -1667,58 +1565,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5038b50a8174e554691de6b6bd01569c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enEnable: 0
   transicio: 0
   temps: 0.5
   transformacions:
-  - transformacio:
-    - tipus: 2
-      corba:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 1.528401
-          outSlope: 1.528401
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 0.712974
-          value: 1.0897102
-          inSlope: -0.11642157
-          outSlope: -0.11642157
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.31771863
-        - serializedVersion: 3
-          time: 0.900159
-          value: 0.9741818
-          inSlope: -0.043044664
-          outSlope: -0.043044664
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.57791626
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.44113
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 0
-      iniciDinamic: 0
-      inici: {x: 0, y: 0, z: 0}
-      final: {x: 1, y: 1, z: 1}
-    color: []
-    shader: []
-    blendShape: []
-    esdeveniment: []
-    so: []
+  - {fileID: 0}

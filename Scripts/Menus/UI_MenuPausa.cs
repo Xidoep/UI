@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class UI_MenuPausa : MonoBehaviour
 {
+    [SerializeField] UI_Menu menu;
     public System.Action hide;
     public System.Action credits;
     public System.Action controls;
     public System.Action configuracio;
     private void OnEnable()
     {
-        var menu = FindObjectOfType<UI_Menu>();
         hide = menu.MenuPausaHide;
         credits = menu.CreditsShow;
         controls = menu.ControlsShow;

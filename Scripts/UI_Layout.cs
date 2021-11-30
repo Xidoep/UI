@@ -9,14 +9,14 @@ public class UI_Layout : MonoBehaviour
     [SerializeField] Selectable mainButton;
     [SerializeField] Selectable selecteOnShown;
 
-    [SerializeField] AnimacioPerCodi_Transformacio[] animationsShow;
+    [SerializeField] AnimacioPerCodi_Esdeveniment[] animationsShow;
     [SerializeField] Utils_DisableTempsAnimacio[] animaionsHide;
     bool shown;
 
     private void OnEnable()
     {
-        if (animationsShow == null) animationsShow = new AnimacioPerCodi_Transformacio[0];
-        if (animationsShow.Length == 0) animationsShow = GetComponentsInChildren<AnimacioPerCodi_Transformacio>();
+        if (animationsShow == null) animationsShow = new AnimacioPerCodi_Esdeveniment[0];
+        if (animationsShow.Length == 0) animationsShow = GetComponentsInChildren<AnimacioPerCodi_Esdeveniment>();
 
         if (animaionsHide == null) animaionsHide = new Utils_DisableTempsAnimacio[0];
         if (animaionsHide.Length == 0) animaionsHide = GetComponentsInChildren<Utils_DisableTempsAnimacio>();

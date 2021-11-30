@@ -5,23 +5,55 @@ using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using XS_Utils;
 
-public class UI_Menu : MonoBehaviour
+[CreateAssetMenu(menuName = "Xido Studio/Menu", fileName = "Menu")]
+public class UI_Menu : ScriptableObject
 {
     const string GAME_PLAY = "GamePlay";
     const string UI = "UI";
 
-    [SerializeField] PlayerInput playerInput;
     [SerializeField] Guardat guardat;
-    //[SerializeField] AnimacioPerCodi animacioBlur;
-    //[SerializeField] AnimacioPerCodi_All blur;
-    [SerializeField] AnimacioPerCodi_Shader blurShader;
-    [SerializeField] GameObject submenuInicial;
+    [SerializeField] GameObject prefab_blurShader;
 
-    WaitForSeconds waitForSeconds;
-
+    PlayerInput playerInput;
+    AnimacioPerCodi blurShader;
     Coroutine amagarBlur;
 
+    bool mostrat = false;
+
     private void OnEnable()
+    {
+        mostrat = false;
+    }
+
+    public void Mostrar()
+    {
+        if (mostrat)
+            return;
+
+        mostrat = true;
+
+        if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>(true);
+        if (guardat) guardat.Carregar();
+        if (playerInput) playerInput.SwitchCurrentActionMap(UI);
+
+        if (blurShader == null) blurShader = Instantiate(prefab_blurShader, Camera.main.transform).GetComponent<AnimacioPerCodi>();
+        if (blurShader)
+        {
+            if (amagarBlur != null)
+            {
+                //StopCoroutine(amagarBlur);
+                amagarBlur = null;
+            }
+            blurShader.gameObject.SetActive(true);
+            //blurShader.Play(0);
+        }
+
+        MenuPausaShow();
+        Time.timeScale = 0;
+    }
+
+
+    /*private void OnEnable()
     {
         if (playerInput == null) FindObjectOfType<PlayerInput>(true);
 
@@ -39,7 +71,6 @@ public class UI_Menu : MonoBehaviour
             blurShader.Play(0);
         }
 
-        //if (submenuInicial) submenuInicial.SetActive(true);
         MenuPausaShow();
         Time.timeScale = 0;
     }
@@ -57,7 +88,7 @@ public class UI_Menu : MonoBehaviour
         }
 
         Time.timeScale = 1;
-    }
+    }*/
 
     public void Suport()
     {
@@ -76,8 +107,22 @@ public class UI_Menu : MonoBehaviour
     }
     public void MenuPausaHide()
     {
+        if (!mostrat)
+            return;
+
+        mostrat = false;
+
+        if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>(true);
+        if (playerInput) playerInput.SwitchCurrentActionMap(GAME_PLAY);
+        if (guardat) guardat.Guardar();
+        if (blurShader)
+        {
+            //blurShader.Play(1);
+            amagarBlur = blurShader.gameObject.SetActive(false, 0.26f);
+        }
+
         SceneManager.UnloadSceneAsync("MenuPausa");
-        this.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void CreditsShow()

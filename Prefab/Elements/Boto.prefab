@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7957026878585017216}
   - component: {fileID: 7957026878585017219}
   - component: {fileID: 7957026878585017217}
-  - component: {fileID: 144237872392037450}
+  - component: {fileID: 6938333896417303986}
   m_Layer: 5
   m_Name: Boto
   m_TagString: Untagged
@@ -122,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 144237872392037450}
-        m_TargetAssemblyTypeName: AnimacioPerCodi_All, Assembly-CSharp
+      - m_Target: {fileID: 6938333896417303986}
+        m_TargetAssemblyTypeName: AnimacioPerCodi_Base, Assembly-CSharp
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &144237872392037450
+--- !u!114 &6938333896417303986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,131 +143,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7957026878585017229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5038b50a8174e554691de6b6bd01569c, type: 3}
+  m_Script: {fileID: 11500000, guid: cc9828c6701dab8439e41718c5e1f81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enEnable: 0
   transicio: 0
-  temps: 0.5
+  temps: 0.4
   transformacions:
-  - transformacio:
-    - tipus: 2
-      corba:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 23.009434
-          outSlope: 23.009434
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0.030750306
-        - serializedVersion: 3
-          time: 0.20369263
-          value: 0.66981125
-          inSlope: -8.417597
-          outSlope: -8.417597
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.026877154
-        - serializedVersion: 3
-          time: 0.6969472
-          value: -0.0017710179
-          inSlope: 1.1348292
-          outSlope: 1.1348292
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.16606994
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0.0058439258
-          outSlope: 0.0058439258
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 0
-      iniciDinamic: 0
-      inici: {x: 1, y: 1, z: 1}
-      final: {x: 2, y: 2, z: 2}
-    - tipus: 1
-      corba:
-        serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 0
-          inSlope: 23.009434
-          outSlope: 23.009434
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0.030750306
-        - serializedVersion: 3
-          time: 0.26020417
-          value: -0.16122441
-          inSlope: -5.8142977
-          outSlope: -5.8142977
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.111575305
-          outWeight: 0.026877154
-        - serializedVersion: 3
-          time: 0.62603945
-          value: 0.14298648
-          inSlope: 0.25040683
-          outSlope: 0.25040683
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33573157
-        - serializedVersion: 3
-          time: 0.8013982
-          value: -0.074627
-          inSlope: 0.080857165
-          outSlope: 0.080857165
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.6840517
-        - serializedVersion: 3
-          time: 0.9
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 0
-      iniciDinamic: 0
-      inici: {x: 0, y: 0, z: 0}
-      final: {x: 0, y: 0, z: 10}
-    color: []
-    shader: []
-    blendShape: []
-    esdeveniment: []
-    so:
-    - play: 0.1
-      so: {fileID: 11400000, guid: 0f5c5cba8ac437443a232771586d3390, type: 2}
+  - {fileID: 11400000, guid: 6817ac2d9f8c16542b2e0e35ede9174b, type: 2}
+  - {fileID: 11400000, guid: 7d219ca88bb40a74eb75007321fb0d71, type: 2}
 --- !u!1 &7957026878644789863
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +246,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
+  m_fontSize: 36
   m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 1

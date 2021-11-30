@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class UI_Controls : MonoBehaviour
 {
-    public System.Action hide;
+    [SerializeField] UI_Menu menu;
+    System.Action hide;
     private void OnEnable()
     {
-        hide = FindObjectOfType<UI_Menu>().ControlsHide;
+        hide = menu.ControlsHide;
     }
     public void Hide()
     {

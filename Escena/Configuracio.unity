@@ -846,49 +846,18 @@ MonoBehaviour:
   transicio: 0
   temps: 0.5
   transformacions:
-  - transformacio:
-    - tipus: 0
-      corba:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-      iniciDinamic: 0
-      inici: {x: 0, y: 0, z: 0}
-      final: {x: 0, y: 0, z: 0}
-    - tipus: 0
-      corba:
-        serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 0
-        m_PostInfinity: 0
-        m_RotationOrder: 0
-      iniciDinamic: 0
-      inici: {x: 0, y: 0, z: 0}
-      final: {x: 0, y: 0, z: 0}
-    color: []
-    shader: []
-    blendShape: []
-    esdeveniment: []
-    so: []
+  - {fileID: 0}
 --- !u!1 &889541632 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2059770661108897826, guid: d323596f530549c4595b386c5d8a76ea, type: 3}
   m_PrefabInstance: {fileID: 889541628}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &889541633 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2059770661406224938, guid: d323596f530549c4595b386c5d8a76ea, type: 3}
+--- !u!114 &889541634 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3660477083001733678, guid: d323596f530549c4595b386c5d8a76ea, type: 3}
   m_PrefabInstance: {fileID: 889541628}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &889541634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 889541633}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b282164f61304d14caabecbc8f0a4a0a, type: 3}
