@@ -130,46 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1684968905}
     m_Modifications:
-    - target: {fileID: 9197360653289083036, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9197360653289083036, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9197360653289083036, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9197360653289083036, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1388193917}
-    - target: {fileID: 9197360653289083036, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9197360653289083036, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 9197360653289083036, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Hide
-      objectReference: {fileID: 0}
-    - target: {fileID: 9197360653289083036, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Select
-      objectReference: {fileID: 0}
-    - target: {fileID: 9197360653289083036, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UI_Credits, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 9197360653289083036, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.UI.Selectable, UnityEngine.UI
-      objectReference: {fileID: 0}
     - target: {fileID: 9197360653289083038, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -258,23 +218,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Credits_Prova
       objectReference: {fileID: 0}
-    - target: {fileID: 9197360653289083039, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
---- !u!114 &1388193917 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8237172159138864426, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
-  m_PrefabInstance: {fileID: 1388193915}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efbfcd642e2b09946abd8e75bc23cf0e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1388193918 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9197360653289083038, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
@@ -371,6 +316,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1388193918}
   m_Father: {fileID: 0}

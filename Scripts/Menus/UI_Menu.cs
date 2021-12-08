@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,11 @@ using XS_Utils;
 [CreateAssetMenu(menuName = "Xido Studio/Menu", fileName = "Menu")]
 public class UI_Menu : ScriptableObject
 {
+    const string MENU_PAUSA = "MenuPausa";
+    const string MENU_CONFIGURACIO = "Configuracio";
+    const string MENU_CONTROLS = "Controls";
+    const string MENU_CREDITS = "Credits";
+
     const string GAME_PLAY = "GamePlay";
     const string UI = "UI";
 
@@ -100,10 +106,14 @@ public class UI_Menu : ScriptableObject
     }
 
 
+    bool carregantMenu;
+    Action carregar;
 
     public void MenuPausaShow()
     {
-        SceneManager.LoadSceneAsync("MenuPausa", LoadSceneMode.Additive);
+        SceneManager.LoadSceneAsync(MENU_PAUSA, LoadSceneMode.Additive);
+        carregar = null;
+        carregantMenu = false;
     }
     public void MenuPausaHide()
     {
@@ -121,40 +131,40 @@ public class UI_Menu : ScriptableObject
             amagarBlur = blurShader.gameObject.SetActive(false, 0.26f);
         }
 
-        SceneManager.UnloadSceneAsync("MenuPausa");
+        SceneManager.UnloadSceneAsync(MENU_PAUSA);
         Time.timeScale = 1;
     }
 
     public void CreditsShow()
-    {
-        SceneManager.LoadSceneAsync("Credits", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("MenuPausa");
+    { 
+        SceneManager.LoadSceneAsync(MENU_CREDITS, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(MENU_PAUSA);
     }
     public void CreditsHide()
     {
-        SceneManager.UnloadSceneAsync("Credits");
+        SceneManager.UnloadSceneAsync(MENU_CREDITS);
         MenuPausaShow();
     }
 
     public void ControlsShow()
     {
-        SceneManager.LoadSceneAsync("Controls", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("MenuPausa");
+        SceneManager.LoadSceneAsync(MENU_CONTROLS, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(MENU_PAUSA);
     }
     public void ControlsHide()
     {
-        SceneManager.UnloadSceneAsync("Controls");
+        SceneManager.UnloadSceneAsync(MENU_CONTROLS);
         MenuPausaShow();
     }
 
     public void ConfiguracioShow()
     {
-        SceneManager.LoadSceneAsync("Configuracio", LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync("MenuPausa");
+        SceneManager.LoadSceneAsync(MENU_CONFIGURACIO, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(MENU_PAUSA);
     }
     public void ConfiguracioHide()
     {
-        SceneManager.UnloadSceneAsync("Configuracio");
+        SceneManager.UnloadSceneAsync(MENU_CONFIGURACIO);
         MenuPausaShow();
     }
 
