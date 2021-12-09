@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
 public class UI_Layout : MonoBehaviour
 {
     [SerializeField] UI_TeclatLayout keyboardLayout;
     [SerializeField] Selectable mainButton;
     [SerializeField] Selectable selecteOnShown;
 
-    [SerializeField] AnimacioPerCodi_Esdeveniment[] animationsShow;
+    [SerializeField] AnimacioPerCodi_Enable[] animationsShow;
     [SerializeField] Utils_DisableTempsAnimacio[] animaionsHide;
     bool shown;
 
     private void OnEnable()
     {
-        if (animationsShow == null) animationsShow = new AnimacioPerCodi_Esdeveniment[0];
-        if (animationsShow.Length == 0) animationsShow = GetComponentsInChildren<AnimacioPerCodi_Esdeveniment>();
+        if (animationsShow == null) animationsShow = new AnimacioPerCodi_Enable[0];
+        if (animationsShow.Length == 0) animationsShow = GetComponentsInChildren<AnimacioPerCodi_Enable>(true);
 
         if (animaionsHide == null) animaionsHide = new Utils_DisableTempsAnimacio[0];
-        if (animaionsHide.Length == 0) animaionsHide = GetComponentsInChildren<Utils_DisableTempsAnimacio>();
+        if (animaionsHide.Length == 0) animaionsHide = GetComponentsInChildren<Utils_DisableTempsAnimacio>(true);
     }
 
     public void OnClick()
@@ -30,7 +31,6 @@ public class UI_Layout : MonoBehaviour
             for (int i = 0; i < animationsShow.Length; i++)
             {
                 animationsShow[i].gameObject.SetActive(true);
-                animationsShow[i].Play();
             }
             selecteOnShown.Select();
         }
