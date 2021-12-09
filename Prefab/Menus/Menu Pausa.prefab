@@ -65,7 +65,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864b9375f238ca4c9abc06809e8e7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escoltador: {fileID: -3348152582035144007, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+  escoltadors:
+  - {fileID: 2567360656977007341, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+  - {fileID: 6189062297148416064, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:
@@ -481,7 +483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9828c6701dab8439e41718c5e1f81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.5
   transformacions:
@@ -640,7 +641,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9828c6701dab8439e41718c5e1f81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.25
   transformacions:
@@ -713,7 +713,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Movement
+  m_text: Movimiento
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1001,7 +1001,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pause menu
+  m_text: "Men\xFA de pausa"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1213,7 +1213,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Select
+  m_text: Seleccionar
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1525,7 +1525,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9828c6701dab8439e41718c5e1f81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.25
   transformacions:
@@ -1880,7 +1879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_text
-      value: Settings
+      value: "Configuraci\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_fontAsset
@@ -1918,9 +1917,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1110c8711db5745a7e676d494a3341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.25
+  enEnable: 0
   transformacions:
   - play: 1
     esdeveniment:
@@ -2139,7 +2138,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_text
-      value: Main menu
+      value: "Men\xFA principal"
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_fontSize
@@ -2357,7 +2356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_text
-      value: Controls
+      value: Controles
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_fontSize
@@ -2399,9 +2398,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1110c8711db5745a7e676d494a3341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.25
+  enEnable: 0
   transformacions:
   - play: 1
     esdeveniment:
@@ -2607,6 +2606,10 @@ PrefabInstance:
       value: Continue
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
+      propertyPath: m_text
+      value: Continuar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2658,23 +2661,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a83f2a346d3d54940b12abdd2c11b9b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4989604315619591676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3311667811059237881}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c98d747d87724d4e90d3d7bc06e590b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buscats:
-  - {fileID: 11400000, guid: 247c2a3ff8d60294889236ec04f82b43, type: 2}
-  - {fileID: 11400000, guid: 30d380f56601e1d48a7c9bcfd3b84931, type: 2}
-  - {fileID: 11400000, guid: 22f6595b31d9b4640bac0ebdf77c8544, type: 2}
-  - {fileID: 11400000, guid: 66199f0bfeec1654392cb6e927f589f1, type: 2}
 --- !u!114 &4630645043619695772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2687,9 +2673,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1110c8711db5745a7e676d494a3341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.25
+  enEnable: 0
   transformacions:
   - play: 1
     esdeveniment:
@@ -2707,6 +2693,23 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &4989604315619591676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3311667811059237881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c98d747d87724d4e90d3d7bc06e590b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buscats:
+  - {fileID: 11400000, guid: 247c2a3ff8d60294889236ec04f82b43, type: 2}
+  - {fileID: 11400000, guid: 30d380f56601e1d48a7c9bcfd3b84931, type: 2}
+  - {fileID: 11400000, guid: 22f6595b31d9b4640bac0ebdf77c8544, type: 2}
+  - {fileID: 11400000, guid: 66199f0bfeec1654392cb6e927f589f1, type: 2}
 --- !u!1001 &5826839264908040841
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3460,7 +3463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_text
-      value: Credits
+      value: "Cr\xE9ditos"
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_fontSize
@@ -3507,9 +3510,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad1110c8711db5745a7e676d494a3341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.25
+  enEnable: 0
   transformacions:
   - play: 1
     esdeveniment:

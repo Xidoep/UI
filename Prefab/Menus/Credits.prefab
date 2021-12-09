@@ -229,7 +229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9828c6701dab8439e41718c5e1f81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.25
   transformacions:
@@ -1024,7 +1023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9828c6701dab8439e41718c5e1f81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.25
   transformacions:
@@ -1155,7 +1153,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864b9375f238ca4c9abc06809e8e7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escoltador: {fileID: -3348152582035144007, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+  escoltadors:
+  - {fileID: 2567360656977007341, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+  - {fileID: 6189062297148416064, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:
@@ -1547,7 +1547,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc9828c6701dab8439e41718c5e1f81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.5
   transformacions:
