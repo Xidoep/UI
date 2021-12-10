@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 public class UI_Layout : MonoBehaviour
 {
+    [SerializeField] UI_Bindings uiBindings;
     [SerializeField] UI_TeclatLayout keyboardLayout;
     [SerializeField] Selectable mainButton;
-    [SerializeField] Selectable selecteOnShown;
 
-    [SerializeField] AnimacioPerCodi_Enable[] animationsShow;
-    [SerializeField] Utils_DisableTempsAnimacio[] animaionsHide;
+    AnimacioPerCodi_Enable[] animationsShow;
+    Utils_DisableTempsAnimacio[] animaionsHide;
     bool shown;
 
     private void OnEnable()
@@ -32,7 +32,6 @@ public class UI_Layout : MonoBehaviour
             {
                 animationsShow[i].gameObject.SetActive(true);
             }
-            selecteOnShown.Select();
         }
         else
         {
@@ -63,5 +62,6 @@ public class UI_Layout : MonoBehaviour
             animaionsHide[i].Disable();
         }
         mainButton.Select();
+        uiBindings.MostrarBindings();
     }
 }

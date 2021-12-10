@@ -569,7 +569,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bef424c961f893040baf2514899a2367, type: 2}
+  - {fileID: 2100000, guid: 91d948041afb514489848a2a9147a0bf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1191,7 +1191,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864b9375f238ca4c9abc06809e8e7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escoltador: {fileID: -3701725696689857482, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+  escoltadors:
+  - {fileID: -3701725696689857482, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+  - {fileID: -7163977983525893310, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:
@@ -1406,18 +1408,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e34ef11a5361e3b4f93451526398b24b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
-  transicio: 0
-  temps: 1
-  pingPong: 0
-  invertit: 0
-  time: 0
-  finalitzarAlFinalAnimacio: 0
-  finalitzat: 0
-  looping: 0
-  index: 0
-  transformacions:
-  - {fileID: 0}
 --- !u!1 &1460727444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1648,7 +1638,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864b9375f238ca4c9abc06809e8e7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escoltador: {fileID: 7482279818944537419, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+  escoltadors: []
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:
@@ -1691,7 +1681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864b9375f238ca4c9abc06809e8e7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escoltador: {fileID: -4184115557672159984, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
+  escoltadors: []
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:
@@ -1719,7 +1709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4864b9375f238ca4c9abc06809e8e7cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  escoltador: {fileID: -357130075554192267, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
+  escoltadors: []
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:

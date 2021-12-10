@@ -5,6 +5,7 @@ using XS_Utils;
 
 public class UI_Bindings : MonoBehaviour
 {
+    [SerializeField] Settings settings;
     [SerializeField] Transform bindingsE, bindingsD;
     [SerializeField] UI_Binding[] bindings;
     List<IBindable> bindables;
@@ -90,7 +91,7 @@ public class UI_Bindings : MonoBehaviour
             {
                 while (index < trobats.Count)
                 {
-                    if (trobats[index].Bindable.Transform.position.y > trobats[mesApunt].Bindable.Transform.position.y)
+                    if (trobats[index].Bindable.position.y > trobats[mesApunt].Bindable.position.y)
                         mesApunt = index;
                     index++;
                 }
@@ -101,7 +102,7 @@ public class UI_Bindings : MonoBehaviour
         for (int i = 0; i < ordenats.Count; i++)
         {
             ordenats[i].transform.SetParent(ordenats[i].Dreta ? bindingsD : bindingsE);
-            ordenats[i].Actualitzar();
+            ordenats[i].Actualitzar(settings);
         }
 
     }
@@ -112,7 +113,7 @@ public class UI_Bindings : MonoBehaviour
         trobats.Add(ui);
 
         binding.Activar(true);
-        ui.Bindable = binding;
+        ui.Bindable = binding.Transform;
         ui.Dreta = (binding.Transform.anchoredPosition.x > 0);
         
 

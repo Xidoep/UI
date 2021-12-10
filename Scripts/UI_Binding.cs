@@ -19,13 +19,13 @@ public class UI_Binding : MonoBehaviour
     [SerializeField] Sprite degradatDreta;
     [SerializeField] Sprite degradatEsquerra;
 
-    IBindable bindable;
+    [SerializeField] RectTransform bindable;
     bool dreta;
 
     GameObject liniaInici;
     GameObject liniaFinal;
 
-    public IBindable Bindable
+    public RectTransform Bindable
     {
         set => bindable = value;
         get => bindable;
@@ -36,14 +36,6 @@ public class UI_Binding : MonoBehaviour
         get => dreta;
     }
 
-
-    public void SetBinding(IBindable bindable) 
-    {
-        this.bindable = bindable;
-
-        Actualitzar();
-        StartCoroutine(Linia());
-    }
     public Input_IconePerBinding IconePerBinding => iconePerBinding;
 
 
@@ -52,9 +44,9 @@ public class UI_Binding : MonoBehaviour
         if (iconePerBinding == null) iconePerBinding = GetComponent<Input_IconePerBinding>();
     }
 
-    public void Actualitzar()
+    public void Actualitzar(Settings settings)
     {
-        dreta = (bindable.Transform.anchoredPosition.x > 0);
+        dreta = (bindable.anchoredPosition.x > 0);
 
         degradat.sprite = dreta ? degradatDreta : degradatEsquerra;
 
@@ -75,23 +67,23 @@ public class UI_Binding : MonoBehaviour
 
         iconePerBinding.MostrarIcone();
 
-        StartCoroutine(Linia());
+        StartCoroutine(Linia(settings));
     }
 
 
     [ContextMenu("Linia")]
-    IEnumerator Linia()
+    IEnumerator Linia(Settings settings)
     {
         yield return new WaitForSecondsRealtime(0.1f);
 
         if (liniaInici == null) liniaInici = new GameObject("liniaInici");
         if (liniaFinal == null) liniaFinal = new GameObject("liniaFinal");
         liniaInici.transform.position = final.transform.position;
-        liniaFinal.transform.position = bindable.Transform.position;
+        liniaFinal.transform.position = bindable.position;
 
         linia.transform.position = liniaInici.transform.position;
         linia.transform.rotation = Quaternion.LookRotation(liniaInici.transform.position - liniaFinal.transform.position);
-        linia.transform.localScale = new Vector3(1, 1, (liniaInici.transform.position - liniaFinal.transform.position).magnitude);
+        linia.transform.localScale = new Vector3(1, 1, (liniaInici.transform.position - liniaFinal.transform.position).magnitude / settings.UISize_Get());
 
         Destroy(liniaInici);
         Destroy(liniaFinal);

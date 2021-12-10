@@ -77,28 +77,30 @@ public class UI_TeclatLayout : MonoBehaviour
         Ñ.Inicial();
 
         StartCoroutine(SetLayout());
-        //GetTeclasAndSetLayout();
     }
 
-    async Task GetTeclasAndSetLayout()
-    {
-        tecles = GetComponentsInChildren<UI_Tecla>();
-        await Task.Yield();
-        SetLayout((int)guardat.Get(GUARDAT_KEY, 0));
-    }
+    
 
     IEnumerator SetLayout()
     {
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.3f);
         layout = (Layout)(int)guardat.Get(GUARDAT_KEY, 0);
         Actualitzar();
+        
     }
-
     public void SetLayout(int tipus)
     {
         layout = (Layout)tipus;
         Actualitzar();
+        guardat.SetLocal(GUARDAT_KEY, (int)layout);
     }
+    private void OnDisable()
+    {
+        layout = Layout.QWERTY;
+        Actualitzar();
+    }
+
+
 
     [ContextMenu("Prova")]
     void Provar()
@@ -319,6 +321,6 @@ public class UI_TeclatLayout : MonoBehaviour
 
         }
 
-        guardat.SetLocal(GUARDAT_KEY, (int)layout);
+        
     }
 }
