@@ -47261,7 +47261,7 @@ MonoBehaviour:
     m_LocalVariables:
     - name: 0
       variable:
-        rid: 128412206132363383
+        rid: 1646476029060710878
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -47281,7 +47281,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 128412206132363383
+    - rid: 1646476029060710878
       type: {class: ObjectVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
       data:
         m_Value: {fileID: 1587068903782871749}
@@ -47671,7 +47671,7 @@ MonoBehaviour:
     m_LocalVariables:
     - name: 0
       variable:
-        rid: 128412206132363382
+        rid: 1646476029060710858
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -47691,7 +47691,7 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 128412206132363382
+    - rid: 1646476029060710858
       type: {class: ObjectVariable, ns: UnityEngine.Localization.SmartFormat.PersistentVariables, asm: Unity.Localization}
       data:
         m_Value: {fileID: 1870677170006001271}
@@ -48544,7 +48544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2691798462480349813, guid: 7f46006921898874c8308f44bd775d12, type: 3}
       propertyPath: m_text
-      value: .
+      value: Movement
       objectReference: {fileID: 0}
     - target: {fileID: 2691798462480349813, guid: 7f46006921898874c8308f44bd775d12, type: 3}
       propertyPath: m_fontAsset
@@ -49140,7 +49140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2691798462480349813, guid: 7f46006921898874c8308f44bd775d12, type: 3}
       propertyPath: m_text
-      value: .
+      value: Movement
       objectReference: {fileID: 0}
     - target: {fileID: 2691798462480349813, guid: 7f46006921898874c8308f44bd775d12, type: 3}
       propertyPath: m_fontAsset
@@ -50024,6 +50024,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2691798462480349813, guid: 7f46006921898874c8308f44bd775d12, type: 3}
+      propertyPath: m_text
+      value: Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691798462480349813, guid: 7f46006921898874c8308f44bd775d12, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -50147,6 +50151,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6529846410455687426}
     m_Modifications:
+    - target: {fileID: 875882461581839054, guid: d7b0d5552fdd34249b233f2bd2648925, type: 3}
+      propertyPath: inputBinding
+      value: 
+      objectReference: {fileID: -3132159674860294276, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
     - target: {fileID: 875882461581839055, guid: d7b0d5552fdd34249b233f2bd2648925, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -50550,6 +50558,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2691798462480349813, guid: 7f46006921898874c8308f44bd775d12, type: 3}
+      propertyPath: m_text
+      value: Movement
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691798462480349813, guid: 7f46006921898874c8308f44bd775d12, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -50692,6 +50704,10 @@ PrefabInstance:
     - target: {fileID: 422074414291832371, guid: 7f46006921898874c8308f44bd775d12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691798462480349813, guid: 7f46006921898874c8308f44bd775d12, type: 3}
+      propertyPath: m_text
+      value: Movement
       objectReference: {fileID: 0}
     - target: {fileID: 2691798462480349813, guid: 7f46006921898874c8308f44bd775d12, type: 3}
       propertyPath: m_fontAsset
