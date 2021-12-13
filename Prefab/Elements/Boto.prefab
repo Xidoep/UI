@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7957026878585017216}
   - component: {fileID: 7957026878585017219}
   - component: {fileID: 7957026878585017217}
-  - component: {fileID: 6938333896417303986}
+  - component: {fileID: 7082436611285757340}
   m_Layer: 5
   m_Name: Boto
   m_TagString: Untagged
@@ -30,6 +30,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7957026878644789860}
   m_Father: {fileID: 0}
@@ -97,7 +98,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
     m_HighlightedColor: {r: 1, g: 1, b: 0.5, a: 1}
@@ -121,20 +122,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7957026878585017219}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6938333896417303986}
-        m_TargetAssemblyTypeName: AnimacioPerCodi_Base, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &6938333896417303986
+      m_Calls: []
+--- !u!114 &7082436611285757340
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,15 +132,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 7957026878585017229}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc9828c6701dab8439e41718c5e1f81c, type: 3}
+  m_Script: {fileID: 11500000, guid: 726679da1c9708c419d7f3d697c3027e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enEnable: 0
   transicio: 0
   temps: 0.4
-  transformacions:
-  - {fileID: 11400000, guid: 6817ac2d9f8c16542b2e0e35ede9174b, type: 2}
-  - {fileID: 11400000, guid: 7d219ca88bb40a74eb75007321fb0d71, type: 2}
+  onSelect:
+    transicio: 0
+    temps: 0.2
+    transformacions:
+    - {fileID: 11400000, guid: e809c8a65580abd47a893fca02da95ad, type: 2}
+    - {fileID: 11400000, guid: 11f8762fc1b43c2418337b14b40b990d, type: 2}
+  loopSelected:
+    transicio: 3
+    temps: 0.8
+    transformacions:
+    - {fileID: 11400000, guid: 25064dd4bcc04af459655b7d06515a61, type: 2}
+  onDeselect:
+    transicio: 0
+    temps: 0.4
+    transformacions:
+    - {fileID: 11400000, guid: 32981486eeb015e43a3dd212bd87f4b6, type: 2}
+    - {fileID: 11400000, guid: a1ebbdd1da2da9a48a8244bc6d60ffd7, type: 2}
+    - {fileID: 11400000, guid: f23a99e9d81f5664ea53a29ddd633ea0, type: 2}
+  onClick:
+    transicio: 0
+    temps: 0.4
+    transformacions:
+    - {fileID: 11400000, guid: 6817ac2d9f8c16542b2e0e35ede9174b, type: 2}
+    - {fileID: 11400000, guid: 7d219ca88bb40a74eb75007321fb0d71, type: 2}
+    - {fileID: 11400000, guid: 80c3462f635b10f488607f9a27ecfab0, type: 2}
+    - {fileID: 11400000, guid: e3e16ba0cf56f7e45b7c6a18135784a6, type: 2}
 --- !u!1 &7957026878644789863
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,6 +193,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7957026878585017218}
   m_RootOrder: 0
@@ -308,6 +320,7 @@ MonoBehaviour:
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 1
+    m_LocalVariables: []
   m_FormatArguments: []
   m_UpdateString:
     m_PersistentCalls:
@@ -324,6 +337,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!114 &7004371179475596251
 MonoBehaviour:
   m_ObjectHideFlags: 0

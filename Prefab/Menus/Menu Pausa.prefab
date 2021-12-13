@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 3311667811325278345}
   - component: {fileID: 2794525812363992539}
   - component: {fileID: 492643569242370049}
+  - component: {fileID: 5121033969908477566}
+  - component: {fileID: 5246709995150432831}
+  - component: {fileID: 2469670113425774011}
   m_Layer: 5
   m_Name: Menu Pausa
   m_TagString: Untagged
@@ -71,9 +74,9 @@ MonoBehaviour:
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 69f380612ee19ed43b89166a1ab5c464, type: 2}
-        m_TargetAssemblyTypeName: UI_Menu, Assembly-CSharp
-        m_MethodName: MenuPausaHide
+      - m_Target: {fileID: 5246709995150432831}
+        m_TargetAssemblyTypeName: AnimacioPerCodi_Base, Assembly-CSharp
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -83,9 +86,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 938625541881601278}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-        m_MethodName: Select
+      - m_Target: {fileID: 2469670113425774011}
+        m_TargetAssemblyTypeName: AnimacioPerCodi_Base, Assembly-CSharp
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -124,7 +127,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 7106886366303105465}
         m_TargetAssemblyTypeName: AnimacioPerCodi_Base, Assembly-CSharp
-        m_MethodName: Play
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -158,6 +161,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59ce391f6bd75ac4583a8b7a9232aea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5121033969908477566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3311667811325278346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcd3eb595ed7cac46ab8c9d050db3f0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transicio: 0
+  temps: 0.5
+  transformacions:
+  - {fileID: 11400000, guid: 972ad61ce4d71794a9a0b88c990d6fa8, type: 2}
+--- !u!114 &5246709995150432831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3311667811325278346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9828c6701dab8439e41718c5e1f81c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transicio: 0
+  temps: 0.5
+  transformacions:
+  - {fileID: 11400000, guid: b05194266b7d55d458d7830699cba19d, type: 2}
+  - {fileID: 11400000, guid: e03c181eed7078641b901cd67def88b0, type: 2}
+--- !u!114 &2469670113425774011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3311667811325278346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad1110c8711db5745a7e676d494a3341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transicio: 0
+  temps: 0.51
+  enEnable: 0
+  transformacions:
+  - play: 1
+    esdeveniment:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: 69f380612ee19ed43b89166a1ab5c464, type: 2}
+          m_TargetAssemblyTypeName: UI_Menu, Assembly-CSharp
+          m_MethodName: MenuPausaHide
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &3311667811663724795
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +442,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Men\xFA de pausa"
+  m_text: Pause menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 19c5dc1fb63d40c4281cb8589c0eedf0, type: 2}
   m_sharedMaterial: {fileID: 407802829209662782, guid: 19c5dc1fb63d40c4281cb8589c0eedf0, type: 2}
@@ -624,7 +692,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7029051704193808936}
   - component: {fileID: 1435120091713468572}
-  - component: {fileID: 3187772496383607719}
   - component: {fileID: 6075825252123148701}
   m_Layer: 5
   m_Name: Panel
@@ -667,36 +734,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5672741663722503753}
   m_CullTransparentMesh: 1
---- !u!114 &3187772496383607719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5672741663722503753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &6075825252123148701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1010,7 +1047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_text
-      value: "Configuaci\xF3"
+      value: Settings
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_fontAsset
@@ -1269,7 +1306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_text
-      value: "Men\xFA principal"
+      value: Main menu
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_fontSize
@@ -1848,7 +1885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_text
-      value: Continuar
+      value: Continue
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_fontAsset
@@ -2810,7 +2847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_text
-      value: "Cr\xE8dits"
+      value: Credits
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789861, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_fontSize

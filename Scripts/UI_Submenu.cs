@@ -11,6 +11,7 @@ public class UI_Submenu : MonoBehaviour
     bool moving;
 
     [SerializeField] Submenu[] submenus;
+    int actual;
 
     private void OnEnable()
     {
@@ -37,6 +38,7 @@ public class UI_Submenu : MonoBehaviour
 
     public void MostrarSubmenu(int index)
     {
+        actual = index;
         for (int i = 0; i < submenus.Length; i++)
         {
             if (i == index) submenus[i].menu.SetActive(true);
@@ -47,9 +49,29 @@ public class UI_Submenu : MonoBehaviour
         }
     }
 
+    public void Augmentar()
+    {
+        if (actual >= submenus.Length - 1)
+            return;
+
+        actual++;
+        Seleccionar(submenus[actual].boto);
+        MostrarSubmenu(actual);
+    }
+    public void Disminuir()
+    {
+        if (actual <= 0)
+            return;
+
+        actual--;
+        Seleccionar(submenus[actual].boto);
+        MostrarSubmenu(actual);
+    }
+
     [System.Serializable]
     public class Submenu
     {
+        public GameObject boto;
         public GameObject menu;
         public Utils_DisableTempsAnimacio disableTempsAnimacio;
     }

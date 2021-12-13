@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UI_Seleccionar_EnEnable : MonoBehaviour
@@ -16,5 +17,6 @@ public class UI_Seleccionar_EnEnable : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.1f);
         selectable.Select();
+        
     }
 }
