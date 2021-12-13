@@ -15,8 +15,11 @@ public class UI_SeleccionarDesseleccionar : MonoBehaviour
     }
     public void Recuperar()
     {
+        if (!selectable)
+            return;
+
         selectable.Select();
-        selectable = null;
+        //selectable = null;
     }
        
 }

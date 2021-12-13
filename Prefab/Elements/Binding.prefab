@@ -431,19 +431,7 @@ MonoBehaviour:
         m_CallState: 2
   m_RebindStartEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8551377409335646735}
-        m_TargetAssemblyTypeName: UI_SeleccionarDesseleccionar, Assembly-CSharp
-        m_MethodName: DesseleccionarIRecordar
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 5606058065411790726}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_RebindStopEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -653,7 +641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u79FB\u52A8"
+  m_text: Movement
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
