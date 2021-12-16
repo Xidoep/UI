@@ -7,20 +7,12 @@ using UnityEngine.UI;
 public class UI_Tamany : MonoBehaviour
 {
     [SerializeField] Settings settings;
-    //[SerializeField] [Range(0.75f, 1.5f)] float size = 1;
     CanvasScaler canvasScaler;
 
-    /*public void SetSize(float size)
-    {
-        this.size = size;
-        UpdateUI();
-        XS_Utils.Debugar.Log($"Size: {size}");
-    }
-    public float GetSize() => size;
-    */
     void OnEnable()
     {
-        settings.UiSize_AddAndInvokeEvent(UpdateUI);
+        //settings.UiSize_AddAndInvokeEvent(UpdateUI);
+        settings.interfaceSize.Event_InvokeAndAdd(UpdateUI);
     }
     void UpdateUI(float size)
     {
@@ -30,6 +22,7 @@ public class UI_Tamany : MonoBehaviour
     }
     void OnDisable()
     {
-        settings.UiSize_RemoveEvent(UpdateUI);
+        //settings.UiSize_RemoveEvent(UpdateUI);
+        settings.interfaceSize.Event_Remove(UpdateUI);
     }
 }

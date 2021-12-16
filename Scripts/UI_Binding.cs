@@ -83,7 +83,7 @@ public class UI_Binding : MonoBehaviour
 
         linia.transform.position = liniaInici.transform.position;
         linia.transform.rotation = Quaternion.LookRotation(liniaInici.transform.position - liniaFinal.transform.position);
-        linia.transform.localScale = new Vector3(1, 1, (liniaInici.transform.position - liniaFinal.transform.position).magnitude / settings.UISize_Get());
+        linia.transform.localScale = new Vector3(1, 1, (liniaInici.transform.position - liniaFinal.transform.position).magnitude / settings.interfaceSize.Get());
 
         Destroy(liniaInici);
         Destroy(liniaFinal);

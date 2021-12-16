@@ -11,11 +11,13 @@ public class UI_ValorUiSize : MonoBehaviour
 
     private void OnEnable()
     {
-        settings.UiSize_AddAndInvokeEvent(passar.Invoke);
+        //settings.UiSize_AddAndInvokeEvent(passar.Invoke);
+        settings.interfaceSize.Event_InvokeAndAdd(passar.Invoke);
     }
 
     private void OnDisable()
     {
-        settings.UiSize_RemoveEvent(passar.Invoke);
+        //settings.UiSize_RemoveEvent(passar.Invoke);
+        settings.interfaceSize.Event_Remove(passar.Invoke);
     }
 }
