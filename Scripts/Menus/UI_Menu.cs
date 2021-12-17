@@ -19,7 +19,7 @@ public class UI_Menu : ScriptableObject
 
     [SerializeField] Guardat guardat;
     [SerializeField] GameObject prefab_blurShader;
-    [SerializeField] UnityEngine.Object gameScene;
+    [SerializeField] Action onPlay;
 
     PlayerInput playerInput;
     AnimacioPerCodi blurShader;
@@ -113,7 +113,7 @@ public class UI_Menu : ScriptableObject
 
     public void Play()
     {
-        SceneManager.LoadSceneAsync(gameScene.name, LoadSceneMode.Additive);
+        onPlay?.Invoke();
     }
     public void MenuPausaShow()
     {

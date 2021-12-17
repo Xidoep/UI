@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
   prefab_blurShader: {fileID: 4810013428633345956, guid: 08be44701e05c8945aea56adfea89cf3, type: 3}
-  playScene: {fileID: 102900000, guid: 7dfaab327730569468449431b1becc0c, type: 3}
+  gameScene: {fileID: 102900000, guid: 7dfaab327730569468449431b1becc0c, type: 3}
