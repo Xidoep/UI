@@ -20,6 +20,7 @@ public class UI_Menu : ScriptableObject
     [SerializeField] Guardat guardat;
     [SerializeField] GameObject prefab_blurShader;
     [SerializeField] Action onPlay;
+    [SerializeField] InputActionReference[] escoltadors;
 
     PlayerInput playerInput;
     AnimacioPerCodi blurShader;
@@ -30,6 +31,35 @@ public class UI_Menu : ScriptableObject
     private void OnEnable()
     {
         mostrat = false;
+        Debugar.Log("Registrar accions per mostrar el menu");
+        for (int i = 0; i < escoltadors.Length; i++)
+        {
+            escoltadors[i].action.performed += MostrarViaAction;
+        }
+        InputSystem.onDeviceChange += MostrarPerqueNoDevice;
+    }
+
+    private void OnDisable()
+    {
+        Debugar.Log("Desregistrar accions per mostrar el menu");
+        for (int i = 0; i < escoltadors.Length; i++)
+        {
+            escoltadors[i].action.performed -= MostrarViaAction;
+        }
+        InputSystem.onDeviceChange -= MostrarPerqueNoDevice;
+    }
+
+    void MostrarPerqueNoDevice(InputDevice inputDevice, InputDeviceChange change)
+    {
+        if(change == InputDeviceChange.Removed || change == InputDeviceChange.Disconnected || change == InputDeviceChange.Disabled)
+            Mostrar();
+    }
+    void MostrarViaAction(InputAction.CallbackContext context)
+    {
+        if (context.phase != InputActionPhase.Performed)
+            return;
+            
+        Mostrar();
     }
 
     public void Mostrar()
