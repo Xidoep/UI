@@ -51,7 +51,7 @@ public class UI_Menu : ScriptableObject
 
     void MostrarPerqueNoDevice(InputDevice inputDevice, InputDeviceChange change)
     {
-        if(change == InputDeviceChange.Removed || change == InputDeviceChange.Disconnected || change == InputDeviceChange.Disabled)
+        if(change == InputDeviceChange.Removed || change == InputDeviceChange.Disconnected)
             Mostrar();
     }
     void MostrarViaAction(InputAction.CallbackContext context)
