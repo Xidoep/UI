@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using XS_Utils;
@@ -24,7 +25,6 @@ public class UI_Menu : ScriptableObject
 
     [SerializeField] Guardat guardat;
     [SerializeField] GameObject prefab_blurShader;
-    [SerializeField] Action onPlay;
     [SerializeField] InputActionReference[] escoltadors;
     [SerializeField] UI_Submenu pausa;
     [SerializeField] UI_Submenu main;
@@ -38,6 +38,12 @@ public class UI_Menu : ScriptableObject
     bool trobat = false;
 
     public UI_Submenu Previous => previous;
+
+    [SerializeField] UnityEvent onPlay;
+    [SerializeField] UnityEvent onPause;
+    [SerializeField] UnityEvent onResume;
+    [SerializeField] UnityEvent onToMainMenu;
+    [SerializeField] UnityEvent onExitGame;
 
     void OnEnable()
     {
@@ -84,16 +90,19 @@ public class UI_Menu : ScriptableObject
     {
         EnterMenuMode();
         Switch(main);
+        onToMainMenu.Invoke();
     }
     public void Pause()
     {
         EnterMenuMode();
         Switch(pausa);
+        onPause.Invoke();
     }
     public void Resume()
     {
         ExitMenuMode();
         Close();
+        onResume.Invoke();
     }
 
 
@@ -102,8 +111,7 @@ public class UI_Menu : ScriptableObject
     public void Play()
     {
         ExitMenuMode();
-
-        onPlay?.Invoke();
+        onPlay.Invoke();
         SceneManager.LoadScene("Game");
     }
     public void MenuPausaShow()
@@ -137,7 +145,11 @@ public class UI_Menu : ScriptableObject
 
 
     public void Suport() => Application.OpenURL("https://www.xidostudio.com/support");
-    public void QuitGame() => Application.Quit();
+    public void QuitGame() 
+    {
+        onExitGame.Invoke();
+        Application.Quit();
+    } 
 
     public void ToMainMenu() 
     { 
