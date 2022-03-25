@@ -5,7 +5,9 @@ using XS_Utils;
 
 public class UI_Bindings : MonoBehaviour
 {
-    [SerializeField] Settings settings;
+    //[SerializeField] Settings settings;
+    SavableVariable<float> interfaceSize;
+    [SerializeField] Guardat guardat;
     [SerializeField] Transform bindingsE, bindingsD;
     [SerializeField] UI_Binding[] bindings;
     List<IBindable> bindables;
@@ -19,13 +21,14 @@ public class UI_Bindings : MonoBehaviour
 
     private void OnEnable()
     {
+        interfaceSize = new SavableVariable<float>();
+        interfaceSize.Define(guardat, UI_Tamany.KEY_INTERFICIE_SIZE, true, 1);
         if(bindables == null)
         {
             bindables = new List<IBindable>(GetComponentsInChildren<IBindable>());
         }
     }
 
-    [ContextMenu("Prova")]
     public void MostrarBindings()
     {
         trobats = new List<UI_Binding>();
@@ -102,7 +105,7 @@ public class UI_Bindings : MonoBehaviour
         for (int i = 0; i < ordenats.Count; i++)
         {
             ordenats[i].transform.SetParent(ordenats[i].Dreta ? bindingsD : bindingsE);
-            ordenats[i].Actualitzar(settings);
+            ordenats[i].Actualitzar(interfaceSize.Valor);
         }
 
     }

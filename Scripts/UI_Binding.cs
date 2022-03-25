@@ -19,11 +19,15 @@ public class UI_Binding : MonoBehaviour
     [SerializeField] Sprite degradatDreta;
     [SerializeField] Sprite degradatEsquerra;
 
-    [SerializeField] RectTransform bindable;
+    [Header("Options")]
+    [SerializeField] bool nonChangable = false;
+
+    RectTransform bindable;
     bool dreta;
 
     GameObject liniaInici;
     GameObject liniaFinal;
+
 
     public RectTransform Bindable
     {
@@ -42,9 +46,16 @@ public class UI_Binding : MonoBehaviour
     private void OnEnable()
     {
         if (iconePerBinding == null) iconePerBinding = GetComponent<Input_IconePerBinding>();
+
+        if (nonChangable)
+        {
+            degradat.color = Color.gray;
+            degradat.raycastTarget = false;
+            degradat.GetComponent<Button>().interactable = false;
+        }
     }
 
-    public void Actualitzar(Settings settings)
+    public void Actualitzar(float interfaceSize)
     {
         dreta = (bindable.anchoredPosition.x > 0);
 
@@ -67,12 +78,12 @@ public class UI_Binding : MonoBehaviour
 
         iconePerBinding.MostrarIcone();
 
-        StartCoroutine(Linia(settings));
+        StartCoroutine(Linia(interfaceSize));
     }
 
 
     [ContextMenu("Linia")]
-    IEnumerator Linia(Settings settings)
+    IEnumerator Linia(float interfaceSize)
     {
         yield return new WaitForSecondsRealtime(0.1f);
 
@@ -83,7 +94,7 @@ public class UI_Binding : MonoBehaviour
 
         linia.transform.position = liniaInici.transform.position;
         linia.transform.rotation = Quaternion.LookRotation(liniaInici.transform.position - liniaFinal.transform.position);
-        linia.transform.localScale = new Vector3(1, 1, (liniaInici.transform.position - liniaFinal.transform.position).magnitude / settings.interfaceSize.Get());
+        linia.transform.localScale = new Vector3(1, 1, (liniaInici.transform.position - liniaFinal.transform.position).magnitude / interfaceSize);
 
         Destroy(liniaInici);
         Destroy(liniaFinal);

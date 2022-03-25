@@ -130,6 +130,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1684968905}
     m_Modifications:
+    - target: {fileID: 2684698301114292956, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 5464393536091570133, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 9197360653289083038, guid: 406dfb8c39ae84e489e9b24935021cdc, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -339,4 +347,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e34dc2e93485438fd4f432c540ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  settings: {fileID: 11400000, guid: 71be1992041410346b077ad9aa639868, type: 2}
+  guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}

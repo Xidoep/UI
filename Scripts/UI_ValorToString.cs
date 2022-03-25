@@ -1,20 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class UI_ValorToString : MonoBehaviour
 {
-    TMP_Text text;
-    TMP_Text Text
+    public enum Visualization
     {
-        get
+        Float,
+        Int,
+        Percent
+    }
+
+    [SerializeField] Slider slider;
+    [SerializeField] Visualization visualization;
+    TMP_Text text;
+    [SerializeField] string sufix;
+
+    private void OnEnable()
+    {
+        text = GetComponent<TMP_Text>();
+        slider.onValueChanged.AddListener(Visualize);
+    }
+    private void OnDisable()
+    {
+        slider.onValueChanged.RemoveListener(Visualize);
+    }
+
+
+    void Visualize(float valor)
+    {
+        switch (visualization)
         {
-            if (text == null) text = GetComponent<TMP_Text>();
-            return text;
+            case Visualization.Float:
+                text.text = $"{valor.ToString("0.#")}{sufix}";
+                break;
+            case Visualization.Int:
+                text.text = $"{valor.ToString("0")}{sufix}";
+                break;
+            case Visualization.Percent:
+                text.text = $"{(valor * 100).ToString("#00")}%";
+                break;
         }
     }
-    public void SetValor(float valor) => Text.text = valor.ToString("0.#");
-    public void SetValor(int valor) => Text.text = valor.ToString();
-    public void SetValorPerCent(float valor) => Text.text = $"{(valor * 100).ToString("#00")}%";
+
 }

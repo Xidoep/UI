@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This put together all options arround an Slider, plus and minous buttons, the amount them move the slider, the mute toggle...
+/// </summary>
 public class UI_Slider : MonoBehaviour
 {
     [SerializeField] Slider slider;

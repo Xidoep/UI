@@ -6,68 +6,154 @@ using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using XS_Utils;
 
-[CreateAssetMenu(menuName = "Xido Studio/Menu", fileName = "Menu")]
+[CreateAssetMenu(menuName = "Xido Studio/Menu/Menu", fileName = "Menu")]
 public class UI_Menu : ScriptableObject
 {
-    const string MENU_PAUSA = "MenuPausa";
+    const string MENU_PAUSA = "Menu";
     const string MENU_CONFIGURACIO = "Configuracio";
     const string MENU_CONTROLS = "Controls";
     const string MENU_CREDITS = "Credits";
-
+    const string MENU_SUBMENU = "Submenu";
+    
+    //The name of the actions maps to swap between.
     const string GAME_PLAY = "GamePlay";
     const string UI = "UI";
+
+    UI_Submenu previous;
+    UI_Submenu current;
 
     [SerializeField] Guardat guardat;
     [SerializeField] GameObject prefab_blurShader;
     [SerializeField] Action onPlay;
     [SerializeField] InputActionReference[] escoltadors;
+    [SerializeField] UI_Submenu pausa;
+    [SerializeField] UI_Submenu main;
 
     PlayerInput playerInput;
     AnimacioPerCodi blurShader;
     Coroutine amagarBlur;
 
-    bool mostrat = false;
+    bool entrat = false;
+    int index = 0;
+    bool trobat = false;
 
-    private void OnEnable()
+    public UI_Submenu Previous => previous;
+
+    void OnEnable()
     {
-        mostrat = false;
-        Debugar.Log("Registrar accions per mostrar el menu");
-        for (int i = 0; i < escoltadors.Length; i++)
-        {
-            escoltadors[i].action.performed += MostrarViaAction;
-        }
-        InputSystem.onDeviceChange += MostrarPerqueNoDevice;
+        Debug.Log("UI_Menu - OnEnable => RegistrarAccions()");
+        RegistrarAccions();
     }
 
-    private void OnDisable()
+    public void RegistrarAccions()
+    {
+        current = null;
+        entrat = false;
+
+        for (int i = 0; i < escoltadors.Length; i++)
+        {
+            escoltadors[i].action.performed += Pause_ViaAction;
+        }
+        InputSystem.onDeviceChange += Pause_OnNoDevice;
+    }
+
+    void OnDisable()
     {
         Debugar.Log("Desregistrar accions per mostrar el menu");
         for (int i = 0; i < escoltadors.Length; i++)
         {
-            escoltadors[i].action.performed -= MostrarViaAction;
+            escoltadors[i].action.performed -= Pause_ViaAction;
         }
-        InputSystem.onDeviceChange -= MostrarPerqueNoDevice;
+        InputSystem.onDeviceChange -= Pause_OnNoDevice;
     }
 
-    void MostrarPerqueNoDevice(InputDevice inputDevice, InputDeviceChange change)
+    void Pause_OnNoDevice(InputDevice inputDevice, InputDeviceChange change)
     {
         if(change == InputDeviceChange.Removed || change == InputDeviceChange.Disconnected)
-            Mostrar();
+            Pause();
     }
-    void MostrarViaAction(InputAction.CallbackContext context)
+    void Pause_ViaAction(InputAction.CallbackContext context)
     {
         if (context.phase != InputActionPhase.Performed)
             return;
-            
-        Mostrar();
+
+        Pause();
     }
 
-    public void Mostrar()
+    public void MainMenu()
     {
-        if (mostrat)
+        EnterMenuMode();
+        Switch(main);
+    }
+    public void Pause()
+    {
+        EnterMenuMode();
+        Switch(pausa);
+    }
+    public void Resume()
+    {
+        ExitMenuMode();
+        Close();
+    }
+
+
+ 
+
+    public void Play()
+    {
+        ExitMenuMode();
+
+        onPlay?.Invoke();
+        SceneManager.LoadScene("Game");
+    }
+    public void MenuPausaShow()
+    {
+        SceneManager.LoadSceneAsync(MENU_PAUSA, LoadSceneMode.Additive);
+    }
+
+    public void Switch(UI_Submenu submenu)
+    {
+        previous = current;
+
+        if (!Application.isPlaying)
             return;
 
-        mostrat = true;
+        if (current != null) SceneManager.UnloadSceneAsync(current.name);
+        SceneManager.LoadSceneAsync(submenu.name, LoadSceneMode.Additive);
+        current = submenu;
+    }
+    public void Close()
+    {
+        previous = current;
+        SceneManager.UnloadSceneAsync(current.name);
+        current = null;
+    }
+    public void ComeToPrevious()
+    {
+        if (current != null) SceneManager.UnloadSceneAsync(current.name);
+        SceneManager.LoadSceneAsync(previous.name, LoadSceneMode.Additive);
+        current = previous;
+    }
+
+
+    public void Suport() => Application.OpenURL("https://www.xidostudio.com/support");
+    public void QuitGame() => Application.Quit();
+
+    public void ToMainMenu() 
+    { 
+        Close();
+        SceneManager.LoadScene("Vestibul");
+    } 
+
+    void EnterMenuMode()
+    {
+        if (!Application.isPlaying)
+            return;
+
+        if (entrat)
+            return;
+
+        entrat = true;
 
         if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>(true);
         if (guardat) guardat.Carregar();
@@ -85,78 +171,14 @@ public class UI_Menu : ScriptableObject
             //blurShader.Play(0);
         }
 
-        MenuPausaShow();
         Time.timeScale = 0;
     }
-
-
-    /*private void OnEnable()
+    void ExitMenuMode()
     {
-        if (playerInput == null) FindObjectOfType<PlayerInput>(true);
-
-        if (guardat) guardat.Carregar();
-        if (playerInput) playerInput.SwitchCurrentActionMap(UI);
-
-        if (blurShader)
-        {
-            if (amagarBlur != null)
-            {
-                StopCoroutine(amagarBlur);
-                amagarBlur = null;
-            }
-            blurShader.gameObject.SetActive(true);
-            blurShader.Play(0);
-        }
-
-        MenuPausaShow();
-        Time.timeScale = 0;
-    }
-    private void OnDisable()
-    {
-        if (playerInput == null) FindObjectOfType<PlayerInput>(true);
-
-        if (playerInput) playerInput.SwitchCurrentActionMap(GAME_PLAY);
-        if (guardat) guardat.Guardar();
-
-        if (blurShader)
-        {
-            blurShader.Play(1);
-            amagarBlur = blurShader.gameObject.SetActive(false, 0.26f);
-        }
-
-        Time.timeScale = 1;
-    }*/
-
-    public void Suport()
-    {
-        Application.OpenURL("https://www.xidostudio.com/support");
-    }
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
-
-    bool carregantMenu;
-    Action carregar;
-
-
-    public void Play()
-    {
-        onPlay?.Invoke();
-    }
-    public void MenuPausaShow()
-    {
-        SceneManager.LoadSceneAsync(MENU_PAUSA, LoadSceneMode.Additive);
-        carregar = null;
-        carregantMenu = false;
-    }
-    public void MenuPausaHide()
-    {
-        if (!mostrat)
+        if (!entrat)
             return;
 
-        mostrat = false;
+        entrat = false;
 
         if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>(true);
         if (playerInput) playerInput.SwitchCurrentActionMap(GAME_PLAY);
@@ -167,43 +189,6 @@ public class UI_Menu : ScriptableObject
             amagarBlur = blurShader.gameObject.SetActive(false, 0.26f);
         }
 
-        SceneManager.UnloadSceneAsync(MENU_PAUSA);
         Time.timeScale = 1;
     }
-
-    public void CreditsShow()
-    { 
-        SceneManager.LoadSceneAsync(MENU_CREDITS, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync(MENU_PAUSA);
-    }
-    public void CreditsHide()
-    {
-        SceneManager.UnloadSceneAsync(MENU_CREDITS);
-        MenuPausaShow();
-    }
-
-    public void ControlsShow()
-    {
-        SceneManager.LoadSceneAsync(MENU_CONTROLS, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync(MENU_PAUSA);
-    }
-    public void ControlsHide()
-    {
-        SceneManager.UnloadSceneAsync(MENU_CONTROLS);
-        MenuPausaShow();
-    }
-
-    public void ConfiguracioShow()
-    {
-        SceneManager.LoadSceneAsync(MENU_CONFIGURACIO, LoadSceneMode.Additive);
-        SceneManager.UnloadSceneAsync(MENU_PAUSA);
-    }
-    public void ConfiguracioHide()
-    {
-        SceneManager.UnloadSceneAsync(MENU_CONFIGURACIO);
-        MenuPausaShow();
-    }
-
-
-
 }

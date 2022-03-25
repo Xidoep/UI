@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+/// <summary>
+/// This is used to eventually disselect this element and reselect it again later.
+/// </summary>
 public class UI_SeleccionarDesseleccionar : MonoBehaviour
 {
     Selectable selectable;

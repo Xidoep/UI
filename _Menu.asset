@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1eabdd833f12340afa5f4ed6b0e998, type: 3}
+  m_Name: _Menu
+  m_EditorClassIdentifier: 
+  guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
+  prefab_blurShader: {fileID: 4810013428633345956, guid: 08be44701e05c8945aea56adfea89cf3, type: 3}
+  escoltadors:
+  - {fileID: -3701725696689857482, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+  - {fileID: -7163977983525893310, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
+  pausa: {fileID: 11400000, guid: 8924fa2a0352242449c316d5cacd72f3, type: 2}
+  main: {fileID: 11400000, guid: 22b3882789e728a42ba36956a05ec8f9, type: 2}

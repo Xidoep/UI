@@ -6,23 +6,25 @@ using UnityEngine.UI;
 
 public class UI_Tamany : MonoBehaviour
 {
-    [SerializeField] Settings settings;
-    CanvasScaler canvasScaler;
+    public const string KEY_INTERFICIE_SIZE = "InterficeSize";
 
+    [SerializeField] Guardat guardat;
+    SavableVariable<float> interfaceSize;
+    CanvasScaler canvasScaler;
+    float size = 1;
     void OnEnable()
     {
-        //settings.UiSize_AddAndInvokeEvent(UpdateUI);
-        settings.interfaceSize.Event_InvokeAndAdd(UpdateUI);
+        interfaceSize = new SavableVariable<float>();
+        interfaceSize.Define(guardat, KEY_INTERFICIE_SIZE, true, (float)guardat.Get(KEY_INTERFICIE_SIZE,1));
+
+        SetCanvasScale();
     }
-    void UpdateUI(float size)
+
+    public void SetCanvasScale()
     {
         if (canvasScaler == null) canvasScaler = GetComponent<CanvasScaler>();
 
+        size = interfaceSize.Valor;
         canvasScaler.referenceResolution = new Vector2(1920 / size, 1080 / size);
-    }
-    void OnDisable()
-    {
-        //settings.UiSize_RemoveEvent(UpdateUI);
-        settings.interfaceSize.Event_Remove(UpdateUI);
     }
 }
