@@ -47,7 +47,7 @@ public class UI_Menu : ScriptableObject
 
     void OnEnable()
     {
-        Debug.Log("UI_Menu - OnEnable => RegistrarAccions()");
+        Debugar.Log("[UI_Menu] OnEnable => RegistrarAccions()");
         RegistrarAccions();
     }
 
@@ -65,7 +65,11 @@ public class UI_Menu : ScriptableObject
 
     void OnDisable()
     {
-        Debugar.Log("Desregistrar accions per mostrar el menu");
+        Debugar.Log("[UI_Menu] OnDisable() => DesregistrarAccions()");
+        DesregistrarAccions();
+    }
+    public void DesregistrarAccions()
+    {
         for (int i = 0; i < escoltadors.Length; i++)
         {
             escoltadors[i].action.performed -= Pause_ViaAction;
@@ -148,6 +152,7 @@ public class UI_Menu : ScriptableObject
     public void QuitGame() 
     {
         onExitGame.Invoke();
+        //Application.wantsToQuit += Wait fore some secons to do fadeout to black animation.
         Application.Quit();
     } 
 
@@ -202,5 +207,10 @@ public class UI_Menu : ScriptableObject
         }
 
         Time.timeScale = 1;
+    }
+
+    private void OnValidate()
+    {
+        guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
     }
 }

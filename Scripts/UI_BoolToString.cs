@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Localization;
 using UnityEngine.ResourceManagement.AsyncOperations;
+using XS_Utils;
 
 public class UI_BoolToString : MonoBehaviour
 {
@@ -26,20 +27,7 @@ public class UI_BoolToString : MonoBehaviour
     void Visualize(float valor)
     {
         if (Mathf.Round(slider.value) == 0)
-            SetText(False);
-        else SetText(True);
-    }
-
-    void SetText(LocalizedString String)
-    {
-        AsyncOperationHandle<string> op = String.GetLocalizedStringAsync();
-        if (op.IsDone)
-        {
-            text.text = op.Result;
-        }
-        else
-        {
-            op.Completed += (o) => text.text = op.Result;
-        }
+            False.WriteOn(text);
+        else True.WriteOn(text);
     }
 }

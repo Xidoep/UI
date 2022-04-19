@@ -126,4 +126,8 @@ public class UI_Bindings : MonoBehaviour
         //ui.Actualitzar();
     }
 
+    private void OnValidate()
+    {
+        guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
+    }
 }

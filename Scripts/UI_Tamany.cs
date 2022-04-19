@@ -27,4 +27,9 @@ public class UI_Tamany : MonoBehaviour
         size = interfaceSize.Valor;
         canvasScaler.referenceResolution = new Vector2(1920 / size, 1080 / size);
     }
+
+    private void OnValidate()
+    {
+        guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
+    }
 }

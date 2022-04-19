@@ -323,4 +323,9 @@ public class UI_TeclatLayout : MonoBehaviour
 
         
     }
+
+    private void OnValidate()
+    {
+        guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
+    }
 }
