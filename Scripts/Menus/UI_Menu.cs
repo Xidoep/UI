@@ -30,7 +30,7 @@ public class UI_Menu : ScriptableObject
     [SerializeField] UI_Submenu main;
 
     PlayerInput playerInput;
-    AnimacioPerCodi blurShader;
+    //AnimacioPerCodi blurShader;
     Coroutine amagarBlur;
 
     bool entrat = false;
@@ -176,7 +176,7 @@ public class UI_Menu : ScriptableObject
         if (guardat) guardat.Carregar();
         if (playerInput) playerInput.SwitchCurrentActionMap(UI);
 
-        if (blurShader == null) blurShader = Instantiate(prefab_blurShader, Camera.main.transform).GetComponent<AnimacioPerCodi>();
+        /*if (blurShader == null) blurShader = Instantiate(prefab_blurShader, Camera.main.transform).GetComponent<AnimacioPerCodi>();
         if (blurShader)
         {
             if (amagarBlur != null)
@@ -186,7 +186,7 @@ public class UI_Menu : ScriptableObject
             }
             blurShader.gameObject.SetActive(true);
             //blurShader.Play(0);
-        }
+        }*/
 
         Time.timeScale = 0;
     }
@@ -200,11 +200,11 @@ public class UI_Menu : ScriptableObject
         if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>(true);
         if (playerInput) playerInput.SwitchCurrentActionMap(GAME_PLAY);
         if (guardat) guardat.Guardar();
-        if (blurShader)
+        /*if (blurShader)
         {
             //blurShader.Play(1);
             amagarBlur = blurShader.gameObject.SetActive(false, 0.26f);
-        }
+        }*/
 
         Time.timeScale = 1;
     }
