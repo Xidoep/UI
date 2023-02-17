@@ -17,5 +17,21 @@ MonoBehaviour:
   escoltadors:
   - {fileID: -3701725696689857482, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
   - {fileID: -7163977983525893310, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
+  - {fileID: -129951666006041596, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
   pausa: {fileID: 11400000, guid: 8924fa2a0352242449c316d5cacd72f3, type: 2}
   main: {fileID: 11400000, guid: 22b3882789e728a42ba36956a05ec8f9, type: 2}
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+  onPause:
+    m_PersistentCalls:
+      m_Calls: []
+  onResume:
+    m_PersistentCalls:
+      m_Calls: []
+  onToMainMenu:
+    m_PersistentCalls:
+      m_Calls: []
+  onExitGame:
+    m_PersistentCalls:
+      m_Calls: []

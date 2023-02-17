@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 9047300467834448557}
   - component: {fileID: 9047300467834448547}
   - component: {fileID: 9047300467834448546}
-  - component: {fileID: 3098217922534355271}
+  - component: {fileID: 7762594329101777532}
   m_Layer: 5
   m_Name: Capcalera
   m_TagString: Untagged
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3098217922534355271
+--- !u!114 &7762594329101777532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,13 +468,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9047300467834448556}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcd3eb595ed7cac46ab8c9d050db3f0b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7212ac3ee04da8c42832ecee15826df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transicio: 0
-  temps: 0.25
-  transformacions:
-  - {fileID: 11400000, guid: 9d97798fa67cb144e965c10accb6f6a1, type: 2}
+  component: {fileID: 9047300467834448557}
+  onClick: 0
+  animacio: {fileID: 11400000, guid: 20421c9d8b293f2458e68313945c48a6, type: 2}
+  pare: {fileID: 0}
 --- !u!1 &9047300468365958361
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ MonoBehaviour:
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6827593981889474490}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AnimacioPerCodi_Button, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
@@ -824,46 +824,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   multipleInteractions: 0
---- !u!114 &6827593981889474490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196224716321083034}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726679da1c9708c419d7f3d697c3027e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transicio: 0
-  temps: 0.4
-  onSelect:
-    transicio: 0
-    temps: 0.2
-    transformacions:
-    - {fileID: 11400000, guid: e809c8a65580abd47a893fca02da95ad, type: 2}
-    - {fileID: 11400000, guid: 11f8762fc1b43c2418337b14b40b990d, type: 2}
-  loopSelected:
-    transicio: 3
-    temps: 0.8
-    transformacions:
-    - {fileID: 11400000, guid: 25064dd4bcc04af459655b7d06515a61, type: 2}
-  onDeselect:
-    transicio: 0
-    temps: 0.4
-    transformacions:
-    - {fileID: 11400000, guid: 32981486eeb015e43a3dd212bd87f4b6, type: 2}
-    - {fileID: 11400000, guid: a1ebbdd1da2da9a48a8244bc6d60ffd7, type: 2}
-    - {fileID: 11400000, guid: f23a99e9d81f5664ea53a29ddd633ea0, type: 2}
-  onClick:
-    transicio: 0
-    temps: 0.4
-    transformacions:
-    - {fileID: 11400000, guid: 6817ac2d9f8c16542b2e0e35ede9174b, type: 2}
-    - {fileID: 11400000, guid: 7d219ca88bb40a74eb75007321fb0d71, type: 2}
-    - {fileID: 11400000, guid: 80c3462f635b10f488607f9a27ecfab0, type: 2}
-    - {fileID: 11400000, guid: e3e16ba0cf56f7e45b7c6a18135784a6, type: 2}
+  delayRegistration: 0
 --- !u!224 &196224716321083045 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 875882461581839055, guid: d7b0d5552fdd34249b233f2bd2648925, type: 3}
@@ -1017,7 +978,7 @@ MonoBehaviour:
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6678025861839276835}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AnimacioPerCodi_Button, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
@@ -1030,46 +991,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   multipleInteractions: 0
---- !u!114 &6678025861839276835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5322235348656706756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726679da1c9708c419d7f3d697c3027e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transicio: 0
-  temps: 0.4
-  onSelect:
-    transicio: 0
-    temps: 0.2
-    transformacions:
-    - {fileID: 11400000, guid: e809c8a65580abd47a893fca02da95ad, type: 2}
-    - {fileID: 11400000, guid: 11f8762fc1b43c2418337b14b40b990d, type: 2}
-  loopSelected:
-    transicio: 3
-    temps: 0.8
-    transformacions:
-    - {fileID: 11400000, guid: 25064dd4bcc04af459655b7d06515a61, type: 2}
-  onDeselect:
-    transicio: 0
-    temps: 0.4
-    transformacions:
-    - {fileID: 11400000, guid: 32981486eeb015e43a3dd212bd87f4b6, type: 2}
-    - {fileID: 11400000, guid: a1ebbdd1da2da9a48a8244bc6d60ffd7, type: 2}
-    - {fileID: 11400000, guid: f23a99e9d81f5664ea53a29ddd633ea0, type: 2}
-  onClick:
-    transicio: 0
-    temps: 0.4
-    transformacions:
-    - {fileID: 11400000, guid: 6817ac2d9f8c16542b2e0e35ede9174b, type: 2}
-    - {fileID: 11400000, guid: 7d219ca88bb40a74eb75007321fb0d71, type: 2}
-    - {fileID: 11400000, guid: 80c3462f635b10f488607f9a27ecfab0, type: 2}
-    - {fileID: 11400000, guid: e3e16ba0cf56f7e45b7c6a18135784a6, type: 2}
+  delayRegistration: 0
 --- !u!224 &5322235348656706811 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 875882461581839055, guid: d7b0d5552fdd34249b233f2bd2648925, type: 3}
