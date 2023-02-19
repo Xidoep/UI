@@ -15,17 +15,17 @@ public class UI_GrupsResaltador : MonoBehaviour
         {
             StopCoroutine(coroutine);
         }
-        //coroutine = StartCoroutine(GoTo(transform.position));
+        coroutine = StartCoroutine(GoTo(transform.position));
     }
 
-    /*IEnumerator GoTo(Vector3 position)
+    IEnumerator GoTo(Vector3 position)
     {
         moving = true;
-        while(Transform.Distance(position,transform.position,true) > 0.1f)
+        while (transform.Distance(position, true) > 0.1f)
         {
             transform.position = Vector3.Lerp(transform.position, position, 10f * Time.unscaledDeltaTime);
             yield return new WaitForSecondsRealtime(0.01f);
         }
         moving = false;
-    }*/
+    }
 }

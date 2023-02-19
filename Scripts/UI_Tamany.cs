@@ -9,13 +9,13 @@ public class UI_Tamany : MonoBehaviour
     public const string KEY_INTERFICIE_SIZE = "InterficeSize";
 
     [SerializeField] Guardat guardat;
-    SavableVariable<float> interfaceSize;
+    [SerializeField] SavableVariable<float> interfaceSize;
     CanvasScaler canvasScaler;
     float size = 1;
     void OnEnable()
     {
         interfaceSize = new SavableVariable<float>();
-        interfaceSize.Define(guardat, KEY_INTERFICIE_SIZE, true, (float)guardat.Get(KEY_INTERFICIE_SIZE,1));
+        interfaceSize.Define(guardat, KEY_INTERFICIE_SIZE, true, (float)(guardat.Get(KEY_INTERFICIE_SIZE, 0.8f)));
 
         SetCanvasScale();
     }

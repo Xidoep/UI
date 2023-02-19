@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
 using XS_Utils;
 
 public class UI_Bindings : MonoBehaviour
@@ -18,19 +20,25 @@ public class UI_Bindings : MonoBehaviour
 
     List<UI_Binding> trobats;
     List<UI_Binding> ordenats;
+    PlayerInput playerInput;
 
     private void OnEnable()
     {
+        
+        playerInput = FindObjectOfType<PlayerInput>();
+
         interfaceSize = new SavableVariable<float>();
-        interfaceSize.Define(guardat, UI_Tamany.KEY_INTERFICIE_SIZE, true, 1);
+        interfaceSize.Define(guardat, UI_Tamany.KEY_INTERFICIE_SIZE, true, 1f);
         if(bindables == null)
         {
             bindables = new List<IBindable>(GetComponentsInChildren<IBindable>());
         }
+        MostrarBindings();
     }
-
+    [ContextMenu("MostrarBindings")]
     public void MostrarBindings()
     {
+
         trobats = new List<UI_Binding>();
         ordenats = new List<UI_Binding>();
 
@@ -43,7 +51,8 @@ public class UI_Bindings : MonoBehaviour
         {
             for (int i = 0; i < bindings[b].IconePerBinding.InputBinding.action.bindings.Count; i++)
             {
-                if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].isComposite)
+                //if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].isComposite)
+                if (bindings[b].IconePerBinding.InputBinding.action.Es2D(playerInput.devices[0]))
                 {
                     for (int c = 0; c < 4; c++)
                     {
@@ -57,8 +66,27 @@ public class UI_Bindings : MonoBehaviour
                         }
                         if (trobat)
                         {
-                            //Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name}({bindings[b].IconePerBinding.InputBinding.action.bindings[i].name}) - (){bindables[index].GetPath()}");
-                            SetBinding(bindings[b],bindables[index]);
+                            Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name}({bindings[b].IconePerBinding.InputBinding.action.bindings[i].name}) - (){bindables[index].GetPath()}");
+                            SetBinding(bindings[b], bindables[index]);
+                        }
+                    }
+                }
+                else if (bindings[b].IconePerBinding.InputBinding.action.Es1D(playerInput.devices[0]))
+                {
+                    for (int c = 0; c < 2; c++)
+                    {
+                        i++;
+                        trobat = false;
+                        index = 0;
+                        while (index < bindables.Count && !trobat)
+                        {
+                            if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].Comparar(bindables[index].GetPath())) trobat = true;
+                            else index++;
+                        }
+                        if (trobat)
+                        {
+                            Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name}({bindings[b].IconePerBinding.InputBinding.action.bindings[i].name}) - (){bindables[index].GetPath()}");
+                            SetBinding(bindings[b], bindables[index]);
                         }
                     }
                 }
@@ -68,14 +96,14 @@ public class UI_Bindings : MonoBehaviour
                     index = 0;
                     while (index < bindables.Count && !trobat)
                     {
-                        //Debug.Log(bindings[b].IconePerBinding.InputBinding.action.bindings[i].overridePath + " - " + bindings[b].IconePerBinding.InputBinding.action.bindings[i].path);
+                        Debug.Log(bindings[b].IconePerBinding.InputBinding.action.bindings[i].overridePath + " - " + bindings[b].IconePerBinding.InputBinding.action.bindings[i].path);
                         if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].Comparar(bindables[index].GetPath())) trobat = true;
                         else index++;
                     }
 
                     if (trobat)
                     {
-                        //Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name} - {bindables[index].GetPath()}");
+                        Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name} - {bindables[index].GetPath()}");
                         SetBinding(bindings[b], bindables[index]);
                     }
                 }

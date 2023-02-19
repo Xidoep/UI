@@ -10,7 +10,6 @@ public class UI_Ratoli : MonoBehaviour, IBindable
     Image image;
     [SerializeField] bool utilitzada = false;
     [SerializeField] MouseButton boto;
-
     public RectTransform Transform => GetComponent<RectTransform>();
 
     [ContextMenu("Provar")]
