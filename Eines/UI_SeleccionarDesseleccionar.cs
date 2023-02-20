@@ -9,19 +9,21 @@ using UnityEngine.UI;
 /// </summary>
 public class UI_SeleccionarDesseleccionar : MonoBehaviour
 {
-    Selectable selectable;
+    public static Selectable selectableGuardat;
 
+    public void DesseleccionarIRecordar() => DesseleccionarIRecordar(gameObject.GetComponent<Selectable>());
     public void DesseleccionarIRecordar(Selectable selectable)
     {
-        this.selectable = selectable;
+        selectable.OnDeselect(new BaseEventData(EventSystem.current));
         EventSystem.current.SetSelectedGameObject(null);
+        selectableGuardat = selectable;
     }
     public void Recuperar()
     {
-        if (!selectable)
+        if (!selectableGuardat)
             return;
 
-        selectable.Select();
+        selectableGuardat.Select();
         //selectable = null;
     }
        

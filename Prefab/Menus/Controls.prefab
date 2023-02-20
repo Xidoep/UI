@@ -27395,7 +27395,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 916896402224192720, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_text
-      value: Back
+      value: "Atr\xE1s"
       objectReference: {fileID: 0}
     - target: {fileID: 1467801218486434392, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_text
@@ -27411,15 +27411,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4066151623538977533, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_text
-      value: Back
+      value: "Atr\xE1s"
       objectReference: {fileID: 0}
     - target: {fileID: 6904799655610301793, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_text
-      value: Movement
+      value: Movimiento
       objectReference: {fileID: 0}
     - target: {fileID: 8110687714320432694, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_text
-      value: Select
+      value: Seleccionar
       objectReference: {fileID: 0}
     - target: {fileID: 8110687715311404784, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_Pivot.x
@@ -27525,7 +27525,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 330500890942471495, guid: d15e7891bc206e04b87d6d4114a759bb, type: 3}
       propertyPath: m_text
-      value: Help
+      value: Ayuda
       objectReference: {fileID: 0}
     - target: {fileID: 330500890942471495, guid: d15e7891bc206e04b87d6d4114a759bb, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -27677,7 +27677,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8546338091933861682, guid: d15e7891bc206e04b87d6d4114a759bb, type: 3}
       propertyPath: m_text
-      value: Current
+      value: Actual
+      objectReference: {fileID: 0}
+    - target: {fileID: 8546338091933861682, guid: d15e7891bc206e04b87d6d4114a759bb, type: 3}
+      propertyPath: m_fontSize
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8907482174568823134, guid: d15e7891bc206e04b87d6d4114a759bb, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
@@ -28935,11 +28939,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5415901338361349136, guid: 2163f3f3b701ac243bc4fcb9584bd323, type: 3}
       propertyPath: m_text
-      value: Layout
+      value: "Disposici\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 5415901338361349136, guid: 2163f3f3b701ac243bc4fcb9584bd323, type: 3}
       propertyPath: m_fontSize
-      value: 35.8
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6303696739085766453, guid: 2163f3f3b701ac243bc4fcb9584bd323, type: 3}
       propertyPath: m_Name
@@ -29611,7 +29615,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3685454820909903974, guid: f455e6d46ba46d1469327a185e4a3ef0, type: 3}
       propertyPath: m_text
-      value: Gamepad
+      value: Mando
       objectReference: {fileID: 0}
     - target: {fileID: 3685454820909903974, guid: f455e6d46ba46d1469327a185e4a3ef0, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -29619,7 +29623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4438619451147698493, guid: f455e6d46ba46d1469327a185e4a3ef0, type: 3}
       propertyPath: m_text
-      value: Keyboard
+      value: Teclado
       objectReference: {fileID: 0}
     - target: {fileID: 4438619451147698493, guid: f455e6d46ba46d1469327a185e4a3ef0, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -29651,7 +29655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7146250173594743289, guid: f455e6d46ba46d1469327a185e4a3ef0, type: 3}
       propertyPath: m_text
-      value: Devices
+      value: Dispositivos
       objectReference: {fileID: 0}
     - target: {fileID: 7545708218590652581, guid: f455e6d46ba46d1469327a185e4a3ef0, type: 3}
       propertyPath: m_Pivot.x
@@ -30056,6 +30060,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bindings
       objectReference: {fileID: 0}
+    - target: {fileID: 894882108606536789, guid: 277829b3d06214443908afec14363692, type: 3}
+      propertyPath: m_text
+      value: No translation found for 'Rotate' in Generic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048900829312130829, guid: 277829b3d06214443908afec14363692, type: 3}
+      propertyPath: m_text
+      value: No translation found for 'Pan' in Generic
+      objectReference: {fileID: 0}
     - target: {fileID: 1217680853629964779, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_RebindText
       value: 
@@ -30092,6 +30104,14 @@ PrefabInstance:
       propertyPath: m_guardatEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2772195071888012902}
+    - target: {fileID: 3555985345903195884, guid: 277829b3d06214443908afec14363692, type: 3}
+      propertyPath: m_text
+      value: No translation found for 'Rotate Left' in Generic
+      objectReference: {fileID: 0}
+    - target: {fileID: 4160476464586310212, guid: 277829b3d06214443908afec14363692, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4699553958933415677, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_RebindText
       value: 
@@ -30104,6 +30124,14 @@ PrefabInstance:
       propertyPath: m_guardatEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2772195071888012902}
+    - target: {fileID: 4722117758441457556, guid: 277829b3d06214443908afec14363692, type: 3}
+      propertyPath: m_text
+      value: No translation found for 'Zoom out' in Generic
+      objectReference: {fileID: 0}
+    - target: {fileID: 4998369839846513030, guid: 277829b3d06214443908afec14363692, type: 3}
+      propertyPath: m_text
+      value: No translation found for 'Zoon' in Generic
+      objectReference: {fileID: 0}
     - target: {fileID: 6572340740120663904, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_RebindText
       value: 
@@ -30116,6 +30144,10 @@ PrefabInstance:
       propertyPath: m_guardatEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2772195071888012902}
+    - target: {fileID: 6868069262174079003, guid: 277829b3d06214443908afec14363692, type: 3}
+      propertyPath: m_text
+      value: No translation found for 'Pan' in Generic
+      objectReference: {fileID: 0}
     - target: {fileID: 6908582176013158770, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_BindingId
       value: 16fd5e39-fd2f-4ad2-822c-fc13c7735d29
@@ -30144,6 +30176,10 @@ PrefabInstance:
       propertyPath: m_guardatEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 2772195071888012902}
+    - target: {fileID: 8578554893832974125, guid: 277829b3d06214443908afec14363692, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9210136785611029597, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -402
@@ -31357,7 +31393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9047300468365958367, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: m_text
-      value: Controls
+      value: Controles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a68aed42643db8847afae1bcf2edee42, type: 3}

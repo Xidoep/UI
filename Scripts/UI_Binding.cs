@@ -68,13 +68,15 @@ public class UI_Binding : MonoBehaviour
         etiqueta.margin = new Vector4(dreta ? 60 : 0, 0, dreta ? 0 : 60, 0);
         etiqueta.alignment = dreta ? TextAlignmentOptions.MidlineLeft : TextAlignmentOptions.MidlineRight;
 
-        final.anchorMin = new Vector2(dreta ? 0 : 1, 0.5f);
-        final.anchorMax = new Vector2(dreta ? 0 : 1, 0.5f);
+        linia.gameObject.SetActive(false);
 
-        linia.anchorMin = new Vector2(dreta ? 0 : 1, 0.5f);
-        linia.anchorMax = new Vector2(dreta ? 0 : 1, 0.5f);
+        //final.anchorMin = new Vector2(dreta ? 0 : 1, 0.5f);
+        //final.anchorMax = new Vector2(dreta ? 0 : 1, 0.5f);
 
-        linia.transform.localScale = Vector3.zero;
+        //linia.anchorMin = new Vector2(dreta ? 0 : 1, 0.5f);
+        //linia.anchorMax = new Vector2(dreta ? 0 : 1, 0.5f);
+
+        //linia.transform.localScale = Vector3.zero;
 
         iconePerBinding.MostrarIcone();
 
@@ -92,9 +94,9 @@ public class UI_Binding : MonoBehaviour
         liniaInici.transform.position = final.transform.position;
         liniaFinal.transform.position = bindable.position;
 
-        linia.transform.position = liniaInici.transform.position;
-        linia.transform.rotation = Quaternion.LookRotation(liniaInici.transform.position - liniaFinal.transform.position);
-        linia.transform.localScale = new Vector3(1, 1, (liniaInici.transform.position - liniaFinal.transform.position).magnitude / interfaceSize);
+        //linia.transform.position = liniaInici.transform.position;
+        //linia.transform.rotation = Quaternion.LookRotation(liniaInici.transform.position - liniaFinal.transform.position);
+        //linia.transform.localScale = new Vector3(1, 1, (liniaInici.transform.position - liniaFinal.transform.position).magnitude / interfaceSize);
 
         Destroy(liniaInici);
         Destroy(liniaFinal);
