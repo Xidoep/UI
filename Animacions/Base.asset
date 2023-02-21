@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e338258b784a52c46b250e540248476b, type: 3}
+  m_Name: Base
+  m_EditorClassIdentifier: 
+  onEnabled: {fileID: 8294921533691381987}
+  idle: {fileID: 0}
+  onPointerEnter: {fileID: 0}
+  apuntat: {fileID: 0}
+  onPointerDown: {fileID: 0}
+  onPointerUp: {fileID: 0}
+  onPointerExit: {fileID: 0}
+  onDestroyOrDisable: {fileID: 3096270799098791778}
+--- !u!114 &3096270799098791778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a5bd4e9dac6aa4697e66b4d0d8fb3a, type: 3}
+  m_Name: OnDestroyOrDisable
+  m_EditorClassIdentifier: 
+  transicio: 0
+  temps: 0.5
+  animacions:
+  - rid: 2210365202362531849
+  - rid: 2210365202362531852
+  references:
+    version: 2
+    RefIds:
+    - rid: 2210365202362531849
+      type: {class: Animacio_So, ns: , asm: AnimacioPerCodi}
+      data:
+        nom: So
+        so: {fileID: 11400000, guid: da9d909357cbc6146ab834215d7941fd, type: 2}
+        aPosicio: 0
+        delay: 0
+    - rid: 2210365202362531852
+      type: {class: Animacio_EsdevenimentGeneric, ns: , asm: AnimacioPerCodi}
+      data:
+        nom: Esdeveniment Generic
+        esdeveniment: 1
+--- !u!114 &8294921533691381987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a5bd4e9dac6aa4697e66b4d0d8fb3a, type: 3}
+  m_Name: OnEnabled
+  m_EditorClassIdentifier: 
+  transicio: 0
+  temps: 0.5
+  animacions:
+  - rid: 2210365202362531850
+  references:
+    version: 2
+    RefIds:
+    - rid: 2210365202362531850
+      type: {class: Animacio_So, ns: , asm: AnimacioPerCodi}
+      data:
+        nom: So
+        so: {fileID: 11400000, guid: 8fd0e6731452437408b33e26cc4b2280, type: 2}
+        aPosicio: 0
+        delay: 0

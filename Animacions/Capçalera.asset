@@ -15,7 +15,7 @@ MonoBehaviour:
   onEnabled: {fileID: 8294921533691381987}
   idle: {fileID: 0}
   onPointerEnter: {fileID: 0}
-  loop: {fileID: 0}
+  apuntat: {fileID: 0}
   onPointerDown: {fileID: 0}
   onPointerUp: {fileID: 0}
   onPointerExit: {fileID: 0}
@@ -33,7 +33,7 @@ MonoBehaviour:
   m_Name: OnDestroyOrDisable
   m_EditorClassIdentifier: 
   transicio: 0
-  temps: 1
+  temps: 0.25
   animacions:
   - rid: 2210365110940336147
   references:
@@ -83,10 +83,9 @@ MonoBehaviour:
   m_Name: OnEnabled
   m_EditorClassIdentifier: 
   transicio: 0
-  temps: 1
+  temps: 0.5
   animacions:
   - rid: 2210365110940336146
-  - rid: 2210365110940336148
   references:
     version: 2
     RefIds:
@@ -100,21 +99,12 @@ MonoBehaviour:
           - serializedVersion: 3
             time: 0
             value: 0
-            inSlope: 1.8979213
-            outSlope: 1.8979213
+            inSlope: 2
+            outSlope: 2
             tangentMode: 0
             weightedMode: 0
             inWeight: 0
-            outWeight: 0.09590644
-          - serializedVersion: 3
-            time: 0.5
-            value: 1
-            inSlope: 1.7668699
-            outSlope: 0.030406952
-            tangentMode: 1
-            weightedMode: 0
-            inWeight: 0.111111104
-            outWeight: 0.33333334
+            outWeight: 0
           - serializedVersion: 3
             time: 1
             value: 1
@@ -129,44 +119,4 @@ MonoBehaviour:
           m_RotationOrder: 4
         inici: {x: 0, y: 100}
         final: {x: 0, y: 0}
-        dinamic: 0
-    - rid: 2210365110940336148
-      type: {class: Animacio_RectEscala, ns: , asm: AnimacioPerCodi}
-      data:
-        nom: Rect escala
-        corba:
-          serializedVersion: 2
-          m_Curve:
-          - serializedVersion: 3
-            time: -0.0011711121
-            value: -0.79904175
-            inSlope: -0.07751077
-            outSlope: -0.07751077
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0
-            outWeight: 0.118518524
-          - serializedVersion: 3
-            time: 0.5971043
-            value: 0.83924484
-            inSlope: 11.619785
-            outSlope: 11.619785
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.08527982
-            outWeight: 0.035058435
-          - serializedVersion: 3
-            time: 1
-            value: 0
-            inSlope: 11.263361
-            outSlope: 11.263361
-            tangentMode: 0
-            weightedMode: 0
-            inWeight: 0.07679468
-            outWeight: 0
-          m_PreInfinity: 2
-          m_PostInfinity: 2
-          m_RotationOrder: 4
-        inici: {x: 100, y: 100}
-        final: {x: 120, y: 120}
         dinamic: 0

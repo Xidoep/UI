@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using XS_Utils;
 
@@ -20,30 +20,30 @@ public class UI_Menu : ScriptableObject
     const string GAME_PLAY = "GamePlay";
     const string UI = "UI";
 
-    UI_Submenu previous;
-    UI_Submenu current;
-
     [SerializeField] Guardat guardat;
-    [SerializeField] GameObject prefab_blurShader;
+    //[SerializeField] GameObject prefab_blurShader;
     [SerializeField] InputActionReference[] escoltadors;
-    [SerializeField] UI_Submenu pausa;
-    [SerializeField] UI_Submenu main;
+    //[SerializeField] UI_Submenu pausa;
+    //[SerializeField] UI_Submenu main;
+    [SerializeField] Utils_InstantiableFromProject pausa;
+    [SerializeField] GameObject[] menus;
+
+    GameObject previous;
+    GameObject current;
 
     PlayerInput playerInput;
-    //AnimacioPerCodi blurShader;
     Coroutine amagarBlur;
+    //AnimacioPerCodi blurShader;
 
-    bool entrat = false;
+    /*bool entrat = false;
     int index = 0;
     bool trobat = false;
+    */
+    public GameObject Previous => previous;
 
-    public UI_Submenu Previous => previous;
-
-    [SerializeField] UnityEvent onPlay;
     [SerializeField] UnityEvent onPause;
     [SerializeField] UnityEvent onResume;
     [SerializeField] UnityEvent onToMainMenu;
-    [SerializeField] UnityEvent onExitGame;
 
     void OnEnable()
     {
@@ -54,7 +54,7 @@ public class UI_Menu : ScriptableObject
     public void RegistrarAccions()
     {
         current = null;
-        entrat = false;
+        //entrat = false;
 
         for (int i = 0; i < escoltadors.Length; i++)
         {
@@ -90,121 +90,115 @@ public class UI_Menu : ScriptableObject
         Pause();
     }
 
-    public void MainMenu()
-    {
-        EnterMenuMode();
-        Switch(main);
-        onToMainMenu.Invoke();
-    }
+
     public void Pause()
     {
+        if (current != null)
+            return;
+
         EnterMenuMode();
         Switch(pausa);
         onPause.Invoke();
     }
     public void Resume()
     {
-        ExitMenuMode();
         Close();
+        ExitMenuMode();
         onResume.Invoke();
     }
 
 
- 
+    GameObject ToPrevious(GameObject current)
+    {
+        if (current == null)
+            return null;
 
-    public void Play()
-    {
-        ExitMenuMode();
-        onPlay.Invoke();
-        SceneManager.LoadScene("Game");
+        GameObject trobat = null;
+        for (int i = 0; i < menus.Length; i++)
+        {
+            if (current.name.StartsWith(menus[i].name))
+            {
+                trobat = menus[i];
+                break;
+            }
+        }
+        return trobat;
     }
-    public void MenuPausaShow()
+    public void Switch(Utils_InstantiableFromProject submenu)
     {
-        SceneManager.LoadSceneAsync(MENU_PAUSA, LoadSceneMode.Additive);
-    }
-
-    public void Switch(UI_Submenu submenu)
-    {
-        previous = current;
+        previous = ToPrevious(current);
 
         if (!Application.isPlaying)
             return;
 
-        if (current != null) SceneManager.UnloadSceneAsync(current.name);
-        SceneManager.LoadSceneAsync(submenu.name, LoadSceneMode.Additive);
-        current = submenu;
+        if (current != null) 
+        {
+            if (current.TryGetComponent(out AnimacioPerCodi_GameObject_Referencia animacio))
+                animacio.Destroy();
+            else
+                Destroy(current.gameObject);
+        }
+
+        current = submenu.InstantiateReturn();
     }
     public void Close()
     {
-        previous = current;
-        SceneManager.UnloadSceneAsync(current.name);
+        if (current.TryGetComponent(out AnimacioPerCodi_GameObject_Referencia animacio))
+            animacio.Destroy();
+        else
+            Destroy(current.gameObject);
+
         current = null;
     }
     public void ComeToPrevious()
     {
-        if (current != null) SceneManager.UnloadSceneAsync(current.name);
-        SceneManager.LoadSceneAsync(previous.name, LoadSceneMode.Additive);
-        current = previous;
+        if(current != null)
+        {
+            if (current.TryGetComponent(out AnimacioPerCodi_GameObject_Referencia animacio))
+                animacio.Destroy();
+            else
+                Destroy(current.gameObject);
+        }
+        current = previous.GetComponent<Utils_InstantiableFromProject>().InstantiateReturn();
     }
 
 
-    public void Suport() => Application.OpenURL("https://www.xidostudio.com/support");
-    public void QuitGame() 
-    {
-        onExitGame.Invoke();
-        //Application.wantsToQuit += Wait fore some secons to do fadeout to black animation.
-        Application.Quit();
-    } 
 
-    public void ToMainMenu() 
+    public void Suport() => Application.OpenURL("https://www.xidostudio.com/support");
+    /*public void QuitGame() 
+    {
+        //onExitGame.Invoke();
+
+        //Application.wantsToQuit += Wait fore some secons to do fadeout to black animation.
+
+        Application.Quit();
+    } */
+
+    /*public void ToMainMenu() 
     { 
         Close();
-        SceneManager.LoadScene("Vestibul");
-    } 
+        //SceneManager.LoadScene("Vestibul");
+    } */
 
     void EnterMenuMode()
     {
         if (!Application.isPlaying)
             return;
 
-        if (entrat)
+        if (current != null)
             return;
-
-        entrat = true;
 
         if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>(true);
         if (guardat) guardat.Carregar();
         if (playerInput) playerInput.SwitchCurrentActionMap(UI);
 
-        /*if (blurShader == null) blurShader = Instantiate(prefab_blurShader, Camera.main.transform).GetComponent<AnimacioPerCodi>();
-        if (blurShader)
-        {
-            if (amagarBlur != null)
-            {
-                //StopCoroutine(amagarBlur);
-                amagarBlur = null;
-            }
-            blurShader.gameObject.SetActive(true);
-            //blurShader.Play(0);
-        }*/
-
         Time.timeScale = 0;
     }
     void ExitMenuMode()
     {
-        if (!entrat)
-            return;
-
-        entrat = false;
-
         if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>(true);
         if (playerInput) playerInput.SwitchCurrentActionMap(GAME_PLAY);
         if (guardat) guardat.Guardar();
-        /*if (blurShader)
-        {
-            //blurShader.Play(1);
-            amagarBlur = blurShader.gameObject.SetActive(false, 0.26f);
-        }*/
 
         Time.timeScale = 1;
     }
