@@ -252,9 +252,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7212ac3ee04da8c42832ecee15826df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  component: {fileID: 0}
+  component: {fileID: 7888343909904973973}
   onClick: 0
-  animacio: {fileID: 0}
+  animacio: {fileID: 11400000, guid: 3f132b74191ab18449b5806a686ba75a, type: 2}
   pare: {fileID: 0}
 --- !u!114 &4692109375964307330
 MonoBehaviour:
@@ -275,6 +275,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1358556795125329337}
     m_Modifications:
+    - target: {fileID: 5706450848973212130, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+      propertyPath: pare
+      value: 
+      objectReference: {fileID: 1385264430942070062}
     - target: {fileID: 8110687715311404784, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -477,6 +481,10 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.101960786
       objectReference: {fileID: 0}
+    - target: {fileID: 7762594329101777532, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
+      propertyPath: pare
+      value: 
+      objectReference: {fileID: 1385264430942070062}
     - target: {fileID: 9047300467834448556, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: m_Name
       value: Capcalera

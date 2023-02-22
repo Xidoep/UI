@@ -240,9 +240,8 @@ GameObject:
   - component: {fileID: 422074414291832371}
   - component: {fileID: 8986967356198845026}
   - component: {fileID: 5559813317664215780}
-  - component: {fileID: 5606058065411790726}
+  - component: {fileID: 2626020714209932728}
   - component: {fileID: 7344643035177447742}
-  - component: {fileID: 5471431377853971401}
   - component: {fileID: 4265845112522601619}
   - component: {fileID: 8551377409335646735}
   m_Layer: 5
@@ -275,7 +274,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.9, y: 0.5}
 --- !u!222 &8986967356198845026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -297,7 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4, g: 0.6, b: 0.8, a: 0.6}
+  m_Color: {r: 0.4, g: 0.6, b: 0.8, a: 0.6509804}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -314,7 +313,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5606058065411790726
+--- !u!114 &2626020714209932728
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,11 +322,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 8224519877242006340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 9618b7b93a7c90f4b9c2f89099acf49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: -1
+    m_Mode: 3
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -335,12 +334,12 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 0
   m_Colors:
-    m_NormalColor: {r: 0.3480331, g: 0.44860572, b: 0.745283, a: 0.2509804}
-    m_HighlightedColor: {r: 1, g: 1, b: 0.5019608, a: 1}
-    m_PressedColor: {r: 1, g: 0.5019608, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 0.5019608, a: 1}
-    m_DisabledColor: {r: 0.4, g: 0.101960786, b: 0.101960786, a: 0.4}
-    m_ColorMultiplier: 2
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
@@ -357,7 +356,33 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5559813317664215780}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4265845112522601619}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.Samples.RebindUI.RebindActionUI,
+          Unity.InputSystem.RebindingUI
+        m_MethodName: StartInteractiveRebind
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
+      - m_Target: {fileID: 8551377409335646735}
+        m_TargetAssemblyTypeName: UI_SeleccionarDesseleccionar, XS.UI
+        m_MethodName: DesseleccionarIRecordar
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2626020714209932728}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 0
+  animacio: {fileID: 11400000, guid: 1081b5261a1003342b4712b3f53c1c63, type: 2}
 --- !u!114 &7344643035177447742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +395,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92d652e4ee99ea4884cd100e6e6483e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  button: {fileID: 2626020714209932728}
+  iconePerBinding: {fileID: 7526660305056389622}
   degradat: {fileID: 5559813317664215780}
   icone: {fileID: 5243486945187100254}
   etiqueta: {fileID: 2691798462480349813}
@@ -378,22 +405,6 @@ MonoBehaviour:
   degradatDreta: {fileID: 21300000, guid: f01532acb9b460a429c7c9e907f0afa0, type: 3}
   degradatEsquerra: {fileID: 21300000, guid: 7790920fb87f0e74299516a66115fe36, type: 3}
   nonChangable: 0
---- !u!114 &5471431377853971401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8224519877242006340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc060dd0798ce848b98677644d4d0bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  reconeixement: {fileID: 11400000, guid: d435628161b5073428f2622f9c70b669, type: 2}
-  binding: {fileID: 8671795482684063346}
-  fondo: {fileID: 0}
-  inputBinding: {fileID: -7620387423433335294, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
 --- !u!114 &4265845112522601619
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -472,6 +483,7 @@ GameObject:
   - component: {fileID: 5243486945187100254}
   - component: {fileID: 6042006495426160266}
   - component: {fileID: 4481706765916852248}
+  - component: {fileID: 7526660305056389622}
   m_Layer: 5
   m_Name: Binding
   m_TagString: Untagged
@@ -537,6 +549,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7526660305056389622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8671795482684063346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc060dd0798ce848b98677644d4d0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reconeixement: {fileID: 11400000, guid: d435628161b5073428f2622f9c70b669, type: 2}
+  binding: {fileID: 8671795482684063346}
+  fondo: {fileID: 0}
+  inputBinding: {fileID: -7620387423433335294, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
 --- !u!1 &9092145220556518358
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,10 +633,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Movement
+  m_text: Moviment
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 19c5dc1fb63d40c4281cb8589c0eedf0, type: 2}
+  m_sharedMaterial: {fileID: 407802829209662782, guid: 19c5dc1fb63d40c4281cb8589c0eedf0, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

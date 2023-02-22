@@ -6,24 +6,17 @@ using UnityEngine.InputSystem;
 using TMPro;
 
 [SelectionBase]
-public class UI_Tecla : MonoBehaviour, IBindable
+public class UI_Tecla : UI_Bindable, IBindable
 {
-    public Image[] image;
-    public TMP_Text text;
-    [SerializeField] bool utilitzada = false;
     [SerializeField] Key tecla;
+
+    Image[] image;
+    TMP_Text text;
+
 
     public Key Tecla => tecla;
 
-    public RectTransform Transform => GetComponent<RectTransform>();
-    Image[] Image
-    {
-        get
-        {
-            if (image.Length == 0) image = GetComponentsInChildren<Image>();
-            return image;
-        }
-    }
+    public RectTransform RectTransform => GetComponent<RectTransform>();
     public TMP_Text Text
     {
         get
@@ -40,7 +33,6 @@ public class UI_Tecla : MonoBehaviour, IBindable
         utilitzada = activat;
         Actualitzar();
     }
-    private void OnValidate() => Actualitzar();
 
     public void Actualitzar()
     {
@@ -61,10 +53,7 @@ public class UI_Tecla : MonoBehaviour, IBindable
                 image[i].color = utilitzada ? Color.white : new Color(.65f, .7f, .75f);
             }
         }
-        
-        
-
-
+        if (animacio == null) animacio = XS_Utils.XS_Editor.LoadAssetAtPath<AnimacioPerCodi_GameObject>("Assets/XidoStudio/UI/Animacions/Tecla.asset");
     }
     string TeclaNom()
     {
@@ -88,4 +77,24 @@ public class UI_Tecla : MonoBehaviour, IBindable
         if (tecla.ToString().Equals("None")) return "";
         return tecla.ToString();
     }
+
+    public void Restaltar()
+    {
+        for (int i = 0; i < image.Length; i++)
+        {
+            animacio.OnPointerEnter(image[i], coroutine);
+        }
+    }
+
+    public void Desresaltar()
+    {
+        for (int i = 0; i < image.Length; i++)
+        {
+            animacio.OnPointerExit(image[i], coroutine);
+        }
+    }
+
+
+
+    private void OnValidate() => Actualitzar();
 }

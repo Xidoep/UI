@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 6046595092837142181}
   - component: {fileID: 1857452991043374366}
   - component: {fileID: 1296983021394390172}
+  - component: {fileID: 3951564590552747426}
   m_Layer: 5
   m_Name: Grups
   m_TagString: Untagged
@@ -253,6 +254,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &3951564590552747426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5009236551527449378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7212ac3ee04da8c42832ecee15826df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 7545708218590652581}
+  animacio: {fileID: 11400000, guid: 3fd7fa53615689b44815e36b49ab111a, type: 2}
+  interactuable: 0
+  onClick: 0
+  pare: {fileID: 0}
 --- !u!1 &8214075708319385436
 GameObject:
   m_ObjectHideFlags: 0

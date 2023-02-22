@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 6484361345928126025}
   - component: {fileID: 8361069174920853199}
   m_Layer: 5
-  m_Name: Base
+  m_Name: Opcions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -127,10 +127,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7212ac3ee04da8c42832ecee15826df8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  component: {fileID: 0}
+  component: {fileID: 6484361345928126025}
   onClick: 0
-  animacio: {fileID: 0}
-  pare: {fileID: 0}
+  animacio: {fileID: 11400000, guid: 3fd7fa53615689b44815e36b49ab111a, type: 2}
+  pare: {fileID: 3346979890240551977}
 --- !u!1 &6484361346128111163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,6 +1388,10 @@ PrefabInstance:
       propertyPath: m_text
       value: Enderrere
       objectReference: {fileID: 0}
+    - target: {fileID: 5706450848973212130, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+      propertyPath: pare
+      value: 
+      objectReference: {fileID: 3346979890240551977}
     - target: {fileID: 6904799655610301793, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_text
       value: Moviment

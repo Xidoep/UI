@@ -33,6 +33,13 @@ public class UI_Bindings : MonoBehaviour
         {
             bindables = new List<IBindable>(GetComponentsInChildren<IBindable>());
         }
+        //MostrarBindings();
+        StartCoroutine(MostrarBindingsTemps());
+    }
+
+    IEnumerator MostrarBindingsTemps()
+    {
+        yield return new WaitForEndOfFrame();
         MostrarBindings();
     }
     [ContextMenu("MostrarBindings")]
@@ -54,6 +61,7 @@ public class UI_Bindings : MonoBehaviour
                 //if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].isComposite)
                 if (bindings[b].IconePerBinding.InputBinding.action.Es2D(playerInput.devices[0]))
                 {
+                    
                     for (int c = 0; c < 4; c++)
                     {
                         i++;
@@ -122,7 +130,7 @@ public class UI_Bindings : MonoBehaviour
             {
                 while (index < trobats.Count)
                 {
-                    if (trobats[index].Bindable.position.y > trobats[mesApunt].Bindable.position.y)
+                    if (trobats[index].GetBindable.RectTransform.position.y > trobats[mesApunt].GetBindable.RectTransform.position.y)
                         mesApunt = index;
                     index++;
                 }
@@ -141,12 +149,13 @@ public class UI_Bindings : MonoBehaviour
     void SetBinding(UI_Binding ui, IBindable binding)
     {
         //Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name}({bindings[b].IconePerBinding.InputBinding.action.bindings[i].name}) - (){bindables[index].GetPath()}");
-        trobats.Add(ui);
+        if(!trobats.Contains(ui)) trobats.Add(ui);
 
         binding.Activar(true);
-        ui.Bindable = binding.Transform;
-        ui.Dreta = (binding.Transform.anchoredPosition.x > 0);
-        
+        //ui.Bindable = binding;
+        ui.Dreta = (binding.RectTransform.anchoredPosition.x > 0);
+
+        ui.AddBindable(binding);
 
         //ui.transform.SetParent(ui.Dreta ? bindingsD : bindingsE);
         //ui.SetBinding(binding);

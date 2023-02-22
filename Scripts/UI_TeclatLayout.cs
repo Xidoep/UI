@@ -18,7 +18,7 @@ public class UI_TeclatLayout : MonoBehaviour
     }
     [SerializeField] Layout layout;
     [SerializeField] Guardat guardat;
-
+    [SerializeField] TMP_Dropdown layoutButton;
     /*[SerializeField] Transform A;
     [SerializeField] Transform M;
     [SerializeField] Transform Q;
@@ -85,6 +85,7 @@ public class UI_TeclatLayout : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(0.3f);
         layout = (Layout)(int)guardat.Get(GUARDAT_KEY, 0);
+        layoutButton.value = (int)guardat.Get(GUARDAT_KEY, 0);
         Actualitzar();
         
     }
@@ -122,7 +123,7 @@ public class UI_TeclatLayout : MonoBehaviour
                 Ñ.Canviar(Ñ);
                 foreach (var item in Tecles)
                 {
-                    if (item.text == null)
+                    if (item.Text == null)
                         continue;
 
                     if (item.Text.font == rus) 
@@ -143,7 +144,7 @@ public class UI_TeclatLayout : MonoBehaviour
                 Ñ.Canviar(Ñ);
                 foreach (var item in Tecles)
                 {
-                    if (item.text == null)
+                    if (item.Text == null)
                         continue;
 
                     if (item.Text.font == rus)
@@ -163,7 +164,7 @@ public class UI_TeclatLayout : MonoBehaviour
                 Ñ.Canviar(M);
                 foreach (var item in Tecles)
                 {
-                    if (item.text == null)
+                    if (item.Text == null)
                         continue;
 
                     if (item.Text.font == rus)
@@ -184,7 +185,7 @@ public class UI_TeclatLayout : MonoBehaviour
 
                 foreach (var item in Tecles)
                 {
-                    if (item.text == null)
+                    if (item.Text == null)
                         continue;
 
                     if (item.Text.font == rus)
@@ -204,7 +205,7 @@ public class UI_TeclatLayout : MonoBehaviour
                 Ñ.Canviar(Ñ);
                 foreach (var item in Tecles)
                 {
-                    if (item.text == null)
+                    if (item.Text == null)
                         continue;
 
                     switch (item.Tecla)

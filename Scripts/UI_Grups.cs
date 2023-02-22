@@ -18,7 +18,7 @@ public class UI_Grups : MonoBehaviour
             if (i == index) grups[i].SetActive(true);
             else
             {
-                if (grups[i].activeSelf) grups[i].SetActive(false);
+                if (grups[i].activeSelf) grups[i].GetComponent<AnimacioPerCodi_GameObject_Referencia>().Disable();
             }
         }
     }

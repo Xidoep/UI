@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8110687715311404784}
   - component: {fileID: 8110687715311404786}
   - component: {fileID: 8110687715311404787}
+  - component: {fileID: 5706450848973212130}
   m_Layer: 5
   m_Name: PeuDePaguina
   m_TagString: Untagged
@@ -80,6 +81,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &5706450848973212130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8110687715311404785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7212ac3ee04da8c42832ecee15826df8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component: {fileID: 8110687715311404784}
+  onClick: 0
+  animacio: {fileID: 11400000, guid: bc1e55cf103fee545a13c29c80dda091, type: 2}
+  pare: {fileID: 0}
 --- !u!1001 &3767856124908711221
 PrefabInstance:
   m_ObjectHideFlags: 0

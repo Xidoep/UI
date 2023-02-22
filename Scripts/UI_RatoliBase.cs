@@ -4,24 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem.LowLevel;
 
-public class UI_RatoliBase : MonoBehaviour, IBindable
+public class UI_RatoliBase : UI_Bindable, IBindable
 {
-    Image image;
-    [SerializeField] bool utilitzada = false;
     [SerializeField] Input_MouseInteraccions interaccio;
 
-    public RectTransform Transform => GetComponent<RectTransform>();
+    Image image;
+
+
+    public RectTransform RectTransform => GetComponent<RectTransform>();
 
     [ContextMenu("Provar")]
     public string GetPath() => "<Mouse>/" + interaccio.ToString().ToLower();
     public void Activar(bool activat)
     {
         utilitzada = activat;
-        Actualitzar();
-    }
-
-    private void OnValidate()
-    {
         Actualitzar();
     }
 
@@ -34,4 +30,10 @@ public class UI_RatoliBase : MonoBehaviour, IBindable
 
         image.color = utilitzada ? Color.white : new Color(.65f, .7f, .75f);
     }
+
+    public void Restaltar() => animacio.OnPointerEnter(image, coroutine);
+    public void Desresaltar() => animacio.OnPointerExit(image, coroutine);
+
+
+    private void OnValidate() => Actualitzar();
 }

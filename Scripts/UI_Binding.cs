@@ -6,7 +6,8 @@ using TMPro;
 
 public class UI_Binding : MonoBehaviour
 {
-    Input_IconePerBinding iconePerBinding;
+    [SerializeField] XS_Button button;
+    [SerializeField] Input_IconePerBinding iconePerBinding;
 
     [Header("Referencies")]
     [SerializeField] Image degradat;
@@ -22,31 +23,43 @@ public class UI_Binding : MonoBehaviour
     [Header("Options")]
     [SerializeField] bool nonChangable = false;
 
-    RectTransform bindable;
+    //IBindable bindable;
+    List<IBindable> bindables;
     bool dreta;
+    bool registrat;
 
     GameObject liniaInici;
     GameObject liniaFinal;
 
 
-    public RectTransform Bindable
+
+    /*public IBindable Bindable { get => bindable;
+        set { 
+            bindable = value;
+            if (!registrat)
+            {
+                registrat = true;
+                button.OnEnter += bindable.Restaltar;
+                button.OnExit += bindable.Desresaltar;
+            }
+        } 
+    }*/
+    public void AddBindable(IBindable bindable)
     {
-        set => bindable = value;
-        get => bindable;
+        if (bindables == null) bindables = new List<IBindable>();
+
+        bindables.Add(bindable);
+        button.OnEnter += bindable.Restaltar;
+        button.OnExit += bindable.Desresaltar;
     }
-    public bool Dreta
-    {
-        set => dreta = value;
-        get => dreta;
-    }
+    public IBindable GetBindable => bindables[0];
+    public bool Dreta { get => dreta; set => dreta = value; }
 
     public Input_IconePerBinding IconePerBinding => iconePerBinding;
 
 
     private void OnEnable()
     {
-        if (iconePerBinding == null) iconePerBinding = GetComponent<Input_IconePerBinding>();
-
         if (nonChangable)
         {
             degradat.color = Color.gray;
@@ -57,7 +70,9 @@ public class UI_Binding : MonoBehaviour
 
     public void Actualitzar(float interfaceSize)
     {
-        dreta = (bindable.anchoredPosition.x > 0);
+        dreta = (bindables[bindables.Count - 1].RectTransform.anchoredPosition.x > 0);
+        
+        GetComponent<RectTransform>().pivot = new Vector2((dreta ? 0.1f : 0.9f), 0.5f);
 
         degradat.sprite = dreta ? degradatDreta : degradatEsquerra;
 
@@ -70,8 +85,8 @@ public class UI_Binding : MonoBehaviour
 
         linia.gameObject.SetActive(false);
 
-        //final.anchorMin = new Vector2(dreta ? 0 : 1, 0.5f);
-        //final.anchorMax = new Vector2(dreta ? 0 : 1, 0.5f);
+        final.anchorMin = new Vector2(dreta ? 0 : 1, 0.5f);
+        final.anchorMax = new Vector2(dreta ? 0 : 1, 0.5f);
 
         //linia.anchorMin = new Vector2(dreta ? 0 : 1, 0.5f);
         //linia.anchorMax = new Vector2(dreta ? 0 : 1, 0.5f);
@@ -92,7 +107,7 @@ public class UI_Binding : MonoBehaviour
         if (liniaInici == null) liniaInici = new GameObject("liniaInici");
         if (liniaFinal == null) liniaFinal = new GameObject("liniaFinal");
         liniaInici.transform.position = final.transform.position;
-        liniaFinal.transform.position = bindable.position;
+        //liniaFinal.transform.position = bindables[0].RectTransform.position;
 
         //linia.transform.position = liniaInici.transform.position;
         //linia.transform.rotation = Quaternion.LookRotation(liniaInici.transform.position - liniaFinal.transform.position);
@@ -101,5 +116,11 @@ public class UI_Binding : MonoBehaviour
         Destroy(liniaInici);
         Destroy(liniaFinal);
 
+    }
+
+    private void OnValidate()
+    {
+        if (button == null) button = GetComponent<XS_Button>();
+        if (iconePerBinding == null) iconePerBinding = GetComponent<Input_IconePerBinding>();
     }
 }
