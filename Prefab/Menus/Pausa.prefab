@@ -128,9 +128,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   component: {fileID: 6484361345928126025}
-  onClick: 0
   animacio: {fileID: 11400000, guid: 3fd7fa53615689b44815e36b49ab111a, type: 2}
+  interactuable: 0
+  onClick: 0
   pare: {fileID: 3346979890240551977}
+  boto: {fileID: 0}
 --- !u!1 &6484361346128111163
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +335,7 @@ MonoBehaviour:
     guardat: {fileID: 0}
     key: 
     local: 0
-    valor: 0
+    perDefecte: 0
 --- !u!114 &8903844816027042562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -380,9 +382,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   component: {fileID: 8361069175134735879}
-  onClick: 0
   animacio: {fileID: 11400000, guid: 3f132b74191ab18449b5806a686ba75a, type: 2}
+  interactuable: 0
+  onClick: 0
   pare: {fileID: 0}
+  boto: {fileID: 0}
 --- !u!114 &-4662833250633056176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,10 +1510,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6484361346128111162}
     m_Modifications:
-    - target: {fileID: 196224716321083044, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
-      propertyPath: inputBinding
-      value: 
-      objectReference: {fileID: 4677144970122333851, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
+    - target: {fileID: 196224716321083034, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 884339088119993894, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1522,14 +1526,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3410442534566997312, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
-      propertyPath: escoltadors.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3410442534566997312, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
-      propertyPath: escoltadors.Array.data[2]
-      value: 
-      objectReference: {fileID: 3029086133510033365, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
     - target: {fileID: 3410442534566997312, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1570,14 +1566,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4484087093646257141, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
-      propertyPath: escoltadors.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4484087093646257141, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
-      propertyPath: escoltadors.Array.data[2]
-      value: 
-      objectReference: {fileID: 4677144970122333851, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
     - target: {fileID: 4484087093646257141, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1621,14 +1609,14 @@ PrefabInstance:
     - target: {fileID: 4484087093646257141, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 11400000, guid: 3a7b2e9894ecb0f4090f0d25d7e74338, type: 2}
+      objectReference: {fileID: 4692109375964307330, guid: c9a73c93b3aa83c4a930bf9f1d2441ad, type: 3}
     - target: {fileID: 4484087093646257141, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 11400000, guid: 3a7b2e9894ecb0f4090f0d25d7e74338, type: 2}
     - target: {fileID: 4484087093646257141, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UI_Submenu, XS.UI
+      value: Utils_InstantiableFromProject, XS.Utils
       objectReference: {fileID: 0}
     - target: {fileID: 4484087093646257141, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1638,10 +1626,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5322235348656706810, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
-      propertyPath: inputBinding
-      value: 
-      objectReference: {fileID: 3029086133510033365, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
     - target: {fileID: 7762594329101777532, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: pare
       value: 

@@ -472,9 +472,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   component: {fileID: 9047300467834448557}
-  onClick: 0
   animacio: {fileID: 11400000, guid: 20421c9d8b293f2458e68313945c48a6, type: 2}
+  interactuable: 0
+  onClick: 0
   pare: {fileID: 0}
+  boto: {fileID: 0}
 --- !u!1 &9047300468365958361
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +699,7 @@ PrefabInstance:
     - target: {fileID: 875882461581839054, guid: d7b0d5552fdd34249b233f2bd2648925, type: 3}
       propertyPath: inputBinding
       value: 
-      objectReference: {fileID: 4711765495512324210, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+      objectReference: {fileID: 4677144970122333851, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
     - target: {fileID: 875882461581839055, guid: d7b0d5552fdd34249b233f2bd2648925, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -812,6 +814,7 @@ MonoBehaviour:
   escoltadors:
   - {fileID: 8689785189611468141, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
   - {fileID: 4711765495512324210, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+  - {fileID: 4677144970122333851, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:
@@ -844,7 +847,7 @@ PrefabInstance:
     - target: {fileID: 875882461581839054, guid: d7b0d5552fdd34249b233f2bd2648925, type: 3}
       propertyPath: inputBinding
       value: 
-      objectReference: {fileID: -8047345925132621113, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+      objectReference: {fileID: 3029086133510033365, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
     - target: {fileID: 875882461581839055, guid: d7b0d5552fdd34249b233f2bd2648925, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -979,6 +982,7 @@ MonoBehaviour:
   escoltadors:
   - {fileID: 4675832845230737324, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
   - {fileID: -8047345925132621113, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
+  - {fileID: 3029086133510033365, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
   OnInteractuar:
     m_PersistentCalls:
       m_Calls:

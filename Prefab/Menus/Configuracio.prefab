@@ -729,6 +729,7 @@ MonoBehaviour:
   interactuable: 0
   onClick: 0
   pare: {fileID: 0}
+  boto: {fileID: 0}
 --- !u!114 &8179008390891989650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1970,6 +1971,18 @@ PrefabInstance:
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Value
       value: 0.7318034
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.key
+      value: VolumMusica
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.local
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.valor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
@@ -4118,6 +4131,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.key
+      value: VolumSons
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.local
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.valor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -4510,6 +4535,18 @@ PrefabInstance:
       propertyPath: perDefecte
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.key
+      value: MouseSensibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.local
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.valor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6520382835854388253, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Name
       value: MouseSensiblity
@@ -4706,6 +4743,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: perDefecte
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.key
+      value: InterficeSize
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.local
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
+      propertyPath: variable.valor
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}

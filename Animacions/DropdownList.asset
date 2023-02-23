@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e338258b784a52c46b250e540248476b, type: 3}
+  m_Name: DropdownList
+  m_EditorClassIdentifier: 
+  onEnabled: {fileID: 8294921533691381987}
+  idle: {fileID: 0}
+  onPointerEnter: {fileID: 0}
+  apuntat: {fileID: 0}
+  onPointerDown: {fileID: 0}
+  onPointerUp: {fileID: 0}
+  onPointerExit: {fileID: 0}
+  onDestroyOrDisable: {fileID: 3096270799098791778}
+--- !u!114 &3096270799098791778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a5bd4e9dac6aa4697e66b4d0d8fb3a, type: 3}
+  m_Name: OnDestroyOrDisable
+  m_EditorClassIdentifier: 
+  transicio: 0
+  temps: 0.5
+  animacions:
+  - rid: 2210365202362531852
+  - rid: 2210365246622924807
+  references:
+    version: 2
+    RefIds:
+    - rid: 2210365202362531852
+      type: {class: Animacio_EsdevenimentGeneric, ns: , asm: AnimacioPerCodi}
+      data:
+        nom: Esdeveniment Generic
+        esdeveniment: 1
+    - rid: 2210365246622924807
+      type: {class: Animacio_RectEscala, ns: , asm: AnimacioPerCodi}
+      data:
+        nom: Rect escala
+        corba:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: -3.2563093
+            outSlope: -3.2563093
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.30504304
+          - serializedVersion: 3
+            time: 0.3
+            value: -0.0006634295
+            inSlope: 2.4454997
+            outSlope: 2.4454997
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.17589186
+            outWeight: 0.13560878
+          - serializedVersion: 3
+            time: 0.7
+            value: 1.0018749
+            inSlope: 2.5408456
+            outSlope: 2.5408456
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.114083745
+            outWeight: 0.18327165
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: -2.9518287
+            outSlope: -2.9518287
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.13284159
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        inici: {x: 0, y: 302}
+        final: {x: 0, y: 0}
+        dinamic: 1
+--- !u!114 &8294921533691381987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a5bd4e9dac6aa4697e66b4d0d8fb3a, type: 3}
+  m_Name: OnEnabled
+  m_EditorClassIdentifier: 
+  transicio: 0
+  temps: 0.75
+  animacions:
+  - rid: 2210365246622924805
+  - rid: 2210365246622924806
+  references:
+    version: 2
+    RefIds:
+    - rid: 2210365246622924805
+      type: {class: Animacio_Escala, ns: , asm: AnimacioPerCodi}
+      data:
+        nom: Escala
+        corba:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 10.770842
+            outSlope: 10.770842
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.028031815
+          - serializedVersion: 3
+            time: 0.5743538
+            value: 1.061835
+            inSlope: -2.5971665
+            outSlope: -2.5971665
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.05626232
+            outWeight: 0.17152293
+          - serializedVersion: 3
+            time: 0.82769793
+            value: 0.9648983
+            inSlope: 1.1147743
+            outSlope: 1.1147743
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.22921783
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: -0
+            outSlope: -0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.44113
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        inici: {x: 1.2, y: 0.6, z: 1.2}
+        final: {x: 1, y: 1, z: 1}
+        dinamic: 0
+    - rid: 2210365246622924806
+      type: {class: Animacio_RectEscala, ns: , asm: AnimacioPerCodi}
+      data:
+        nom: Rect escala
+        corba:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 10.072072
+            outSlope: 10.072072
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.09928443
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        inici: {x: 0, y: 0}
+        final: {x: 0, y: 302}
+        dinamic: 0

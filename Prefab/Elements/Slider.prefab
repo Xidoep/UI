@@ -319,6 +319,11 @@ MonoBehaviour:
       m_Calls: []
   animacio: {fileID: 11400000, guid: 6aa56ea7bf0bc2a4db26a9e65c4b00b6, type: 2}
   so: {fileID: 11400000, guid: 50f36f7a3a835f441bb9c9f072726e22, type: 2}
+  variable:
+    guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
+    key: 
+    local: 0
+    valor: 0.5
   guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
   key: 
   local: 1

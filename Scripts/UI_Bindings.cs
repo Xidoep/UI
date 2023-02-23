@@ -27,8 +27,7 @@ public class UI_Bindings : MonoBehaviour
         
         playerInput = FindObjectOfType<PlayerInput>();
 
-        interfaceSize = new SavableVariable<float>();
-        interfaceSize.Define(guardat, UI_Tamany.KEY_INTERFICIE_SIZE, true, 1f);
+        interfaceSize = new SavableVariable<float>(guardat, UI_Tamany.KEY_INTERFICIE_SIZE, true, 1f);
         if(bindables == null)
         {
             bindables = new List<IBindable>(GetComponentsInChildren<IBindable>());

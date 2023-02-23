@@ -14,8 +14,8 @@ public class UI_Tamany : MonoBehaviour
     float size = 1;
     void OnEnable()
     {
-        interfaceSize = new SavableVariable<float>();
-        interfaceSize.Define(guardat, KEY_INTERFICIE_SIZE, true, (float)(guardat.Get(KEY_INTERFICIE_SIZE, 0.8f)));
+        interfaceSize = new SavableVariable<float>(guardat, KEY_INTERFICIE_SIZE, true, (float)(guardat.Get(KEY_INTERFICIE_SIZE, 0.8f)));
+        //interfaceSize.Define(guardat, KEY_INTERFICIE_SIZE, true, (float)(guardat.Get(KEY_INTERFICIE_SIZE, 0.8f)));
 
         SetCanvasScale();
     }

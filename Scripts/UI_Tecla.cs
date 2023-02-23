@@ -88,6 +88,7 @@ public class UI_Tecla : UI_Bindable, IBindable
 
     public void Desresaltar()
     {
+        if (coroutine != null) StopCoroutine(coroutine);
         for (int i = 0; i < image.Length; i++)
         {
             animacio.OnPointerExit(image[i], coroutine);
