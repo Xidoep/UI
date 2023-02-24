@@ -28,8 +28,8 @@ public class UI_Menu : ScriptableObject
     [SerializeField] Utils_InstantiableFromProject pausa;
     [SerializeField] GameObject[] menus;
 
-    GameObject previous;
-    GameObject current;
+    [SerializeField] GameObject previous;
+    [SerializeField] GameObject current;
 
     PlayerInput playerInput;
     Coroutine amagarBlur;
@@ -189,7 +189,7 @@ public class UI_Menu : ScriptableObject
             return;
 
         if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>(true);
-        if (guardat) guardat.Carregar();
+        //if (guardat) guardat.Carregar();
         if (playerInput) playerInput.SwitchCurrentActionMap(UI);
 
         Time.timeScale = 0;

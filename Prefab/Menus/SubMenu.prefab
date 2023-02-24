@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 1385264430942070062}
   - component: {fileID: 4692109375964307330}
   m_Layer: 5
-  m_Name: SubMenu 1
+  m_Name: SubMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -203,10 +203,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
   interfaceSize:
-    guardat: {fileID: 0}
-    key: 
-    local: 0
-    valor: 0
+    guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
+    key: InterficeSize
+    local: 1
+    perDefecte: 1
 --- !u!114 &6206017895747369764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,9 +253,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   component: {fileID: 7888343909904973973}
-  onClick: 0
   animacio: {fileID: 11400000, guid: 3f132b74191ab18449b5806a686ba75a, type: 2}
+  interactuable: 0
+  onClick: 0
   pare: {fileID: 0}
+  boto: {fileID: 0}
 --- !u!114 &4692109375964307330
 MonoBehaviour:
   m_ObjectHideFlags: 0
