@@ -73,7 +73,7 @@ public class UI_Bindings : MonoBehaviour
                         }
                         if (trobat)
                         {
-                            Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name}({bindings[b].IconePerBinding.InputBinding.action.bindings[i].name}) - (){bindables[index].GetPath()}");
+                            //Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name}({bindings[b].IconePerBinding.InputBinding.action.bindings[i].name}) - (){bindables[index].GetPath()}");
                             SetBinding(bindings[b], bindables[index]);
                         }
                     }
@@ -92,7 +92,7 @@ public class UI_Bindings : MonoBehaviour
                         }
                         if (trobat)
                         {
-                            Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name}({bindings[b].IconePerBinding.InputBinding.action.bindings[i].name}) - (){bindables[index].GetPath()}");
+                            //Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name}({bindings[b].IconePerBinding.InputBinding.action.bindings[i].name}) - (){bindables[index].GetPath()}");
                             SetBinding(bindings[b], bindables[index]);
                         }
                     }
@@ -103,14 +103,14 @@ public class UI_Bindings : MonoBehaviour
                     index = 0;
                     while (index < bindables.Count && !trobat)
                     {
-                        Debug.Log(bindings[b].IconePerBinding.InputBinding.action.bindings[i].overridePath + " - " + bindings[b].IconePerBinding.InputBinding.action.bindings[i].path);
+                        //Debug.Log(bindings[b].IconePerBinding.InputBinding.action.bindings[i].overridePath + " - " + bindings[b].IconePerBinding.InputBinding.action.bindings[i].path);
                         if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].Comparar(bindables[index].GetPath())) trobat = true;
                         else index++;
                     }
 
                     if (trobat)
                     {
-                        Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name} - {bindables[index].GetPath()}");
+                        //Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name} - {bindables[index].GetPath()}");
                         SetBinding(bindings[b], bindables[index]);
                     }
                 }
