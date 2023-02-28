@@ -123,12 +123,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   animacio: {fileID: 11400000, guid: 2a5c255a53d1de247915709d45ae0b2f, type: 2}
-  onEnter:
-    m_PersistentCalls:
-      m_Calls: []
-  onExit:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &7957026878644789863
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +191,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 
+  m_text: por defecto
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 19c5dc1fb63d40c4281cb8589c0eedf0, type: 2}
   m_sharedMaterial: {fileID: 407802829209662782, guid: 19c5dc1fb63d40c4281cb8589c0eedf0, type: 2}
@@ -206,7 +200,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4278190080
   m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -268,6 +262,8 @@ MonoBehaviour:
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
   animacio: {fileID: 11400000, guid: 7be7faf63610ad54c9b4f2b01d39cabc, type: 2}
   button: {fileID: 748083570356153585}
+  slider: {fileID: 0}
+  percentatge: 0
 --- !u!114 &8496839354916248684
 MonoBehaviour:
   m_ObjectHideFlags: 0

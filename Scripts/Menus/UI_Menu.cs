@@ -205,6 +205,6 @@ public class UI_Menu : ScriptableObject
 
     private void OnValidate()
     {
-        guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
+        guardat = XS_Editor.LoadGuardat<Guardat>();
     }
 }
