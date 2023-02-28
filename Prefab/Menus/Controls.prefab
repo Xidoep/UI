@@ -11844,12 +11844,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e34dc2e93485438fd4f432c540ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
   interfaceSize:
     guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
     key: InterficeSize
     local: 1
-    perDefecte: 1
+    perDefecte: 0.8
 --- !u!114 &7891777877626544594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52735,7 +52734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5415901338361349136, guid: 2163f3f3b701ac243bc4fcb9584bd323, type: 3}
       propertyPath: m_text
-      value: Layout
+      value: "Disposici\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 5415901338361349136, guid: 2163f3f3b701ac243bc4fcb9584bd323, type: 3}
       propertyPath: m_fontSize
@@ -53173,7 +53172,7 @@ PrefabInstance:
       objectReference: {fileID: 8780826405593779634, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
     - target: {fileID: 1048900829312130829, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_text
-      value: "Despla\xE7ament"
+      value: Movimient
       objectReference: {fileID: 0}
     - target: {fileID: 1217680853629964779, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_RebindText
@@ -53217,7 +53216,7 @@ PrefabInstance:
       objectReference: {fileID: 3770240543168870276}
     - target: {fileID: 3555985345903195884, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_text
-      value: Girar esquerra
+      value: Girar derecha
       objectReference: {fileID: 0}
     - target: {fileID: 4160476464586310212, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_IsActive
@@ -53241,7 +53240,7 @@ PrefabInstance:
       objectReference: {fileID: -6804108300162860560, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
     - target: {fileID: 4722117758441457556, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_text
-      value: Allunyar-se
+      value: Alejarse
       objectReference: {fileID: 0}
     - target: {fileID: 4873264665695435918, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: inputBinding
@@ -53249,7 +53248,7 @@ PrefabInstance:
       objectReference: {fileID: -8821978498007634768, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
     - target: {fileID: 4998369839846513030, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_text
-      value: Zoom
+      value: Acercarse
       objectReference: {fileID: 0}
     - target: {fileID: 6572340740120663904, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_RebindText
@@ -53265,7 +53264,7 @@ PrefabInstance:
       objectReference: {fileID: 3770240543168870276}
     - target: {fileID: 6868069262174079003, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_text
-      value: "Despla\xE7ament"
+      value: Movimient
       objectReference: {fileID: 0}
     - target: {fileID: 6908582176013158770, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_BindingId
@@ -54385,11 +54384,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 916896402224192720, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_text
-      value: Enderrere
+      value: "Atr\xE1s"
       objectReference: {fileID: 0}
     - target: {fileID: 4066151623538977533, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_text
-      value: Enderrere
+      value: "Atr\xE1s"
       objectReference: {fileID: 0}
     - target: {fileID: 5706450848973212130, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: pare
@@ -54397,8 +54396,12 @@ PrefabInstance:
       objectReference: {fileID: 1504515499145313517}
     - target: {fileID: 6904799655610301793, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_text
-      value: Moviment
+      value: Movimiento
       objectReference: {fileID: 0}
+    - target: {fileID: 6904799655719940199, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+      propertyPath: inputBinding
+      value: 
+      objectReference: {fileID: -2531482967603343764, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
     - target: {fileID: 8110687714320432694, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_text
       value: Seleccionar
@@ -55394,7 +55397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9047300468365958367, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: m_text
-      value: Controls
+      value: Controles
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
@@ -55619,7 +55622,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 330500890942471495, guid: d15e7891bc206e04b87d6d4114a759bb, type: 3}
       propertyPath: m_text
-      value: by default
+      value: por defecto
       objectReference: {fileID: 0}
     - target: {fileID: 330500890942471495, guid: d15e7891bc206e04b87d6d4114a759bb, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -55715,7 +55718,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8546338091933861682, guid: d15e7891bc206e04b87d6d4114a759bb, type: 3}
       propertyPath: m_text
-      value: Restore
+      value: Restaurar
       objectReference: {fileID: 0}
     - target: {fileID: 8546338091933861682, guid: d15e7891bc206e04b87d6d4114a759bb, type: 3}
       propertyPath: m_fontSize

@@ -21,7 +21,8 @@ public class UI_Tamany : MonoBehaviour
 
     public void SetCanvasScale()
     {
-        //if (canvasScaler == null) canvasScaler = GetComponent<CanvasScaler>();
+        if (canvasScaler == null) canvasScaler = GetComponent<CanvasScaler>();
+
         size = interfaceSize.Valor;
         canvasScaler.referenceResolution = new Vector2(1920 / size, 1080 / size);
     }
@@ -29,7 +30,5 @@ public class UI_Tamany : MonoBehaviour
     private void OnValidate() 
     {
         interfaceSize = new SavableVariable<float>(KEY_INTERFICIE_SIZE, true, 0.8f);
-        if (canvasScaler == null) canvasScaler = GetComponent<CanvasScaler>();
-        if (canvasScaler == null) Debug.LogError("No hi ha un CanvasScaler!!!", this.gameObject);
     } 
 }

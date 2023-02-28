@@ -22,7 +22,8 @@ public class UI_Menu : ScriptableObject
 
     [SerializeField] Guardat guardat;
     //[SerializeField] GameObject prefab_blurShader;
-    [SerializeField] InputActionReference[] escoltadors;
+    [SerializeField] AccesToMenu[] accessos;
+    //[SerializeField] InputActionReference[] escoltadors;
     //[SerializeField] UI_Submenu pausa;
     //[SerializeField] UI_Submenu main;
     [SerializeField] Utils_InstantiableFromProject pausa;
@@ -32,19 +33,55 @@ public class UI_Menu : ScriptableObject
     [SerializeField] GameObject current;
 
     PlayerInput playerInput;
-    Coroutine amagarBlur;
+    //Coroutine amagarBlur;
     //AnimacioPerCodi blurShader;
 
     /*bool entrat = false;
     int index = 0;
     bool trobat = false;
     */
+
+    
     public GameObject Previous => previous;
 
     [SerializeField] UnityEvent onPause;
     [SerializeField] UnityEvent onResume;
     [SerializeField] UnityEvent onToMainMenu;
 
+    [System.Serializable]
+    public struct AccesToMenu
+    {
+        [SerializeField] InputActionReference[] escoltadors;
+
+        [SerializeField] Utils_InstantiableFromProject menu;
+        Action<Utils_InstantiableFromProject> pausa;
+
+        public void RegistrarAccions(Action<Utils_InstantiableFromProject> pausa)
+        {
+            //current = null;
+            //entrat = false;
+            for (int i = 0; i < escoltadors.Length; i++)
+            {
+                escoltadors[i].action.performed += Pause_ViaAction;
+            }
+            this.pausa += pausa;
+        }
+        public void DesregistrarAccions(Action<Utils_InstantiableFromProject> pausa)
+        {
+            for (int i = 0; i < escoltadors.Length; i++)
+            {
+                escoltadors[i].action.performed -= Pause_ViaAction;
+            }
+            this.pausa -= pausa;
+        }
+        void Pause_ViaAction(InputAction.CallbackContext context)
+        {
+            if (context.phase != InputActionPhase.Performed)
+                return;
+
+            pausa?.Invoke(menu);
+        }
+    }
     void OnEnable()
     {
         Debugar.Log("[UI_Menu] OnEnable => RegistrarAccions()");
@@ -56,9 +93,9 @@ public class UI_Menu : ScriptableObject
         current = null;
         //entrat = false;
 
-        for (int i = 0; i < escoltadors.Length; i++)
+        for (int i = 0; i < accessos.Length; i++)
         {
-            escoltadors[i].action.performed += Pause_ViaAction;
+            accessos[i].RegistrarAccions(Pause);
         }
         InputSystem.onDeviceChange += Pause_OnNoDevice;
     }
@@ -70,9 +107,9 @@ public class UI_Menu : ScriptableObject
     }
     public void DesregistrarAccions()
     {
-        for (int i = 0; i < escoltadors.Length; i++)
+        for (int i = 0; i < accessos.Length; i++)
         {
-            escoltadors[i].action.performed -= Pause_ViaAction;
+            accessos[i].RegistrarAccions(Pause);
         }
         InputSystem.onDeviceChange -= Pause_OnNoDevice;
     }
@@ -82,15 +119,16 @@ public class UI_Menu : ScriptableObject
         if(change == InputDeviceChange.Removed || change == InputDeviceChange.Disconnected)
             Pause();
     }
-    void Pause_ViaAction(InputAction.CallbackContext context)
+
+    public void Pause(Utils_InstantiableFromProject menu)
     {
-        if (context.phase != InputActionPhase.Performed)
+        if (current != null)
             return;
 
-        Pause();
+        EnterMenuMode();
+        Switch(menu);
+        onPause.Invoke();
     }
-
-
     public void Pause()
     {
         if (current != null)
@@ -164,7 +202,7 @@ public class UI_Menu : ScriptableObject
 
 
 
-    public void Suport() => Application.OpenURL("https://www.xidostudio.com/support");
+    public void Suport() => Application.OpenURL("https://www.xidostudioScom/support");
     /*public void QuitGame() 
     {
         //onExitGame.Invoke();
