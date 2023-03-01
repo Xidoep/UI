@@ -87,6 +87,13 @@ public class UI_Menu : ScriptableObject
         Debugar.Log("[UI_Menu] OnEnable => RegistrarAccions()");
         RegistrarAccions();
     }
+    void OnDisable()
+    {
+        Debugar.Log("[UI_Menu] OnDisable() => DesregistrarAccions()");
+        DesregistrarAccions();
+        current = null;
+        previous = null;
+    }
 
     public void RegistrarAccions()
     {
@@ -100,11 +107,7 @@ public class UI_Menu : ScriptableObject
         InputSystem.onDeviceChange += Pause_OnNoDevice;
     }
 
-    void OnDisable()
-    {
-        Debugar.Log("[UI_Menu] OnDisable() => DesregistrarAccions()");
-        DesregistrarAccions();
-    }
+
     public void DesregistrarAccions()
     {
         for (int i = 0; i < accessos.Length; i++)

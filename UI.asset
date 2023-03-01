@@ -20,10 +20,6 @@ MonoBehaviour:
   - escoltadors:
     - {fileID: -9137019786463250605, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
     menu: {fileID: 4692109375964307330, guid: c9a73c93b3aa83c4a930bf9f1d2441ad, type: 3}
-  escoltadors:
-  - {fileID: -3701725696689857482, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
-  - {fileID: -7163977983525893310, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
-  - {fileID: -129951666006041596, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
   pausa: {fileID: -4662833250633056176, guid: 44db95828c24fd74e9359d15ac1ebcc7, type: 3}
   menus:
   - {fileID: 3260677825915062634, guid: 91d39af8aa8b15e41a3d292b36642764, type: 3}
