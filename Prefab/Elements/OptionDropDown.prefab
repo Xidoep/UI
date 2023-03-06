@@ -314,6 +314,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1616841672178017534, guid: d844f9388ac19e64491335afc08f1ad7, type: 3}
+      propertyPath: animacio
+      value: 
+      objectReference: {fileID: 11400000, guid: e190a6ae564ca3c4bb1513dc6064d51f, type: 2}
+    - target: {fileID: 1616841672178017534, guid: d844f9388ac19e64491335afc08f1ad7, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 0}
@@ -321,6 +325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dropdown
       objectReference: {fileID: 0}
+    - target: {fileID: 4775226171368593662, guid: d844f9388ac19e64491335afc08f1ad7, type: 3}
+      propertyPath: animacio
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b7c939f72e716e4489fb4d79aa030c3, type: 2}
     - target: {fileID: 6125056606842135328, guid: d844f9388ac19e64491335afc08f1ad7, type: 3}
       propertyPath: m_SizeDelta.y
       value: 310

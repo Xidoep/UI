@@ -31,10 +31,34 @@ MonoBehaviour:
   current: {fileID: 0}
   onPause:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 52c2d0aec9828df429cf838c2f727adf, type: 2}
+        m_TargetAssemblyTypeName: Fase_Menu, Hexbase
+        m_MethodName: DesactivarBotons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onResume:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 52c2d0aec9828df429cf838c2f727adf, type: 2}
+        m_TargetAssemblyTypeName: Fase_Menu, Hexbase
+        m_MethodName: ActivarBotons
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onToMainMenu:
     m_PersistentCalls:
       m_Calls: []

@@ -132,15 +132,8 @@ public class UI_Menu : ScriptableObject
         Switch(menu);
         onPause.Invoke();
     }
-    public void Pause()
-    {
-        if (current != null)
-            return;
+    public void Pause() => Pause(pausa);
 
-        EnterMenuMode();
-        Switch(pausa);
-        onPause.Invoke();
-    }
     public void Resume()
     {
         Close();
@@ -200,7 +193,13 @@ public class UI_Menu : ScriptableObject
             else
                 Destroy(current.gameObject);
         }
-        current = previous.GetComponent<Utils_InstantiableFromProject>().InstantiateReturn();
+
+        if (previous)
+            current = previous.GetComponent<Utils_InstantiableFromProject>().InstantiateReturn();
+        else
+            Resume();
+
+
     }
 
 
