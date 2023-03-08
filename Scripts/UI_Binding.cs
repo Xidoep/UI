@@ -25,7 +25,7 @@ public class UI_Binding : MonoBehaviour
 
     //IBindable bindable;
     List<IBindable> bindables;
-    bool dreta;
+    [SerializeField] bool dreta;
     bool registrat;
 
     GameObject liniaInici;
@@ -70,7 +70,8 @@ public class UI_Binding : MonoBehaviour
 
     public void Actualitzar(float interfaceSize)
     {
-        dreta = (bindables[bindables.Count - 1].RectTransform.anchoredPosition.x > 0);
+        if (Application.isPlaying)
+            dreta = (bindables[bindables.Count - 1].RectTransform.anchoredPosition.x > 0);
         
         GetComponent<RectTransform>().pivot = new Vector2((dreta ? 0.1f : 0.9f), 0.5f);
 
@@ -94,6 +95,9 @@ public class UI_Binding : MonoBehaviour
         //linia.transform.localScale = Vector3.zero;
 
         iconePerBinding.MostrarIcone();
+
+        if (!Application.isPlaying)
+            return;
 
         StartCoroutine(Linia(interfaceSize));
     }
@@ -122,5 +126,6 @@ public class UI_Binding : MonoBehaviour
     {
         if (button == null) button = GetComponent<XS_Button>();
         if (iconePerBinding == null) iconePerBinding = GetComponent<Input_IconePerBinding>();
+        Actualitzar(1);
     }
 }

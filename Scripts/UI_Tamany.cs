@@ -29,6 +29,6 @@ public class UI_Tamany : MonoBehaviour
 
     private void OnValidate() 
     {
-        interfaceSize = new SavableVariable<float>(KEY_INTERFICIE_SIZE, true, 0.8f);
+        interfaceSize = new SavableVariable<float>(KEY_INTERFICIE_SIZE, Guardat.Direccio.Local, 0.8f);
     } 
 }

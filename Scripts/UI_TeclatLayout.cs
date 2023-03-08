@@ -7,7 +7,7 @@ using TMPro;
 
 public class UI_TeclatLayout : MonoBehaviour
 {
-    const string GUARDAT_KEY = "Layout";
+    const string KEY_GUARDAT = "Layout";
     enum Layout
     {
         QWERTY,
@@ -17,7 +17,8 @@ public class UI_TeclatLayout : MonoBehaviour
         JCUKEN //Rus
     }
     [SerializeField] Layout layout;
-    [SerializeField] Guardat guardat;
+    //[SerializeField] Guardat guardat;
+    [SerializeField] SavableVariable<int> seleccionat;
     [SerializeField] TMP_Dropdown layoutButton;
     /*[SerializeField] Transform A;
     [SerializeField] Transform M;
@@ -84,8 +85,8 @@ public class UI_TeclatLayout : MonoBehaviour
     IEnumerator SetLayout()
     {
         yield return new WaitForSecondsRealtime(0.3f);
-        layout = (Layout)(int)guardat.Get(GUARDAT_KEY, 0);
-        layoutButton.value = (int)guardat.Get(GUARDAT_KEY, 0);
+        layout = (Layout)seleccionat.Valor;
+        layoutButton.value = (int)layout;
         Actualitzar();
         
     }
@@ -93,7 +94,7 @@ public class UI_TeclatLayout : MonoBehaviour
     {
         layout = (Layout)tipus;
         Actualitzar();
-        guardat.SetLocal(GUARDAT_KEY, (int)layout);
+        seleccionat.Valor = (int)layout;
     }
     private void OnDisable()
     {
@@ -327,6 +328,7 @@ public class UI_TeclatLayout : MonoBehaviour
 
     private void OnValidate()
     {
-        guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
+        seleccionat = new SavableVariable<int>(KEY_GUARDAT, Guardat.Direccio.Local, 0);
+        //guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
     }
 }

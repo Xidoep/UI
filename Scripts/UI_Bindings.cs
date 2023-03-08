@@ -9,7 +9,7 @@ public class UI_Bindings : MonoBehaviour
 {
     //[SerializeField] Settings settings;
     SavableVariable<float> interfaceSize;
-    [SerializeField] Guardat guardat;
+    //[SerializeField] Guardat guardat;
     [SerializeField] Transform bindingsE, bindingsD;
     [SerializeField] UI_Binding[] bindings;
     List<IBindable> bindables;
@@ -27,7 +27,7 @@ public class UI_Bindings : MonoBehaviour
         
         playerInput = FindObjectOfType<PlayerInput>();
 
-        interfaceSize = new SavableVariable<float>(guardat, UI_Tamany.KEY_INTERFICIE_SIZE, true, 1f);
+        interfaceSize = new SavableVariable<float>(UI_Tamany.KEY_INTERFICIE_SIZE, Guardat.Direccio.Local, 0.8f);
         if(bindables == null)
         {
             bindables = new List<IBindable>(GetComponentsInChildren<IBindable>());
@@ -162,8 +162,8 @@ public class UI_Bindings : MonoBehaviour
         //ui.Actualitzar();
     }
 
-    private void OnValidate()
+    /*private void OnValidate()
     {
         guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
-    }
+    }*/
 }
