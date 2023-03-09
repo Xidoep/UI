@@ -12,6 +12,9 @@ public class UI_Bindings : MonoBehaviour
     //[SerializeField] Guardat guardat;
     [SerializeField] Transform bindingsE, bindingsD;
     [SerializeField] UI_Binding[] bindings;
+    [SerializeField] bool rebindable;
+    [SerializeField] bool posicionar;
+
     List<IBindable> bindables;
 
     bool trobat = false;
@@ -34,6 +37,7 @@ public class UI_Bindings : MonoBehaviour
         }
         //MostrarBindings();
         StartCoroutine(MostrarBindingsTemps());
+
     }
 
     IEnumerator MostrarBindingsTemps()
@@ -58,7 +62,7 @@ public class UI_Bindings : MonoBehaviour
             for (int i = 0; i < bindings[b].IconePerBinding.InputBinding.action.bindings.Count; i++)
             {
                 //if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].isComposite)
-                if (bindings[b].IconePerBinding.InputBinding.action.Es2D(playerInput.devices[0]))
+                if (bindings[b].IconePerBinding.InputBinding.action.Es2D(playerInput.devices[0], true))
                 {
                     
                     for (int c = 0; c < 4; c++)
@@ -68,7 +72,7 @@ public class UI_Bindings : MonoBehaviour
                         index = 0;
                         while (index < bindables.Count && !trobat)
                         {
-                            if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].Comparar(bindables[index].GetPath())) trobat = true;
+                            if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].CompararPath(bindables[index].GetPath(), true)) trobat = true;
                             else index++;
                         }
                         if (trobat)
@@ -78,7 +82,7 @@ public class UI_Bindings : MonoBehaviour
                         }
                     }
                 }
-                else if (bindings[b].IconePerBinding.InputBinding.action.Es1D(playerInput.devices[0]))
+                else if (bindings[b].IconePerBinding.InputBinding.action.Es1D(playerInput.devices[0], true))
                 {
                     for (int c = 0; c < 2; c++)
                     {
@@ -87,7 +91,7 @@ public class UI_Bindings : MonoBehaviour
                         index = 0;
                         while (index < bindables.Count && !trobat)
                         {
-                            if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].Comparar(bindables[index].GetPath())) trobat = true;
+                            if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].CompararPath(bindables[index].GetPath(), true)) trobat = true;
                             else index++;
                         }
                         if (trobat)
@@ -104,7 +108,7 @@ public class UI_Bindings : MonoBehaviour
                     while (index < bindables.Count && !trobat)
                     {
                         //Debug.Log(bindings[b].IconePerBinding.InputBinding.action.bindings[i].overridePath + " - " + bindings[b].IconePerBinding.InputBinding.action.bindings[i].path);
-                        if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].Comparar(bindables[index].GetPath())) trobat = true;
+                        if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].CompararPath(bindables[index].GetPath(), true)) trobat = true;
                         else index++;
                     }
 
@@ -116,7 +120,6 @@ public class UI_Bindings : MonoBehaviour
                 }
                 
             }
-
 
         }
 
@@ -139,8 +142,11 @@ public class UI_Bindings : MonoBehaviour
         }
         for (int i = 0; i < ordenats.Count; i++)
         {
-            ordenats[i].transform.SetParent(ordenats[i].Dreta ? bindingsD : bindingsE);
-            ordenats[i].Actualitzar(interfaceSize.Valor);
+            if(posicionar)
+                ordenats[i].transform.SetParent(ordenats[i].Dreta ? bindingsD : bindingsE);
+
+            ordenats[i].Rebindable = rebindable;
+            ordenats[i].Actualitzar();
         }
 
     }
@@ -152,14 +158,13 @@ public class UI_Bindings : MonoBehaviour
 
         binding.Activar(true);
         //ui.Bindable = binding;
-        ui.Dreta = (binding.RectTransform.anchoredPosition.x > 0);
+        if (posicionar)
+            ui.Dreta = (binding.RectTransform.anchoredPosition.x > 0);
 
         ui.AddBindable(binding);
 
-        //ui.transform.SetParent(ui.Dreta ? bindingsD : bindingsE);
-        //ui.SetBinding(binding);
 
-        //ui.Actualitzar();
+
     }
 
     /*private void OnValidate()

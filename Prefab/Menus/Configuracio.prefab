@@ -2615,7 +2615,7 @@ MonoBehaviour:
   interfaceSize:
     guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
     key: InterficeSize
-    local: 1
+    direccio: 0
     perDefecte: 0.8
 --- !u!114 &1499146817553394387
 MonoBehaviour:
@@ -2930,79 +2930,79 @@ MonoBehaviour:
   - rectTransform: {fileID: 7201589258760347256}
     posicio: {x: 806.0161, y: -50}
     factor: {x: 0.5, y: 0.9621212}
-    factorVisible: {x: 0.50000006, y: 0.007452227}
+    factorVisible: {x: 0.50000006, y: 0.007452135}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 7189711738577096837}
     posicio: {x: 806.0161, y: -211.36363}
     factor: {x: 0.5, y: 0.83987606}
-    factorVisible: {x: 0.50000006, y: -0.12854052}
+    factorVisible: {x: 0.50000006, y: -0.1285406}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 1126707225299674641}
     posicio: {x: 806.0161, y: -318.9394}
     factor: {x: 0.5, y: 0.7583792}
-    factorVisible: {x: 0.50000006, y: -0.21920235}
+    factorVisible: {x: 0.50000006, y: -0.21920244}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 6932812182895912035}
     posicio: {x: 806.0161, y: -372.72726}
     factor: {x: 0.5, y: 0.71763086}
-    factorVisible: {x: 0.50000006, y: -0.26453325}
+    factorVisible: {x: 0.50000006, y: -0.26453337}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 5716725796037734194}
     posicio: {x: 806.0161, y: -534.0909}
     factor: {x: 0.5, y: 0.5953857}
-    factorVisible: {x: 0.50000006, y: -0.40052602}
+    factorVisible: {x: 0.50000006, y: -0.4005261}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 6094840547317319413}
     posicio: {x: 806.0161, y: -641.6667}
     factor: {x: 0.5, y: 0.51388884}
-    factorVisible: {x: 0.50000006, y: -0.49118787}
+    factorVisible: {x: 0.50000006, y: -0.49118793}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 7001935512506706845}
     posicio: {x: 806.0161, y: -714.5455}
     factor: {x: 0.5, y: 0.45867765}
-    factorVisible: {x: 0.50000006, y: -0.53651875}
+    factorVisible: {x: 0.50000006, y: -0.5365188}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 8875090812800472005}
     posicio: {x: 806.0161, y: -824.5455}
     factor: {x: 0.5, y: 0.37534434}
-    factorVisible: {x: 0.50000006, y: -0.64531296}
+    factorVisible: {x: 0.50000006, y: -0.645313}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 1502313630553303961}
     posicio: {x: 806.0161, y: -985.9091}
     factor: {x: 0.5, y: 0.25309914}
-    factorVisible: {x: 0.50000006, y: -0.78130573}
+    factorVisible: {x: 0.50000006, y: -0.7813058}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 8487314930458508738}
     posicio: {x: 806.0161, y: -1093.4849}
     factor: {x: 0.5, y: 0.17160237}
-    factorVisible: {x: 0.50000006, y: -0.87196755}
+    factorVisible: {x: 0.50000006, y: -0.8719676}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 2007378676128448277}
     posicio: {x: 806.0161, y: -1201.0605}
     factor: {x: 0.5, y: 0.09010565}
-    factorVisible: {x: 0.50000006, y: -0.9626293}
+    factorVisible: {x: 0.50000006, y: -0.96262944}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 7876360283625566069}
     posicio: {x: 806.0161, y: -1308.6364}
     factor: {x: 0.5, y: 0.008608818}
-    factorVisible: {x: 0.50000006, y: -1.0532912}
+    factorVisible: {x: 0.50000006, y: -1.0532913}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 8604497531347287474}
     posicio: {x: 806.0161, y: -1416.2122}
     factor: {x: 0.5, y: -0.07288802}
-    factorVisible: {x: 0.50000006, y: -1.143953}
+    factorVisible: {x: 0.50000006, y: -1.1439531}
     visibleX: 1
     visibleY: 0
   preparat: 1
@@ -5811,7 +5811,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 55821974032104010}
   m_HandleRect: {fileID: 7004004123136756057}
   m_Direction: 2
-  m_Value: 0.96212053
+  m_Value: 0.96212107
   m_Size: 0.83560604
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -6016,7 +6016,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 313248139976527631}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.99999994
+  m_Size: 0.9999999
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6413,7 +6413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 8.219807}
+  m_AnchoredPosition: {x: 0.000061035156, y: 8.219705}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3838745324353510633
@@ -8947,7 +8947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520382836856339970, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_fontSize
-      value: 35.8
+      value: 28.3
       objectReference: {fileID: 0}
     - target: {fileID: 6520382836856339970, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_fontAsset
@@ -9068,7 +9068,7 @@ MonoBehaviour:
   variable:
     guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
     key: InterficeSize
-    local: 1
+    direccio: 0
     perDefecte: 0
   onEnable:
     m_PersistentCalls:
@@ -9553,7 +9553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Value
-      value: 1.1
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_MaxValue
@@ -9613,7 +9613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009742057469777523, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_text
-      value: 110%
+      value: 80%
       objectReference: {fileID: 0}
     - target: {fileID: 5772690786862618381, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: component
@@ -10760,7 +10760,7 @@ MonoBehaviour:
   variable:
     guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
     key: InterficeSize
-    local: 1
+    direccio: 0
     perDefecte: 0
   onEnable:
     m_PersistentCalls:
@@ -14267,7 +14267,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Value
-      value: 0.9
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: variable.key
@@ -14311,7 +14311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009742057469777523, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_text
-      value: 90%
+      value: 110%
       objectReference: {fileID: 0}
     - target: {fileID: 3280818107671750408, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
@@ -16849,7 +16849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Value
-      value: 0.79791737
+      value: 0.8499999
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_MaxValue
@@ -16909,7 +16909,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009742057469777523, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_text
-      value: 80%
+      value: 85%
       objectReference: {fileID: 0}
     - target: {fileID: 3280818107671750408, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Navigation.m_SelectOnUp
@@ -17093,7 +17093,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6520382836856339970, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_fontSize
-      value: 21.75
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6520382836856339970, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_fontAsset
@@ -18683,7 +18683,7 @@ MonoBehaviour:
   variable:
     guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
     key: InterficeSize
-    local: 1
+    direccio: 0
     perDefecte: 0
   onEnable:
     m_PersistentCalls:
