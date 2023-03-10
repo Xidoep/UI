@@ -101,6 +101,25 @@ public class UI_Bindings : MonoBehaviour
                         }
                     }
                 }
+                else if (bindings[b].IconePerBinding.InputBinding.action.EsOneModifier(playerInput.devices[0], true))
+                {
+                    for (int c = 0; c < 2; c++)
+                    {
+                        i++;
+                        trobat = false;
+                        index = 0;
+                        while (index < bindables.Count && !trobat)
+                        {
+                            if (bindings[b].IconePerBinding.InputBinding.action.bindings[i].CompararPath(bindables[index].GetPath(), true)) trobat = true;
+                            else index++;
+                        }
+                        if (trobat)
+                        {
+                            //Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name}({bindings[b].IconePerBinding.InputBinding.action.bindings[i].name}) - (){bindables[index].GetPath()}");
+                            SetBinding(bindings[b], bindables[index]);
+                        }
+                    }
+                }
                 else
                 {
                     trobat = false;
@@ -167,8 +186,11 @@ public class UI_Bindings : MonoBehaviour
 
     }
 
-    /*private void OnValidate()
+    private void OnValidate()
     {
-        guardat = XS_Utils.XS_Editor.LoadGuardat<Guardat>();
-    }*/
+        if(bindings == null || bindings.Length == 0)
+        {
+            bindings = GetComponentsInChildren<UI_Binding>();
+        }
+    }
 }

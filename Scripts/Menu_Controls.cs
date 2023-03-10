@@ -22,6 +22,7 @@ public class Menu_Controls : MonoBehaviour
 
     public void Control(int index)
     {
+        Debug.Log("index " + index);
         if (index == inputSeleccionat.Valor)
             return;
 
@@ -43,7 +44,10 @@ public class Menu_Controls : MonoBehaviour
         {
             menus[i].gameObject.SetActive(false);
         }
+
         botons[inputSeleccionat.Valor].GetComponent<XS_Button>().Select();
+
+        menus[inputSeleccionat.Valor].gameObject.SetActive(true);
         Control(inputSeleccionat.Valor);
 
         /*for (int i = 0; i < botons.Length; i++)
