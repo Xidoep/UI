@@ -6,21 +6,20 @@ using UnityEngine.InputSystem.LowLevel;
 
 public class UI_RatoliBase : UI_Bindable, IBindable
 {
-    [SerializeField] Input_MouseInteraccions interaccio;
-
+    //[SerializeField] Input_MouseInteraccions interaccio;
+    [SerializeField] string path;
     Image image;
 
 
     public RectTransform RectTransform => GetComponent<RectTransform>();
 
-    [ContextMenu("Provar")]
-    public string GetPath() => "<Mouse>/" + interaccio.ToString().ToLower();
+    public string Path => path;
     public void Activar(bool activat)
     {
         utilitzada = activat;
         Actualitzar();
     }
-
+    public void Desactivar() { }
     void Actualitzar()
     {
         if (!image) image = GetComponentInChildren<Image>();

@@ -26,12 +26,20 @@ public class UI_Tecla : UI_Bindable, IBindable
         }
     }
 
-    [ContextMenu("Provar")]
-    public string GetPath() => "<Keyboard>/" + tecla.ToString().Substring(0, 1).ToLower() + tecla.ToString().Substring(1);
+    public string Path => "<Keyboard>/" + tecla.ToString().Substring(0, 1).ToLower() + tecla.ToString().Substring(1);
     public void Activar(bool activat)
     {
+        Debug.Log($"Utilitzada({tecla.ToString()}) = {utilitzada}");
         utilitzada = activat;
         Actualitzar();
+    }
+    public void Desactivar()
+    {
+        utilitzada = false;
+        for (int i = 0; i < image.Length; i++)
+        {
+            image[i].color = utilitzada ? Color.white : new Color(.65f, .7f, .75f);
+        }
     }
 
     public void Actualitzar()

@@ -11,13 +11,13 @@ public class UI_Boto : UI_Bindable, IBindable
 
 
     public RectTransform RectTransform => GetComponent<RectTransform>();
-    public string GetPath() => path;
+    public string Path => path;
     public void Activar(bool activat)
     {
         utilitzada = activat;
         Actualitzar();
     }
-
+    public void Desactivar() { }
     void Actualitzar()
     {
         if (!image) image = GetComponentInChildren<Image>();

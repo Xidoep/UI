@@ -14,14 +14,13 @@ public class UI_Ratoli : UI_Bindable, IBindable
 
     public RectTransform RectTransform => GetComponent<RectTransform>();
 
-    [ContextMenu("Provar")]
-    public string GetPath() => "<Mouse>/" + boto.ToString().ToLower() + "Button";
+    public string Path => "<Mouse>/" + boto.ToString().ToLower() + "Button";
     public void Activar(bool activat)
     {
         utilitzada = activat;
         Actualitzar();
     }
-
+    public void Desactivar() { }
 
     void Actualitzar()
     {

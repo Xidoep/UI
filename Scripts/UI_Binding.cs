@@ -2,10 +2,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
+using UnityEngine.InputSystem.Samples.RebindUI;
 public class UI_Binding : MonoBehaviour
 {
-
+    [SerializeField] InputActionReference binding;
     [Header("Base")]
     [SerializeField] XS_Button button;
     [SerializeField] HorizontalLayoutGroup layoutGroup;
@@ -26,10 +28,15 @@ public class UI_Binding : MonoBehaviour
     [SerializeField] Input_IconePerBinding recuperarIcone;
     [SerializeField] RectTransform recuperarTexte;
 
+    [Apartat("Altres Referencies")]
+    [SerializeField] RebindActionUI rebindActionUI;
+    [SerializeField] List<InputBinding> bindings;
+
     [Apartat("Options")]
     [SerializeField] bool dreta;
     [SerializeField] bool overrided;
     [SerializeField] bool rebindable; //Que pots clicar per rebindar i recuperar
+    [SerializeField] bool prioritzarMouse;
 
     List<IBindable> bindables;
 
@@ -42,6 +49,18 @@ public class UI_Binding : MonoBehaviour
         button.OnEnter += bindable.Restaltar;
         button.OnExit += bindable.Desresaltar;
     }
+    public void RemoveBindables()
+    {
+        for (int i = 0; i < bindables.Count; i++)
+        {
+            button.OnEnter -= bindables[i].Restaltar;
+            button.OnExit -= bindables[i].Desresaltar;
+            bindables[i].Desactivar();
+            bindables[i].Desresaltar();
+        }
+        bindables.Clear();
+    }
+
     public IBindable GetBindable => bindables[0];
     public bool Dreta { get => dreta; set => dreta = value; }
 
@@ -50,16 +69,26 @@ public class UI_Binding : MonoBehaviour
     public bool Rebindable { set => rebindable = value; }
 
 
-
     public void Actualitzar()
     {
-
         //Triar si ha d'anar a la dreta o a l'esquerra.
         if (Application.isPlaying)
             dreta = (bindables[bindables.Count - 1].RectTransform.anchoredPosition.x > 0);
 
+        //Setup overrided
+        bool algunBindingOverrided = false;
+        for (int i = 0; i < icone.Icones.Count; i++)
+        {
+            if (icone.Icones[i].overrided)
+            {
+                algunBindingOverrided = true;
+                break;
+            }
+        }
+        overrided = algunBindingOverrided;
+
         //HAbilitar botons
-        rectTransform.sizeDelta = new Vector2(rebindable ? 500 : 300, 50);
+        rectTransform.sizeDelta = new Vector2(rebindable ? 600 : 300, 50);
 
         button.Interactable(rebindable);
         Navigation navigation = new Navigation();
@@ -72,17 +101,18 @@ public class UI_Binding : MonoBehaviour
         rectTransform.pivot = new Vector2((dreta ? 0.1f : 0.9f), 0.5f);
         degradat.sprite = dreta ? degradatDreta : degradatEsquerra;
         layoutGroup.childAlignment = dreta ? TextAnchor.MiddleLeft : TextAnchor.MiddleRight;
+
         if (dreta)
         {
             final.SetAsFirstSibling();
 
             ((RectTransform)etiqueta.transform).SetAsLastSibling();
-            recuperar.SetAsLastSibling();
+            recuperar.transform.SetAsLastSibling();
         }
         else
         {
             ((RectTransform)etiqueta.transform).SetAsFirstSibling();
-            recuperar.SetAsFirstSibling();
+            recuperar.transform.SetAsFirstSibling();
 
             final.SetAsLastSibling();
         }
@@ -107,18 +137,27 @@ public class UI_Binding : MonoBehaviour
         //Visualitzar bindings
         if (!Application.isPlaying)
             return;
-
-        icone.MostrarIcone();
-        if (rebindable && overrided)
-            recuperarIcone.MostrarIcone();
     }
 
+    public void MostrarIcone()
+    {
+        icone.MostrarIcone(rebindActionUI.actionReference, true);
+        if (rebindable && overrided)
+            recuperarIcone.MostrarIcone(rebindActionUI.actionReference, true);
+    }
 
 
     private void OnValidate()
     {
         if (button == null) button = GetComponent<XS_Button>();
         if (icone == null) icone = GetComponent<Input_IconePerBinding>();
-        //Actualitzar();
+
+        icone.SetInputActionReference = rebindActionUI.actionReference;
+        recuperarIcone.SetInputActionReference = rebindActionUI.actionReference;
+
+        icone.SetPropritzarMouse = prioritzarMouse;
+        recuperarIcone.SetPropritzarMouse = prioritzarMouse;
+        //icone.SetInputActionReference(null);
+        //recuperarIcone.SetInputActionReference(null);
     }
 }

@@ -90,9 +90,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reconeixement: {fileID: 11400000, guid: d435628161b5073428f2622f9c70b669, type: 2}
+  tipoBinding: 0
+  icones: []
   binding: {fileID: 2198919727779221444}
   fondo: {fileID: 0}
-  inputBinding: {fileID: -3308873266360972293, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
+  inputBinding: {fileID: 0}
+  prioritzaMouse: 0
   overrided: 0
 --- !u!1 &4879513475832180778
 GameObject:
@@ -311,7 +314,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
       - m_Target: {fileID: 8551377409335646735}
         m_TargetAssemblyTypeName: UI_SeleccionarDesseleccionar, XS.UI
         m_MethodName: DesseleccionarIRecordar
@@ -323,7 +326,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
   component: {fileID: 5559813317664215780}
   animacio: {fileID: 11400000, guid: 1081b5261a1003342b4712b3f53c1c63, type: 2}
 --- !u!114 &7344643035177447742
@@ -351,8 +354,9 @@ MonoBehaviour:
   recuperarLayout: {fileID: 4856237193946381320}
   recuperarIcone: {fileID: 1038111411620695556}
   recuperarTexte: {fileID: 123296207851543554}
+  rebindActionUI: {fileID: 4265845112522601619}
   dreta: 1
-  overrided: 0
+  overrided: 1
   rebindable: 0
 --- !u!114 &4265845112522601619
 MonoBehaviour:
@@ -396,11 +400,14 @@ MonoBehaviour:
       m_Calls: []
   m_guardatEvent:
     m_PersistentCalls:
+      m_Calls: []
+  m_infoMessage:
+    m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 62fb1feabce02f248a791f903d6ff97e, type: 2}
-        m_TargetAssemblyTypeName: Input_Bindings, Assembly-CSharp
-        m_MethodName: Guardar
-        m_Mode: 0
+      - m_Target: {fileID: -1850259969044711568, guid: 67acd8b5033974d4fa2f0885c4212dc5, type: 3}
+        m_TargetAssemblyTypeName: Utils_InstantiableFromProject, XS.Utils
+        m_MethodName: Instantiate
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -537,9 +544,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reconeixement: {fileID: 11400000, guid: d435628161b5073428f2622f9c70b669, type: 2}
+  tipoBinding: 0
+  icones: []
   binding: {fileID: 8671795482684063346}
   fondo: {fileID: 0}
-  inputBinding: {fileID: -3308873266360972293, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
+  inputBinding: {fileID: 0}
+  prioritzaMouse: 0
   overrided: 1
 --- !u!1 &9092145220556518358
 GameObject:
@@ -893,7 +903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789860, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 69.915
+      value: 58.24
       objectReference: {fileID: 0}
     - target: {fileID: 7957026878644789860, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -903,16 +913,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8496839354916248684, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
+      propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
+      value: 303630844529659904
+      objectReference: {fileID: 0}
+    - target: {fileID: 8541882415003944173, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
+      propertyPath: button
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8541882415003944173, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_text
-      value: 'Recover?
-
-'
+      value: Original
       objectReference: {fileID: 0}
     - target: {fileID: 8541882415003944173, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: animacio
       value: 
-      objectReference: {fileID: 11400000, guid: a678f3a1ef40fd842bd580bc84c7c05f, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8541882415003944173, guid: 2b6fac50eeca9f04694f159d62fa23da, type: 3}
       propertyPath: m_fontSize
       value: 28

@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public interface IBindable
 {
     public RectTransform RectTransform { get; }
-    public string GetPath();
+    public string Path { get; }
     public void Activar(bool activat);
-
+    public void Desactivar();
     public void Restaltar();
     public void Desresaltar();
 }
