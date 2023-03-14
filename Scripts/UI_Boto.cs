@@ -4,34 +4,59 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [SelectionBase]
-public class UI_Boto : UI_Bindable, IBindable
+public class UI_Boto : UI_Bindable
 {
     [SerializeField] string path;
-    Image image;
+    [SerializeField] Image[] image;
 
 
-    public RectTransform RectTransform => GetComponent<RectTransform>();
-    public string Path => path;
-    public void Activar(bool activat)
+    public override RectTransform RectTransform => GetComponent<RectTransform>();
+    public override string Path => path;
+    public override void Activar(bool activat)
     {
         utilitzada = activat;
         Actualitzar();
     }
-    public void Desactivar() { }
-    void Actualitzar()
+    public override void Actualitzar()
     {
-        if (!image) image = GetComponentInChildren<Image>();
+        if (image == null)
+        {
+            image = new Image[0];
+            if (image.Length == 0) image = GetComponentsInChildren<Image>(true);
+        }
 
-        if (!image)
-            return;
-
-        image.color = utilitzada ? Color.white : new Color(.65f, .7f, .75f);
+        if (image.Length > 0)
+        {
+            for (int i = 0; i < image.Length; i++)
+            {
+                image[i].color = utilitzada ? Color.white : new Color(.65f, .7f, .75f);
+            }
+        }
     }
 
-    public void Restaltar() => animacio.OnPointerEnter(image, coroutine);
-    public void Desresaltar() => animacio.OnPointerExit(image, coroutine);
+    public override void Restaltar() 
+    {
+        for (int i = 0; i < image.Length; i++)
+        {
+            coroutine = animacio.OnPointerEnter(image[i], coroutine);
+        }
+    }
+    public override void Desresaltar()
+    {
+        if (coroutine != null) StopCoroutine(coroutine);
+        for (int i = 0; i < image.Length; i++)
+        {
+            coroutine = animacio.OnPointerExit(image[i], coroutine);
+        }
+    }
+    public override void Desactivar()
+    {
+        if (coroutine != null) StopCoroutine(coroutine);
+        for (int i = 0; i < image.Length; i++)
+        {
+            animacio.Disable(image[i], ref coroutine, false);
+        }
+    }
 
 
-
-    private void OnValidate() => Actualitzar();
 }

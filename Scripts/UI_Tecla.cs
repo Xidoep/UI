@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 
 [SelectionBase]
-public class UI_Tecla : UI_Bindable, IBindable
+public class UI_Tecla : UI_Bindable
 {
     [SerializeField] Key tecla;
 
@@ -16,7 +16,7 @@ public class UI_Tecla : UI_Bindable, IBindable
 
     public Key Tecla => tecla;
 
-    public RectTransform RectTransform => GetComponent<RectTransform>();
+    public override RectTransform RectTransform => GetComponent<RectTransform>();
     public TMP_Text Text
     {
         get
@@ -26,23 +26,15 @@ public class UI_Tecla : UI_Bindable, IBindable
         }
     }
 
-    public string Path => "<Keyboard>/" + tecla.ToString().Substring(0, 1).ToLower() + tecla.ToString().Substring(1);
-    public void Activar(bool activat)
+    public override string Path => "<Keyboard>/" + tecla.ToString().Substring(0, 1).ToLower() + tecla.ToString().Substring(1);
+    public override void Activar(bool activat)
     {
-        Debug.Log($"Utilitzada({tecla.ToString()}) = {utilitzada}");
         utilitzada = activat;
+        Debug.Log($"Utilitzada({tecla.ToString()}) = {utilitzada}");
         Actualitzar();
     }
-    public void Desactivar()
-    {
-        utilitzada = false;
-        for (int i = 0; i < image.Length; i++)
-        {
-            image[i].color = utilitzada ? Color.white : new Color(.65f, .7f, .75f);
-        }
-    }
 
-    public void Actualitzar()
+    public override void Actualitzar()
     {
         if(image == null)
         {
@@ -61,8 +53,37 @@ public class UI_Tecla : UI_Bindable, IBindable
                 image[i].color = utilitzada ? Color.white : new Color(.65f, .7f, .75f);
             }
         }
-        if (animacio == null) animacio = XS_Utils.XS_Editor.LoadAssetAtPath<AnimacioPerCodi_GameObject>("Assets/XidoStudio/UI/Animacions/Tecla.asset");
+        //if (animacio == null) animacio = XS_Utils.XS_Editor.LoadAssetAtPath<AnimacioPerCodi_GameObject>("Assets/XidoStudio/UI/Animacions/Tecla.asset");
     }
+
+
+    public override void Restaltar()
+    {
+        for (int i = 0; i < image.Length; i++)
+        {
+            coroutine = animacio.OnPointerEnter(image[i], coroutine);
+        }
+    }
+
+    public override void Desresaltar()
+    {
+        if (coroutine != null) StopCoroutine(coroutine);
+        for (int i = 0; i < image.Length; i++)
+        {
+            coroutine = animacio.OnPointerExit(image[i], coroutine);
+        }
+    }
+
+    public override void Desactivar()
+    {
+        if (coroutine != null) StopCoroutine(coroutine);
+        for (int i = 0; i < image.Length; i++)
+        {
+            animacio.Disable(image[i], ref coroutine, false);
+        }
+    }
+
+
     string TeclaNom()
     {
         if (tecla.ToString().Contains("Divide")) return "/";
@@ -85,25 +106,4 @@ public class UI_Tecla : UI_Bindable, IBindable
         if (tecla.ToString().Equals("None")) return "";
         return tecla.ToString();
     }
-
-    public void Restaltar()
-    {
-        for (int i = 0; i < image.Length; i++)
-        {
-            animacio.OnPointerEnter(image[i], coroutine);
-        }
-    }
-
-    public void Desresaltar()
-    {
-        if (coroutine != null) StopCoroutine(coroutine);
-        for (int i = 0; i < image.Length; i++)
-        {
-            animacio.OnPointerExit(image[i], coroutine);
-        }
-    }
-
-
-
-    private void OnValidate() => Actualitzar();
 }

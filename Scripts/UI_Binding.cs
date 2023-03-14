@@ -7,8 +7,6 @@ using UnityEngine.InputSystem.Utilities;
 using UnityEngine.InputSystem.Samples.RebindUI;
 public class UI_Binding : MonoBehaviour
 {
-    [SerializeField] InputActionReference binding;
-    [Header("Base")]
     [SerializeField] XS_Button button;
     [SerializeField] HorizontalLayoutGroup layoutGroup;
     [SerializeField] RectTransform rectTransform;
@@ -38,12 +36,12 @@ public class UI_Binding : MonoBehaviour
     [SerializeField] bool rebindable; //Que pots clicar per rebindar i recuperar
     [SerializeField] bool prioritzarMouse;
 
-    List<IBindable> bindables;
+    [SerializeField] List<UI_Bindable> bindables;
 
 
-    public void AddBindable(IBindable bindable)
+    public void AddBindable(UI_Bindable bindable)
     {
-        if (bindables == null) bindables = new List<IBindable>();
+        if (bindables == null) bindables = new List<UI_Bindable>();
 
         bindables.Add(bindable);
         button.OnEnter += bindable.Restaltar;
@@ -55,13 +53,13 @@ public class UI_Binding : MonoBehaviour
         {
             button.OnEnter -= bindables[i].Restaltar;
             button.OnExit -= bindables[i].Desresaltar;
+            bindables[i].Activar(false);
             bindables[i].Desactivar();
-            bindables[i].Desresaltar();
         }
         bindables.Clear();
     }
 
-    public IBindable GetBindable => bindables[0];
+    public UI_Bindable GetBindable => bindables[0];
     public bool Dreta { get => dreta; set => dreta = value; }
 
     public Input_IconePerBinding IconePerBinding => icone;
@@ -69,6 +67,7 @@ public class UI_Binding : MonoBehaviour
     public bool Rebindable { set => rebindable = value; }
 
 
+    [ContextMenu("Actualitzar")]
     public void Actualitzar()
     {
         //Triar si ha d'anar a la dreta o a l'esquerra.
@@ -132,11 +131,6 @@ public class UI_Binding : MonoBehaviour
             }
         }
 
-
-
-        //Visualitzar bindings
-        if (!Application.isPlaying)
-            return;
     }
 
     public void MostrarIcone()

@@ -17,7 +17,7 @@ public class UI_Bindings : MonoBehaviour
     [SerializeField] bool rebindable;
     [SerializeField] bool posicionar;
 
-    List<IBindable> bindables;
+    [SerializeField] UI_Bindable[] ui;
 
     bool trobat = false;
     int index = 0;
@@ -44,10 +44,7 @@ public class UI_Bindings : MonoBehaviour
 
         interfaceSize = new SavableVariable<float>(UI_Tamany.KEY_INTERFICIE_SIZE, Guardat.Direccio.Local, 0.8f);
 
-        if (bindables == null)
-        {
-            bindables = new List<IBindable>(GetComponentsInChildren<IBindable>());
-        }
+       
 
         //MostrarBindings();
         StartCoroutine(MostrarBindingsTemps());
@@ -81,12 +78,11 @@ public class UI_Bindings : MonoBehaviour
     }
     private void Despres(RebindActionUI arg0, InputActionRebindingExtensions.RebindingOperation arg1)
     {
-        AssignarBindables();
         for (int i = 0; i < bindings.Length; i++)
         {
-            bindings[i].Actualitzar();
             bindings[i].MostrarIcone();
         }
+        AssignarBindables();
     }
 
     void AccioDespresDeRebindejar(InputAction inputAction)
@@ -94,7 +90,6 @@ public class UI_Bindings : MonoBehaviour
 
         Debug.Log("AccioDespresDeRebindejar");
         input_Bindings.Guardar(inputAction);
-
 
         /*for (int i = 0; i < bindings.Length; i++)
         {
@@ -121,11 +116,19 @@ public class UI_Bindings : MonoBehaviour
         {
             for (int i = 0; i < bindings[bi].IconePerBinding.Icones.Count; i++)
             {
-                for (int bl = 0; bl < bindables.Count; bl++)
+                for (int bl = 0; bl < ui.Length; bl++)
                 {
-                    if (bindings[bi].IconePerBinding.Icones[i].path == bindables[bl].Path)
+                    if (bindings[bi].IconePerBinding.Icones[i].path == ui[bl].Path)
                     {
-                        SetBinding(bindings[bi], bindables[bl]);
+                        if (!trobats.Contains(bindings[bi])) 
+                            trobats.Add(bindings[bi]);
+
+                        ui[bl].Activar(true);
+
+                        if (posicionar)
+                            bindings[bi].Dreta = (ui[bl].RectTransform.anchoredPosition.x > 0);
+
+                        bindings[bi].AddBindable(ui[bl]);
                     }
                 }
             }
@@ -139,9 +142,9 @@ public class UI_Bindings : MonoBehaviour
         trobats = new List<UI_Binding>();
         ordenats = new List<UI_Binding>();
 
-        for (int i = 0; i < bindables.Count; i++)
+        for (int i = 0; i < ui.Length; i++)
         {
-            bindables[i].Activar(false);
+            ui[i].Activar(false);
         }
 
         AssignarBindables();
@@ -164,29 +167,13 @@ public class UI_Bindings : MonoBehaviour
         }
         for (int i = 0; i < ordenats.Count; i++)
         {
-            if(posicionar)
-                ordenats[i].transform.SetParent(ordenats[i].Dreta ? bindingsD : bindingsE);
+            ordenats[i].transform.SetParent(ordenats[i].Dreta ? bindingsD : bindingsE);
 
             ordenats[i].Rebindable = rebindable;
             ordenats[i].Actualitzar();
         }
     }
 
-    void SetBinding(UI_Binding ui, IBindable binding)
-    {
-        //Debug.Log($"{bindings[b].IconePerBinding.InputBinding.action.name}({bindings[b].IconePerBinding.InputBinding.action.bindings[i].name}) - (){bindables[index].GetPath()}");
-        if(!trobats.Contains(ui)) trobats.Add(ui);
-
-        binding.Activar(true);
-        //ui.Bindable = binding;
-        if (posicionar)
-            ui.Dreta = (binding.RectTransform.anchoredPosition.x > 0);
-
-        ui.AddBindable(binding);
-
-
-
-    }
 
     private void OnValidate()
     {
@@ -195,6 +182,9 @@ public class UI_Bindings : MonoBehaviour
         {
             bindings = GetComponentsInChildren<UI_Binding>();
         }
-
+        if (ui == null || ui.Length == 0)
+        {
+            ui = GetComponentsInChildren<UI_Bindable>();
+        }
     }
 }

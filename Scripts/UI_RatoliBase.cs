@@ -4,23 +4,22 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem.LowLevel;
 
-public class UI_RatoliBase : UI_Bindable, IBindable
+public class UI_RatoliBase : UI_Bindable
 {
     //[SerializeField] Input_MouseInteraccions interaccio;
     [SerializeField] string path;
     Image image;
 
 
-    public RectTransform RectTransform => GetComponent<RectTransform>();
+    public override RectTransform RectTransform => GetComponent<RectTransform>();
 
-    public string Path => path;
-    public void Activar(bool activat)
+    public override string Path => path;
+    public override void Activar(bool activat)
     {
         utilitzada = activat;
         Actualitzar();
     }
-    public void Desactivar() { }
-    void Actualitzar()
+    public override void Actualitzar()
     {
         if (!image) image = GetComponentInChildren<Image>();
 
@@ -30,9 +29,7 @@ public class UI_RatoliBase : UI_Bindable, IBindable
         image.color = utilitzada ? Color.white : new Color(.65f, .7f, .75f);
     }
 
-    public void Restaltar() => animacio.OnPointerEnter(image, coroutine);
-    public void Desresaltar() => animacio.OnPointerExit(image, coroutine);
-
-
-    private void OnValidate() => Actualitzar();
+    public override void Restaltar() => coroutine = animacio.OnPointerEnter(image, coroutine);
+    public override void Desresaltar() => coroutine = animacio.OnPointerExit(image, coroutine);
+    public override void Desactivar() => animacio.Disable(image, ref coroutine, false);
 }
