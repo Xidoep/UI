@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/dpad/up
+  image: []
 --- !u!1 &3031153167809043381
 GameObject:
   m_ObjectHideFlags: 0
@@ -102,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/buttonWest
+  image: []
 --- !u!1 &3034540494509136719
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/leftShoulder
+  image: []
 --- !u!1 &3598849326596234858
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,8 +192,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -65}
-  m_SizeDelta: {x: 0, y: -270}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1575733400076692163
 MonoBehaviour:
@@ -204,17 +207,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93fe3458477c11a4db8d192aae29cb50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  input_Bindings: {fileID: 11400000, guid: 62fb1feabce02f248a791f903d6ff97e, type: 2}
   bindingsE: {fileID: 353470592500520373}
   bindingsD: {fileID: 353470593810835776}
   bindings:
   - {fileID: 1180697422129590809}
-  - {fileID: 4736827110673982735}
   - {fileID: 9109518994282859758}
-  - {fileID: 4853090528376579671}
   - {fileID: 1061358038001991062}
+  - {fileID: 5135272469484019428}
   - {fileID: 751855350515852164}
   rebindable: 0
   posicionar: 1
+  ui:
+  - {fileID: 8189098089905349266}
+  - {fileID: 1880283762554632181}
+  - {fileID: 4326608933962690516}
+  - {fileID: 1469708446883129589}
+  - {fileID: 267855693958618597}
+  - {fileID: 2669201361686155684}
+  - {fileID: 7394513067326364899}
+  - {fileID: 7670403929013033468}
+  - {fileID: 8988319549268704728}
+  - {fileID: 4930812348615844125}
+  - {fileID: 141227145291367612}
+  - {fileID: 1886432346764922689}
+  - {fileID: 2754292034473505581}
+  - {fileID: 3498199204849477841}
+  - {fileID: 5896415418821699131}
+  - {fileID: 6590229241455496587}
+  - {fileID: 1956729038032439915}
+  - {fileID: 2132826289540035745}
+  - {fileID: 7692956387435464267}
 --- !u!1 &3812257316791260163
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/leftStickPress
+  image: []
 --- !u!1 &3993350796309594047
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,6 +341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/dpad
+  image: []
 --- !u!1 &4324274831568231784
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/start
+  image: []
 --- !u!1 &4341169874061859256
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/leftTrigger
+  image: []
 --- !u!1 &4451305603980873579
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +497,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/rightStickPress
+  image: []
 --- !u!1 &4475529317495138590
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,6 +549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/buttonNorth
+  image: []
 --- !u!1 &4854359872982767130
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,6 +601,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/dpad/left
+  image: []
 --- !u!1 &4993856650029638369
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/rightTrigger
+  image: []
 --- !u!1 &5667043255703240396
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +705,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/select
+  image: []
 --- !u!1 &6072378079131872198
 GameObject:
   m_ObjectHideFlags: 0
@@ -725,6 +757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/buttonEast
+  image: []
 --- !u!1 &6307047993089920730
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +809,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/rightShoulder
+  image: []
 --- !u!1 &6694042134469647677
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,6 +861,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/dpad/right
+  image: []
 --- !u!1 &6995885349416733491
 GameObject:
   m_ObjectHideFlags: 0
@@ -878,6 +913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/dpad/down
+  image: []
 --- !u!1 &7454967469043198056
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,6 +965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/buttonSouth
+  image: []
 --- !u!1 &8050174625950684191
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,6 +1017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/leftStick
+  image: []
 --- !u!1 &8544288726023375735
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,8 +1072,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 655.2, y: 600}
+  m_AnchoredPosition: {x: 0, y: -40}
+  m_SizeDelta: {x: 600, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8544288726023375688
 CanvasRenderer:
@@ -1126,6 +1164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animacio: {fileID: 0}
   path: <Gamepad>/rightStick
+  image: []
 --- !u!1001 &1118228665406304585
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1147,7 +1186,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 743612127370625425, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.65
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 743612127370625425, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1155,7 +1194,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 743612127370625425, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.35
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 743612127370625425, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1163,7 +1202,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 743612127370625425, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 480
       objectReference: {fileID: 0}
     - target: {fileID: 743612127370625425, guid: 277829b3d06214443908afec14363692, type: 3}
       propertyPath: m_SizeDelta.y
@@ -1294,6 +1333,37 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 743612127370625425, guid: 277829b3d06214443908afec14363692, type: 3}
   m_PrefabInstance: {fileID: 1118228665406304585}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &552986871809615971 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 587761166140905770, guid: 277829b3d06214443908afec14363692, type: 3}
+  m_PrefabInstance: {fileID: 1118228665406304585}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1693364618947163205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552986871809615971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c98d747d87724d4e90d3d7bc06e590b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buscats:
+  - {fileID: 11400000, guid: 30d380f56601e1d48a7c9bcfd3b84931, type: 2}
+--- !u!114 &9013058995204801601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552986871809615971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a83f2a346d3d54940b12abdd2c11b9b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &751855350515852164 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 426609956902064845, guid: 277829b3d06214443908afec14363692, type: 3}
@@ -1321,26 +1391,15 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2298543382293857104, guid: 277829b3d06214443908afec14363692, type: 3}
   m_PrefabInstance: {fileID: 1118228665406304585}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 552986871809615971}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a92d652e4ee99ea4884cd100e6e6483e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4736827110673982735 stripped
+--- !u!114 &5135272469484019428 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5636299063991866438, guid: 277829b3d06214443908afec14363692, type: 3}
-  m_PrefabInstance: {fileID: 1118228665406304585}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a92d652e4ee99ea4884cd100e6e6483e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4853090528376579671 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5538612891688720158, guid: 277829b3d06214443908afec14363692, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5242357167243374509, guid: 277829b3d06214443908afec14363692, type: 3}
   m_PrefabInstance: {fileID: 1118228665406304585}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

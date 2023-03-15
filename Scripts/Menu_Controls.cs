@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Localization.Events;
+using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.Tables;
+using UnityEngine.Localization;
 
 public class Menu_Controls : MonoBehaviour
 {
@@ -15,8 +19,10 @@ public class Menu_Controls : MonoBehaviour
     //[SerializeField] XS_ScrollRect scrollRect;
     //[SerializeField] List<XS_Text> botons;
     [SerializeField] RectTransform rectTransform;
-
     [SerializeField] SavableVariable<int> inputSeleccionat;
+    [Apartat("Reset")]
+    [SerializeField] Utils_InstantiableFromProject popupRestore;
+    [SerializeField] Input_Bindings inputBindings;
     
     Lector lector;
 
@@ -25,7 +31,6 @@ public class Menu_Controls : MonoBehaviour
         Debug.Log("index " + index);
         if (index == inputSeleccionat.Valor)
             return;
-
         if (lector == null) lector = rectTransform.gameObject.AddComponent<Lector>();
         rectTransform.SetupAndPlay(lector, new Animacio_RectPosicio(rectTransform.anchoredPosition, new Vector2(index * -350, 0), Corba.EasyInEasyOut, true),0.25f, Transicio.clamp);
 
@@ -56,8 +61,16 @@ public class Menu_Controls : MonoBehaviour
         }*/
         
     }
+
+    public void PopupResetControls() => popupRestore.InstantiateReturn().GetComponent<Utils_EsdevenimentDelegat>().Registrar(ResetControls);
+    void ResetControls()
+    {
+        inputBindings.ResetBindings();
+        menus[inputSeleccionat.Valor].GetComponent<UI_Bindings>().MostrarBindings();
+    }
     private void OnValidate()
     {
         inputSeleccionat = new SavableVariable<int>(KEY_UI_INPUT_SELECCIONAT, Guardat.Direccio.Local, 0);
+        if (inputBindings == null) inputBindings = XS_Utils.XS_Editor.LoadAssetAtPath<Input_Bindings>("Assets/XidoStudio/Inputs/Rebindings/Bindings.asset");
     }
 }

@@ -98,6 +98,7 @@ public class UI_Binding : MonoBehaviour
 
         //Modificar UI basica
         rectTransform.pivot = new Vector2((dreta ? 0.1f : 0.9f), 0.5f);
+        rectTransform.localScale = Vector3.one;
         degradat.sprite = dreta ? degradatDreta : degradatEsquerra;
         layoutGroup.childAlignment = dreta ? TextAnchor.MiddleLeft : TextAnchor.MiddleRight;
 

@@ -178,10 +178,7 @@ public class UI_Bindings : MonoBehaviour
     private void OnValidate()
     {
         input_Bindings = XS_Editor.LoadAssetAtPath<Input_Bindings>("Assets/XidoStudio/Inputs/Rebindings/Bindings.asset");
-        if(bindings == null || bindings.Length == 0)
-        {
-            bindings = GetComponentsInChildren<UI_Binding>();
-        }
+        bindings = GetComponentsInChildren<UI_Binding>();
         if (ui == null || ui.Length == 0)
         {
             ui = GetComponentsInChildren<UI_Bindable>();

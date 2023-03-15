@@ -355,9 +355,12 @@ MonoBehaviour:
   recuperarIcone: {fileID: 1038111411620695556}
   recuperarTexte: {fileID: 123296207851543554}
   rebindActionUI: {fileID: 4265845112522601619}
+  bindings: []
   dreta: 1
   overrided: 1
   rebindable: 0
+  prioritzarMouse: 0
+  bindables: []
 --- !u!114 &4265845112522601619
 MonoBehaviour:
   m_ObjectHideFlags: 0

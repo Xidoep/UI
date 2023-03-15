@@ -201,12 +201,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 211e34dc2e93485438fd4f432c540ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
   interfaceSize:
     guardat: {fileID: 11400000, guid: d8ba27ffe88b6fc4cb63b16236c5a60f, type: 2}
     key: InterficeSize
-    local: 1
-    perDefecte: 1
+    direccio: 0
+    perDefecte: 0.8
 --- !u!114 &6206017895747369764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,7 +220,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   escoltadors:
   - {fileID: 2567360656977007341, guid: 15e4b10fbcf2bec4d8a1e0c61b2f36b8, type: 3}
-  - {fileID: 7792465118582136395, guid: b3fbba656f112284da3a0a039abd6344, type: 3}
   - {fileID: 6588833117958143675, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
   OnInteractuar:
     m_PersistentCalls:
@@ -479,6 +477,18 @@ PrefabInstance:
       propertyPath: OnInteractuar.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: AnimacioPerCodi_Button, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5322235348497783292, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
+      propertyPath: m_text
+      value: Sistema
+      objectReference: {fileID: 0}
+    - target: {fileID: 5322235348497783292, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 19c5dc1fb63d40c4281cb8589c0eedf0, type: 2}
+    - target: {fileID: 5322235348497783292, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 407802829209662782, guid: 19c5dc1fb63d40c4281cb8589c0eedf0, type: 2}
     - target: {fileID: 6719071086474002858, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: m_Color.a
       value: 0.101960786
@@ -585,7 +595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9047300468365958367, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
       propertyPath: m_fontSize
-      value: 36
+      value: 42
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a68aed42643db8847afae1bcf2edee42, type: 3}
