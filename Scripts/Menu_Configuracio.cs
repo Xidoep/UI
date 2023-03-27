@@ -18,4 +18,6 @@ public class Menu_Configuracio : ScriptableObject
         popupCanviarIdioma.InstantiateReturn().GetComponent<Utils_EsdevenimentDelegat>().Registrar(CanviarIdioma);
     }
     void CanviarIdioma() => localitzacio.IdiomaActual(idioma);
+
+    public void ObrirPaguinaFormulariContacteXS() => Application.OpenURL("https://www.xidostudio.com/support");
 }

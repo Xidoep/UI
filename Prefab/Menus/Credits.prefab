@@ -151,11 +151,27 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Made by:\r\n<b> Javier del Egido Perea </b>\r\n\r\nMusic by:\r\n<b> Kevin
-    MacLeod (incompetech.com) </b>\r\n\r\n\nSpecial thanks:\r\n<b> Jaume Espadaler
-    Gelis </b>\r\nfor valuable tests and comments.\r\n\r\n<b> Carla Riubrogent Colom\xE9
-    </b>\r\nfor being so patient with me all these years.\r\n\r\n\n\n<b> Thanks for
-    playing </b>"
+  m_text: 'Made by:
+
+    <b> Javier del Egido Perea </b>
+
+    
+
+    Music by:
+
+    <b>
+    Kevin MacLeod (incompetech.com) </b>
+
+    
+
+
+    Special thanks:
+
+
+
+
+    <b>
+    Thanks for playing </b>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

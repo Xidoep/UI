@@ -26,13 +26,15 @@ public class Menu_Controls : MonoBehaviour
     
     Lector lector;
 
+    float DistanciaEntreBotons(int index) => index * -430;
+
     public void Control(int index)
     {
         Debug.Log("index " + index);
         if (index == inputSeleccionat.Valor)
             return;
         if (lector == null) lector = rectTransform.gameObject.AddComponent<Lector>();
-        rectTransform.SetupAndPlay(lector, new Animacio_RectPosicio(rectTransform.anchoredPosition, new Vector2(index * -350, 0), Corba.EasyInEasyOut, true),0.25f, Transicio.clamp);
+        rectTransform.SetupAndPlay(lector, new Animacio_RectPosicio(rectTransform.anchoredPosition, new Vector2(DistanciaEntreBotons(index), 0), Corba.EasyInEasyOut, true),0.25f, Transicio.clamp);
 
         menus[inputSeleccionat.Valor].SetAnimacio(index > inputSeleccionat.Valor ? dreta : esquerra);
         menus[inputSeleccionat.Valor].Destroy();
@@ -54,6 +56,7 @@ public class Menu_Controls : MonoBehaviour
 
         menus[inputSeleccionat.Valor].gameObject.SetActive(true);
         Control(inputSeleccionat.Valor);
+        rectTransform.anchoredPosition = new Vector2(DistanciaEntreBotons(inputSeleccionat.Valor), 0);
 
         /*for (int i = 0; i < botons.Length; i++)
         {

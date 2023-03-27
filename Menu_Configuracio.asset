@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   localitzacio: {fileID: 11400000, guid: a801af3f9157ab94bbe53da1bba32646, type: 2}
   idioma: 0
-  popupCanviarIdioma: {fileID: 5465153273881408386, guid: 7d7199d0d3bb8394389bc84816faae65, type: 3}
+  popupCanviarIdioma: {fileID: 7624413259430149597, guid: 15ed162e27e0c574ea00ba296f10fc69, type: 3}
