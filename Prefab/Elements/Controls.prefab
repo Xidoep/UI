@@ -213,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2322400135629151709}
   - component: {fileID: 4070774113655556929}
+  - component: {fileID: 3314207728968745464}
   m_Layer: 5
   m_Name: Controls
   m_TagString: Untagged
@@ -267,9 +268,9 @@ MonoBehaviour:
   - {fileID: 1503553536588522920}
   - {fileID: 1499950958471796403}
   menus:
-  - {fileID: 5127358034757977692}
-  - {fileID: 1753452752864332060}
-  - {fileID: 741274915131610335}
+  - {fileID: 5455614847859633462}
+  - {fileID: 1269041478536626923}
+  - {fileID: 2290861238746041507}
   dreta: {fileID: 11400000, guid: 144243d56875b5f4487f7df5cd24ded7, type: 2}
   esquerra: {fileID: 11400000, guid: 09231bd29e24b7d4093ef39f9eb79007, type: 2}
   rectTransform: {fileID: 6801136910022571169}
@@ -278,8 +279,43 @@ MonoBehaviour:
     key: UiInputSeleccionat
     direccio: 0
     perDefecte: 0
-  popupRestore: {fileID: 0}
+  entradaDreta: {fileID: 8294921533691381987, guid: 144243d56875b5f4487f7df5cd24ded7, type: 2}
+  entradaEsquerra: {fileID: 8294921533691381987, guid: 09231bd29e24b7d4093ef39f9eb79007, type: 2}
+  sortidaDreta: {fileID: 3096270799098791778, guid: 144243d56875b5f4487f7df5cd24ded7, type: 2}
+  sortidaEsquerra: {fileID: 3096270799098791778, guid: 09231bd29e24b7d4093ef39f9eb79007, type: 2}
+  popupRestore: {fileID: -7452876204873259805, guid: aee3a0db229ebdc4c9e9882fc29735fd, type: 3}
   inputBindings: {fileID: 11400000, guid: 62fb1feabce02f248a791f903d6ff97e, type: 2}
+--- !u!114 &3314207728968745464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1004259740240112739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4864b9375f238ca4c9abc06809e8e7cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  escoltadors:
+  - {fileID: 7004679490953539324, guid: f052fa43ec0c567418585bca48df59f5, type: 3}
+  OnInteractuar:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4070774113655556929}
+        m_TargetAssemblyTypeName: Menu_Controls, XS.UI
+        m_MethodName: PopupResetControls
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  multipleInteractions: 1
+  delayRegistration: 0
 --- !u!1 &1866497059343205053
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,17 +2611,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e651820dca4735e4cb53042f22d69db8, type: 3}
---- !u!114 &741274915131610335 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3187998262350817532, guid: e651820dca4735e4cb53042f22d69db8, type: 3}
-  m_PrefabInstance: {fileID: 2771827156712979491}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7212ac3ee04da8c42832ecee15826df8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &2290861238746041507 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4160556622021865600, guid: e651820dca4735e4cb53042f22d69db8, type: 3}
@@ -4526,17 +4551,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5c04a9817b8bc14cb13f6d27775fb15, type: 3}
---- !u!114 &5127358034757977692 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 284638093703956931, guid: f5c04a9817b8bc14cb13f6d27775fb15, type: 3}
-  m_PrefabInstance: {fileID: 4961616734730211231}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7212ac3ee04da8c42832ecee15826df8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &5455614847859633462 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1111554498762859177, guid: f5c04a9817b8bc14cb13f6d27775fb15, type: 3}
@@ -5820,17 +5834,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7331747909317484660, guid: 0929e01c0b9e5a44b827c74bc16a5ea6, type: 3}
   m_PrefabInstance: {fileID: 8368553838054826655}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1753452752864332060 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7815593209481243523, guid: 0929e01c0b9e5a44b827c74bc16a5ea6, type: 3}
-  m_PrefabInstance: {fileID: 8368553838054826655}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7212ac3ee04da8c42832ecee15826df8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8604768622375337604
 PrefabInstance:
   m_ObjectHideFlags: 0

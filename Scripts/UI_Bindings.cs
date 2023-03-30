@@ -9,8 +9,9 @@ using System;
 
 public class UI_Bindings : MonoBehaviour
 {
-    //[SerializeField] Settings settings;
+
     SavableVariable<float> interfaceSize;
+
     [SerializeField] Input_Bindings input_Bindings;
     [SerializeField] Transform bindingsE, bindingsD;
     [SerializeField] UI_Binding[] bindings;
@@ -27,6 +28,8 @@ public class UI_Bindings : MonoBehaviour
     List<UI_Binding> ordenats;
     PlayerInput playerInput;
 
+    
+
     [ContextMenu("ApagarBindables")]
     void ApagarBindables()
     {
@@ -37,7 +40,7 @@ public class UI_Bindings : MonoBehaviour
 
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
         
         playerInput = FindObjectOfType<PlayerInput>();
@@ -59,7 +62,7 @@ public class UI_Bindings : MonoBehaviour
 
     }
 
-    private void Despres(RebindActionUI arg0, string arg1, string arg2, string arg3)
+    /*private void Despres(RebindActionUI arg0, string arg1, string arg2, string arg3)
     {
         AssignarBindables();
         for (int i = 0; i < bindings.Length; i++)
@@ -68,15 +71,15 @@ public class UI_Bindings : MonoBehaviour
             bindings[i].MostrarIcone();
         }
     }
-
-    private void Abans(RebindActionUI arg0, InputActionRebindingExtensions.RebindingOperation arg1)
+    */
+    void Abans(RebindActionUI arg0, InputActionRebindingExtensions.RebindingOperation arg1)
     {
         for (int i = 0; i < bindings.Length; i++)
         {
             bindings[i].RemoveBindables();
         }
     }
-    private void Despres(RebindActionUI arg0, InputActionRebindingExtensions.RebindingOperation arg1)
+    void Despres(RebindActionUI arg0, InputActionRebindingExtensions.RebindingOperation arg1)
     {
         for (int i = 0; i < bindings.Length; i++)
         {
@@ -90,17 +93,6 @@ public class UI_Bindings : MonoBehaviour
 
         Debug.Log("AccioDespresDeRebindejar");
         input_Bindings.Guardar(inputAction);
-
-        /*for (int i = 0; i < bindings.Length; i++)
-        {
-            bindings[i].RemoveBindables();
-        }
-        AssignarBindables();
-        for (int i = 0; i < bindings.Length; i++)
-        {
-            bindings[i].Actualitzar();
-            bindings[i].MostrarIcone();
-        }*/
     }
 
 
