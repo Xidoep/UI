@@ -73,7 +73,7 @@ public class Menu_Controls : MonoBehaviour
         botons[inputSeleccionat.Valor].GetComponent<XS_Button>().Select();
 
         menus[inputSeleccionat.Valor].gameObject.SetActive(true);
-        entradaEsquerra.Play(menus[inputSeleccionat.Valor], lectorEntrada);
+        entradaDreta.Play(menus[inputSeleccionat.Valor], lectorEntrada);
         Control(inputSeleccionat.Valor);
         rectTransform.anchoredPosition = new Vector2(DistanciaEntreBotons(inputSeleccionat.Valor), 0);
 
