@@ -2920,73 +2920,73 @@ MonoBehaviour:
   - rectTransform: {fileID: 7201589258760347256}
     posicio: {x: 1207.7251, y: -50}
     factor: {x: 0.5, y: 0.9590164}
-    factorVisible: {x: 0.5, y: 0.0043474627}
+    factorVisible: {x: 0.50000006, y: 0.004347244}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 7189711738577096837}
     posicio: {x: 1207.7251, y: -212.29507}
     factor: {x: 0.5, y: 0.82598764}
-    factorVisible: {x: 0.5, y: -0.13164528}
+    factorVisible: {x: 0.50000006, y: -0.1316455}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 1126707225299674641}
     posicio: {x: 1207.7251, y: -320.4918}
     factor: {x: 0.5, y: 0.7373018}
-    factorVisible: {x: 0.5, y: -0.22230712}
+    factorVisible: {x: 0.50000006, y: -0.22230732}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 6932812182895912035}
     posicio: {x: 1207.7251, y: -374.59015}
     factor: {x: 0.5, y: 0.6929589}
-    factorVisible: {x: 0.5, y: -0.26763803}
+    factorVisible: {x: 0.50000006, y: -0.26763824}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 5716725796037734194}
     posicio: {x: 1207.7251, y: -536.88525}
     factor: {x: 0.5, y: 0.5599301}
-    factorVisible: {x: 0.5, y: -0.40363076}
+    factorVisible: {x: 0.50000006, y: -0.403631}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 6094840547317319413}
     posicio: {x: 1207.7251, y: -645.082}
     factor: {x: 0.5, y: 0.47124428}
-    factorVisible: {x: 0.5, y: -0.49429265}
+    factorVisible: {x: 0.50000006, y: -0.49429286}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 7001935512506706845}
     posicio: {x: 1207.7251, y: -719.0164}
     factor: {x: 0.5, y: 0.41064227}
-    factorVisible: {x: 0.5, y: -0.53962356}
+    factorVisible: {x: 0.50000006, y: -0.5396238}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 1502313630553303961}
     posicio: {x: 1207.7251, y: -883.11475}
     factor: {x: 0.5, y: 0.27613544}
-    factorVisible: {x: 0.5, y: -0.69374865}
+    factorVisible: {x: 0.50000006, y: -0.6937489}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 8487314930458508738}
     posicio: {x: 1207.7251, y: -991.31146}
     factor: {x: 0.5, y: 0.18744963}
-    factorVisible: {x: 0.5, y: -0.7844105}
+    factorVisible: {x: 0.50000006, y: -0.7844107}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 2007378676128448277}
     posicio: {x: 1207.7251, y: -1099.5082}
     factor: {x: 0.5, y: 0.098763764}
-    factorVisible: {x: 0.5, y: -0.8750723}
+    factorVisible: {x: 0.50000006, y: -0.87507254}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 7876360283625566069}
     posicio: {x: 1207.7251, y: -1207.705}
     factor: {x: 0.5, y: 0.010077894}
-    factorVisible: {x: 0.5, y: -0.9657341}
+    factorVisible: {x: 0.50000006, y: -0.9657343}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 8604497531347287474}
     posicio: {x: 1207.7251, y: -1315.9016}
     factor: {x: 0.5, y: -0.07860792}
-    factorVisible: {x: 0.5, y: -1.0563959}
+    factorVisible: {x: 0.50000006, y: -1.0563961}
     visibleX: 1
     visibleY: 0
   preparat: 1
@@ -5564,8 +5564,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 55821974032104010}
   m_HandleRect: {fileID: 7004004123136756057}
   m_Direction: 2
-  m_Value: 0.9590167
-  m_Size: 0.90409845
+  m_Value: 0.95901674
+  m_Size: 0.90409833
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6165,7 +6165,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 4.7952514}
+  m_AnchoredPosition: {x: 0.000061035156, y: 4.79501}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &3838745324353510633
