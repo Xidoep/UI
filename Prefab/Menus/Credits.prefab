@@ -155,14 +155,14 @@ MonoBehaviour:
 
     <b> Javier del Egido Perea </b>
 
-    
+
 
     Music by:
 
     <b>
     Kevin MacLeod (incompetech.com) </b>
 
-    
+
 
 
     Special thanks:
@@ -170,8 +170,8 @@ MonoBehaviour:
 
 
 
-    <b>
-    Thanks for playing </b>'
+    <b> Thanks
+    for playing </b>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -431,10 +431,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2965310247405351039}
     m_Modifications:
+    - target: {fileID: 1467801218596522928, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5706450848973212130, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: pare
       value: 
       objectReference: {fileID: 6234515966836350294}
+    - target: {fileID: 8093565208657474764, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+      propertyPath: component
+      value: 
+      objectReference: {fileID: 1390504565350563709}
     - target: {fileID: 8110687715311404784, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -525,6 +533,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+--- !u!114 &1390504565350563709 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1467801218596522942, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+  m_PrefabInstance: {fileID: 509678505786848451}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8618849994194121267 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8110687715311404784, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}

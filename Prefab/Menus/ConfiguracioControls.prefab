@@ -583,10 +583,18 @@ PrefabInstance:
       propertyPath: m_text
       value: "Atr\xE1s"
       objectReference: {fileID: 0}
+    - target: {fileID: 1467801218596522928, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5706450848973212130, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: pare
       value: 
       objectReference: {fileID: 1504515499145313517}
+    - target: {fileID: 8093565208657474764, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+      propertyPath: component
+      value: 
+      objectReference: {fileID: 2646076098043074786}
     - target: {fileID: 8110687715311404784, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
       propertyPath: m_Pivot.x
       value: 1
@@ -677,6 +685,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+--- !u!114 &2646076098043074786 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1467801218596522942, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
+  m_PrefabInstance: {fileID: 3523624015062537052}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4641134093677122988 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8110687715311404784, guid: 797dbdb483bc1b244995dbf78611e85b, type: 3}
