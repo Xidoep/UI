@@ -2834,7 +2834,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 524279
 --- !u!114 &3260677825915062637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3152,85 +3152,85 @@ MonoBehaviour:
   autoAssignarContingut: 1
   contingut:
   - rectTransform: {fileID: 7201589258760347256}
-    posicio: {x: 1188.8499, y: -50}
+    posicio: {x: 1920.2363, y: -50}
     factor: {x: 0.5, y: 0.9621212}
     factorVisible: {x: 0.5, y: 0.00000003788774}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 7189711738577096837}
-    posicio: {x: 1188.8499, y: -211.36363}
+    posicio: {x: 1920.2363, y: -211.36363}
     factor: {x: 0.5, y: 0.83987606}
     factorVisible: {x: 0.5, y: -0.078410834}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 1126707225299674641}
-    posicio: {x: 1188.8499, y: -318.9394}
+    posicio: {x: 1920.2363, y: -318.9394}
     factor: {x: 0.5, y: 0.7583792}
     factorVisible: {x: 0.5, y: -0.13068475}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 6932812182895912035}
-    posicio: {x: 1188.8499, y: -372.72726}
+    posicio: {x: 1920.2363, y: -372.72726}
     factor: {x: 0.5, y: 0.71763086}
     factorVisible: {x: 0.5, y: -0.15682171}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 5716725796037734194}
-    posicio: {x: 1188.8499, y: -534.0909}
+    posicio: {x: 1920.2363, y: -534.0909}
     factor: {x: 0.5, y: 0.5953857}
     factorVisible: {x: 0.5, y: -0.23523259}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 6094840547317319413}
-    posicio: {x: 745.6133, y: -641.6667}
-    factor: {x: 0.31358597, y: 0.51388884}
-    factorVisible: {x: 0.39597097, y: -0.2875065}
+    posicio: {x: 461.62143, y: -641.6667}
+    factor: {x: 0.12019912, y: 0.51388884}
+    factorVisible: {x: 0.24515213, y: -0.2875065}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 8058109276062942640}
-    posicio: {x: 1188.8499, y: -587.8788}
+    posicio: {x: 1920.2363, y: -587.8788}
     factor: {x: 0.5, y: 0.5546373}
     factorVisible: {x: 0.5, y: -0.26136956}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 5381639674539563564}
-    posicio: {x: 1188.8499, y: -749.24243}
+    posicio: {x: 1920.2363, y: -749.24243}
     factor: {x: 0.5, y: 0.43239212}
     factorVisible: {x: 0.5, y: -0.33978042}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 7001935512506706845}
-    posicio: {x: 1188.8499, y: -823.63635}
+    posicio: {x: 1920.2363, y: -823.63635}
     factor: {x: 0.5, y: 0.37603307}
     factorVisible: {x: 0.5, y: -0.36591738}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 1502313630553303961}
-    posicio: {x: 1188.8499, y: -985.9091}
+    posicio: {x: 1920.2363, y: -985.9091}
     factor: {x: 0.5, y: 0.25309914}
     factorVisible: {x: 0.5, y: -0.45478302}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 8487314930458508738}
-    posicio: {x: 1188.8499, y: -1093.4849}
+    posicio: {x: 1920.2363, y: -1093.4849}
     factor: {x: 0.5, y: 0.17160237}
     factorVisible: {x: 0.5, y: -0.50705695}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 2007378676128448277}
-    posicio: {x: 1188.8499, y: -1201.0605}
+    posicio: {x: 1920.2363, y: -1201.0605}
     factor: {x: 0.5, y: 0.09010565}
     factorVisible: {x: 0.5, y: -0.5593308}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 7876360283625566069}
-    posicio: {x: 1188.8499, y: -1308.6364}
+    posicio: {x: 1920.2363, y: -1308.6364}
     factor: {x: 0.5, y: 0.008608818}
     factorVisible: {x: 0.5, y: -0.61160475}
     visibleX: 1
     visibleY: 0
   - rectTransform: {fileID: 8604497531347287474}
-    posicio: {x: 1188.8499, y: -1416.2122}
+    posicio: {x: 1920.2363, y: -1416.2122}
     factor: {x: 0.5, y: -0.07288802}
     factorVisible: {x: 0.5, y: -0.6638787}
     visibleX: 1
@@ -3239,7 +3239,7 @@ MonoBehaviour:
   preparat: 1
   posicionar: 1
   indexSeleccionat: 0
-  posicio: {x: 0.5, y: 0.9621212}
+  posicio: {x: NaN, y: NaN}
 --- !u!114 &8286828110937519821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6063,7 +6063,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 313248139976527631}
   m_Direction: 0
   m_Value: 0
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9607,7 +9607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Value
-      value: 0.8
+      value: 0.74991715
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_MaxValue
@@ -9667,7 +9667,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009742057469777523, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_text
-      value: 80%
+      value: 75%
       objectReference: {fileID: 0}
     - target: {fileID: 5772690786862618381, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: component
@@ -12395,7 +12395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8763901716828067369, guid: 6449b30076983344fa0a3d2e930f142e, type: 3}
       propertyPath: m_text
-      value: on
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8763901716828067369, guid: 6449b30076983344fa0a3d2e930f142e, type: 3}
       propertyPath: m_Enabled
@@ -14573,7 +14573,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Value
-      value: 1.0085727
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: variable.key
@@ -14617,7 +14617,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009742057469777523, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_text
-      value: 101%
+      value: 125%
       objectReference: {fileID: 0}
     - target: {fileID: 3280818107671750408, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
@@ -14657,7 +14657,7 @@ PrefabInstance:
       objectReference: {fileID: 7613131420191583126}
     - target: {fileID: 5850739574497363405, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -210
       objectReference: {fileID: 0}
     - target: {fileID: 6024903960537779623, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_text
@@ -17267,7 +17267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 0.8336638
       objectReference: {fileID: 0}
     - target: {fileID: 1884689410641577287, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_MaxValue
@@ -17327,7 +17327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3009742057469777523, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_text
-      value: 100%
+      value: 83%
       objectReference: {fileID: 0}
     - target: {fileID: 3280818107671750408, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_Navigation.m_SelectOnUp
@@ -17407,7 +17407,7 @@ PrefabInstance:
       objectReference: {fileID: 415285865919552770}
     - target: {fileID: 5850739574497363405, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -210
       objectReference: {fileID: 0}
     - target: {fileID: 6024903960537779623, guid: e4be217a0d735d749858b742fca51771, type: 3}
       propertyPath: m_text
