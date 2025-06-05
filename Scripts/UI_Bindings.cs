@@ -20,7 +20,6 @@ public class UI_Bindings : MonoBehaviour
 
     [SerializeField] UI_Bindable[] ui;
 
-    bool trobat = false;
     int index = 0;
     int mesApunt = 0;
 
@@ -43,7 +42,7 @@ public class UI_Bindings : MonoBehaviour
     void OnEnable()
     {
         
-        playerInput = FindObjectOfType<PlayerInput>();
+        playerInput = FindFirstObjectByType<PlayerInput>();
 
         interfaceSize = new SavableVariable<float>(UI_Tamany.KEY_INTERFICIE_SIZE, Guardat.Direccio.Local, 0.8f);
 

@@ -228,7 +228,7 @@ public class UI_Menu : ScriptableObject
         if (current != null)
             return;
 
-        if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>(true);
+        if (playerInput == null) playerInput = FindFirstObjectByType<PlayerInput>(FindObjectsInactive.Include);
         //if (guardat) guardat.Carregar();
         if (playerInput) playerInput.SwitchCurrentActionMap(UI);
 
@@ -236,7 +236,7 @@ public class UI_Menu : ScriptableObject
     }
     void ExitMenuMode()
     {
-        if (playerInput == null) playerInput = FindObjectOfType<PlayerInput>(true);
+        if (playerInput == null) playerInput = FindFirstObjectByType<PlayerInput>(FindObjectsInactive.Include);
         if (playerInput) playerInput.SwitchCurrentActionMap(GAME_PLAY);
         if (guardat) guardat.Guardar();
 
